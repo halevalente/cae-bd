@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados II</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet"/>
+  <link type="text/css" href="../css/classes.css" rel="stylesheet"/>
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados II</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="banco2_sgbd.html">SGBD</a></li>
+               <li><a href="#" class="current">Modelo de Entidade Relacionamento–MER</a></li>
+			   <li><a href="banco2_modeloRelacional.html">Modelo Relacional–MR</a></li>
+               <li><a href="banco2_selecaoDados.html">Sele&ccedil;&atilde;o de dados</a></li>
+               <li><a href="banco2_alteracaoDados.html">Altera&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_insercaoDados.html">Inser&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_exclusaoDados.html">Exclus&atilde;o de dados</a></li>
+               <li><a href="banco2_instrucoesDdl.html">Instru&ccedil;&otilde;es DDL</a></li>
+               <li><a href="banco2_subQuery.html">SubQuerys</a></li>
+               <li><a href="banco2_indice.html">&Iacute;ndice</a></li>
+               <li><a href="banco2_trigger.html">Triggers</a></li>
+               <li><a href="banco2_storedProcedure.html">Stored Procedure</a></li>
+               <li><a href="banco2_recursosAdministracaoBd.html">Recursos de Administra&ccedil;&atilde;o BD</a></li>
+			   <li><a href="exercicios/exer_mer.html">Exerc&iacute;cios de MER</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+      
+          <p class="cl_conteudo_tit">Modelo Entidade-Relacionamento (ME-R)</p>&nbsp;           
+            
+      <p>O modelo de entidade e relacionamento &eacute; o mais utilizado atualmente, devido a sua simplicidade e efici&ecirc;ncia. Baseia-se na percep&ccedil;&atilde;o de mundo real, que consiste em uma cole&ccedil;&atilde;o de objetos b&aacute;sicos, chamados entidades e relacionamentos entre esses objetos. Voc&ecirc; poder&aacute; usar ou n&atilde;o um software para modelagem de dados. A modelagem de dados consiste em uma s&eacute;rie de an&aacute;lises conceituais e l&oacute;gicas para encontrar a melhor disposi&ccedil;&atilde;o poss&iacute;vel de armazenamento e manuten&ccedil;&atilde;o das informa&ccedil;&otilde;es no banco de dados.</p>&nbsp;
+
+          
+      <p class="cl_conteudo_subtit">Conceitos</p>&nbsp;
+          
+          <ul class="cl_topicos_txt">
+          		<li><b>Entidade</b>: &Eacute; uma representa&ccedil;&atilde;o abstrata de um objeto do mundo real. Exemplo: funcion&aacute;rio, aluno, departamento etc.</li>
+          </ul>&nbsp;
+                
+                 
+                 	<p class="cl_conteudo_subtit">N&atilde;o s&atilde;o entidades:</p>&nbsp;
+                 	
+                    <ul class="cl_topicos_txt">
+            	
+                		<li>Entidade com apenas 1 elemento;</li>&nbsp;
+	                	<li>Opera&ccedil;&otilde;es do sistema;</li>&nbsp;
+    	            	<li>Sa&iacute;das do sistema;</li>&nbsp;
+        	        	<li>Pessoas que realizam trabalhos (usu&aacute;rios do sistema);</li>&nbsp;
+            	    	<li>Cargos de dire&ccedil;&atilde;o.</li>&nbsp;
+            		
+                    </ul>
+                
+                <p><u>Atributo</u>: Elemento de dado que cont&eacute;m informa&ccedil;&atilde;o que 
+                       descreve uma entidade. Exemplo: c&oacute;digo_funcion&aacute;rio, endere&ccedil;o, nome
+                       do aluno etc.</p>&nbsp;
+                 
+                <p><u>Dom&iacute;nio do Atributo</u>: Universo de valores que um atributo pode armazenar. Exemplo:</p>
+
+ 				<ul class="cl_topicos_txt">
+            	
+                		<li> Conjunto de valores do atributo Sexo do funcion&aacute;rio: M ou F;</li>&nbsp;
+	                	<li>Conjunto de valores do atributo Nome do aluno: 40 caracteres alfanum&eacute;rico;</li>&nbsp;
+    	            	<li>Conjunto de valores do atributo sal&aacute;rio: inteiro maior que 5000.</li>&nbsp;
+        	        	<li>Relacionamento: Estrutura que indica a associa&ccedil;&atilde;o entre duas ou mais entidades. Exemplo:</li>&nbsp;
+                        </ul>
+            	    	
+                        <div class="cl_conteudo_img">
+          	
+              				<img src="imagens/image022.jpg" alt="Exemplo"/> &nbsp;
+          
+         				</div>
+                        
+            
+                    
+		  	
+          
+          <p>Nesse caso, h&aacute; um relacionamento entre a entidade &quot;paciente&quot; e a entidade &quot;prontu&aacute;rio&quot;.</p>&nbsp;
+          
+      <p class="cl_conteudo_subtit">Cardinalidade de relacionamentos</p>&nbsp;
+          
+          <ul class="cl_topicos_txt">
+          	
+          		<li>Um-para-um (1 : 1) : uma entidade A (nesse caso, paciente) est&aacute; 
+                    associada no m&aacute;ximo a uma entidade em B (prontu&aacute;rio) e uma entidade 
+                    em B est&aacute; associada no m&aacute;ximo a uma entidade em A. Exemplo:</li>&nbsp;
+            	
+          </ul>
+          
+          <div class="cl_conteudo_img">
+          	
+              <img src="imagens/image022.jpg" alt="Exemplo 2" /> &nbsp;
+          
+    	  </div>
+          
+          <p>Nesse exemplo, um paciente s&oacute; pode ter um prontu&aacute;rio e um prontu&aacute;rio 
+             s&oacute; pode pertencer a um paciente.</p>&nbsp;
+          
+          <ul class="cl_topicos_txt">
+          	
+          		<li>Um-para-muitos (1 : N): uma entidade em A (nesse caso, venda) est&aacute; 
+                    associada a qualquer n&uacute;mero de entidades em B (cliente), enquanto uma 
+                    entidade em B est&aacute; associada no m&aacute;ximo a uma entidade em A. Exemplo:</li>&nbsp;
+            	
+          </ul>
+
+ 
+			<div class="cl_conteudo_img">
+          	
+            	<img src="imagens/1praN.jpg" alt="Exemplo 3"/> &nbsp;
+          
+    	  	</div>	
+            
+      <p>Nesse exemplo, um cliente pode participar de v&aacute;rias vendas, e uma venda s&oacute; 
+               pode ser realizada para um cliente.</p>&nbsp;
+			
+            <ul class="cl_topicos_txt">
+          	
+       		  <li> Muitos-para-um (N : 1): uma entidade em A (nesse caso, venda) est&aacute; 
+                     associada no m&aacute;ximo uma entidade em B (cliente), enquanto uma entidade 
+                     em B est&aacute; associada a qualquer n&uacute;mero de entidades em B. Exemplo:</li>&nbsp;
+            	
+          	</ul>
+
+ 
+			<div class="cl_conteudo_img">
+          	
+            	<img src="imagens/Npra1.jpg" alt="Exemplo 4"/> &nbsp;
+          
+    	  	</div>	
+ 
+	  <p>Nesse exemplo, uma venda s&oacute; pode ser realizada para um &uacute;nico cliente, 
+               mas um cliente pode participar de v&aacute;rias vendas.</p>&nbsp;
+
+ 			<ul class="cl_topicos_txt">
+          	
+       		  <li>Muitos-para-muitos: Uma entidade em A est&aacute; associada a qualquer 
+                    n&uacute;mero de entidades em B, e uma entidade em B est&aacute; associada a qualquer 
+                    n&uacute;mero de entidades em A.</li>&nbsp;
+            	
+          	</ul>
+
+ 
+			<div class="cl_conteudo_img">
+          	
+            	<img src="imagens/NpraN.jpg" alt="Exemplo 5"/> &nbsp;
+          
+    	  	</div>	
+
+ 			<p class="cl_conteudo_subtit">Grau do Relacionamento</p>&nbsp;
+            
+            <p>Indica o n&uacute;mero de entidade que se relacionam.</p>&nbsp;
+            
+            <p class="cl_conteudo_subtit2"><u>Relacionamento Bin&aacute;rio </u></p>&nbsp;
+            
+			<p>Quando existe o relacionamento entre apenas duas entidades. Exemplo:</p>&nbsp;
+            
+            <div class="cl_conteudo_img">
+          	
+            	<img src="imagens/image022.jpg" alt="Exemplo 6"/> &nbsp;
+          
+    	  	</div>	
+			
+      <p class="cl_conteudo_subtit2"><u>Relacionamento Tern&aacute;rio</u></p>&nbsp;
+    		
+			<p>Quando existe o relacionamento entre tr&ecirc;s ou mais entidades. Exemplo:</p>&nbsp;
+            
+            <div class="cl_conteudo_img">
+          	
+            	<img src="imagens/relacionamentoTernario.jpg" alt="Exemplo 7"/> &nbsp;
+          
+    	  	</div>
+            
+      <p class="cl_conteudo_subtit">Agrega&ccedil;&atilde;o</p>&nbsp;
+            
+            <p>Uma limita&ccedil;&atilde;o do modelo E-R &eacute; que n&atilde;o &eacute; poss&iacute;vel expressar relacionamentos 
+               entre relacionamentos. Agrega&ccedil;&atilde;o &eacute; uma abstra&ccedil;&atilde;o atrav&eacute;s da qual relacionamentos
+               s&atilde;o tratados como entidades de n&iacute;vel superior. Observe o exemplo a seguir:</p>&nbsp;
+            
+            <div class="cl_conteudo_img">
+          	
+            	<img src="imagens/image009.jpg" alt="Exemplo 8"/> &nbsp;
+          
+    	  	</div>
+            
+      <p>Agora o mesmo exemplo usando agrega&ccedil;&atilde;o:</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+            	<img src="imagens/image011.jpg" alt="Exemplo 9"/> &nbsp;
+          
+    	  	</div>
+            
+      <p class="cl_conteudo_subtit">Generaliza&ccedil;&atilde;o e Especializa&ccedil;&atilde;o</p>&nbsp;
+			
+            <p>Existem casos em que um conjunto-entidade pode ser dividido em categorias, 
+               cada qual com atributos espec&iacute;ficos. Observe a figura abaixo:</p>&nbsp;
+            
+            <div class="cl_conteudo_img">
+          	
+            	<img src="imagens/image013.jpg" alt="Exemplo 10"/> &nbsp;
+          
+    	  	</div>
+            
+      <p class="cl_conteudo_subtit">Diagrama Entidade-Relacionamento (DE-R)</p>&nbsp;
+			
+            <p>A estrutura l&oacute;gica geral de um banco de dados pode ser expressa graficamente
+               por um Diagrama Entidade-Relacionamento. Exemplo:</p>
+               
+            
+            <div class="cl_conteudo_img">
+          	
+            	<img src="imagens/image015.png" alt="Exemplo 11"/> &nbsp;
+          
+    	  	</div>
+
+			
+            <ul class="cl_topicos_txt">
+          	
+       		  <li> A presen&ccedil;a de um <u>substantivo</u> usualmente indica uma <u>entidade;</u></li>&nbsp;
+                <li> A presen&ccedil;a de um <u>verbo</u> &eacute; uma forte indica&ccedil;&atilde;o de um <u>relacionamento</u>;</li>&nbsp;
+                <li> Um <u>adjetivo</u>, que &eacute; uma qualidade, &eacute; uma forte indica&ccedil;&atilde;o de um <u>atributo;</u></li>&nbsp;
+                <li> Um <u>adv&eacute;rbio</u> temporal, qualificando o verbo, &eacute; uma indica&ccedil;&atilde;o de um 
+                     <u>atributo</u> do <u>Relacionamento</u>.</li>&nbsp;
+            	
+          	</ul>&nbsp;&nbsp;&nbsp;
+          
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->            
+</body>
+</html>

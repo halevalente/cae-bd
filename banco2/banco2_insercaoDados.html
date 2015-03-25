@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados II</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet"/>
+  <link type="text/css" href="../css/classes.css" rel="stylesheet"/>
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados II</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="banco2_sgbd.html">SGBD</a></li>
+               <li><a href="banco2_mer.html">Modelo de Entidade Relacionamento–MER</a></li>
+			   <li><a href="banco2_modeloRelacional.html">Modelo Relacional–MR</a></li>
+               <li><a href="banco2_selecaoDados.html">Sele&ccedil;&atilde;o de dados</a></li>
+               <li><a href="banco2_alteracaoDados.html">Altera&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="#" class="current">Inser&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_exclusaoDados.html">Exclus&atilde;o de dados</a></li>
+               <li><a href="banco2_instrucoesDdl.html">Instru&ccedil;&otilde;es DDL</a></li>
+
+               <li><a href="banco2_subQuery.html">SubQuerys</a></li>
+               <li><a href="banco2_indice.html">&Iacute;ndice</a></li>
+               <li><a href="banco2_trigger.html">Triggers</a></li>
+               <li><a href="banco2_storedProcedure.html">Stored Procedure</a></li>
+               <li><a href="banco2_recursosAdministracaoBd.html">Recursos de Administra&ccedil;&atilde;o BD</a></li>
+			   <li><a href="exercicios/exer_insercaoDados.html">Exerc&iacute;cios de Inser&ccedil;&atilde;o de dados</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+      
+          <p  class="cl_conteudo_tit">Inser&ccedil;&atilde;o de Dados</p>
+          &nbsp;
+            
+            
+            <p>A s&iacute;ntese b&aacute;sica do comando INSERT &eacute; a seguinte:</p>&nbsp;
+            <pre class="conteudo_codigo">INSERT INTO &lt;nome_tabela&gt; &lt;[(nome_coluna,...)]&gt; VALUES &lt;valores&gt;</pre>&nbsp;
+            
+            <p>C&oacute;digo utilizado para explica&ccedil;&atilde;o do conte&uacute;do:</p>&nbsp;
+            
+            <pre class="conteudo_codigo">create database locadora;
+use locadora;
+CREATE TABLE `filmes` (
+  `id` int(10) unsigned NOT NULL,
+  `titulo` varchar(80) NOT NULL,
+  `ano` int(4) unsigned NOT NULL,
+  `diretor` varchar(80) NOT NULL,
+   PRIMARY KEY  (`id`)
+)AUTO_INCREMENT=4;
+
+INSERT INTO `filmes` VALUES (1, 'King Kong', 2006, 'Peter Jackson');
+INSERT INTO `filmes` VALUES (2, 'Guerra dos Mundos', 2005, 'Steven Spielberg');
+INSERT INTO `filmes` VALUES (3, 'Harry Potter', 2006, 'Mike Newell');</pre>&nbsp;
+
+<p>Vamos inserir os dados de um filme em nossa tabela.</p> &nbsp;
+
+      <pre class="conteudo_codigo">insert into filmes (id,titulo,ano,diretor) values (0,'King Kong',2006,'Peter');</pre>&nbsp;
+
+		<div class="cl_conteudo_img">
+            	<img src="imagens/insertDemonstracao.png" alt="Insert Demonstra&ccedil;&atilde;o" style="border-color:#00F" border="2"/>        
+   	  </div>
+      &nbsp;
+      
+      
+      <p>Quando &eacute; criado a tabela filmes &eacute; definido a coluna id como tendo a caracteristica de ser auto_increment, ou seja, seu valor &eacute; incrementado automaticamente, n&atilde;o &eacute; necess&aacute;rio preocupar com o valor inserido por &uacute;ltimo para decidir qual o valor a ser inserido agora. Com esta caracter&iacute;stica pode-se criar sequ&ecirc;ncias de valores como 1,2,3,4,5,6... Para aproveitar esta facilidade n&atilde;o pode atribuir um valor v&aacute;lido a coluna id, deve inserir 0 ou NULL para que o banco de dados saiba que o deseja que ele calcule sozinho o pr&oacute;ximo valor v&aacute;lido.</p>
+      
+      <p>Interessante ressaltar que valores do tipo texto (string) s&atilde;o colocados entre aspas (simples ou dupla). Poderia, tamb&eacute;m, inserir dados omitindo os nomes das colunas e colocando apenas os valores no comando, desde que os valores estejam na mesma sequ&ecirc;ncia das colunas na tabela.</p>&nbsp;
+      
+      <pre class="conteudo_codigo">insert into filmes values (null,'Guerra',2005,'Steven');</pre>&nbsp;
+      
+      <div class="cl_conteudo_img">
+            	<img src="imagens/insertDemonstracao2.png" alt="Insert Demonstra&ccedil;&atilde;o" style="border-color:#00F" border="2"/>        
+   	  </div>&nbsp;
+      
+      <p>Note que desta vez n&atilde;o foi colocado os nomes das colunas antes da instru&ccedil;&atilde;o VALUES. Outra mudan&ccedil;a que foi feita foi atribuir o valor null a coluna id. Observe como est&aacute; a tabela no momento com o aux&iacute;lio do comando SELECT.</p>&nbsp;
+      
+      <pre class="conteudo_codigo">select * from filmes;</pre>&nbsp;
+      
+      <div class="cl_conteudo_img">
+            	<img src="imagens/SelectDepoisDoInsert.png" alt="Tabela Demonstra&ccedil;&atilde;o" style="border-color:#00F" border="2"/>        
+   	  </div>&nbsp;
+      
+      <p>Observe que a coluna id cont&eacute;m uma sequ&ecirc;ncia de valores, sequ&ecirc;ncia esta gerada autom&aacute;ticamente pelo banco de dados.</p>
+      &nbsp;&nbsp;&nbsp;
+               
+             
+
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+
+</body>
+</html>

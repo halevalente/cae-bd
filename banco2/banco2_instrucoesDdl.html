@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados II</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet"/>
+  <link type="text/css" href="../css/classes.css" rel="stylesheet"/>
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados II</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="banco2_sgbd.html">SGBD</a></li>
+               <li><a href="banco2_mer.html">Modelo de Entidade Relacionamento–MER</a></li>
+			   <li><a href="banco2_modeloRelacional.html">Modelo Relacional–MR</a></li>
+               <li><a href="banco2_alteracaoDados.html">Sele&ccedil;&atilde;o de dados</a></li>
+               <li><a href="banco2_alteracaoDados.html">Altera&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_insercaoDados.html">Inser&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_exclusaoDados.html">Exclus&atilde;o de dados</a></li>
+               <li><a href="#" class="current">Instru&ccedil;&otilde;es DDL</a></li>
+               <li><a href="banco2_subQuery.html">SubQuerys</a></li>
+               <li><a href="banco2_indice.html">&Iacute;ndice</a></li>
+               <li><a href="banco2_trigger.html">Triggers</a></li>
+               <li><a href="banco2_storedProcedure.html">Stored Procedure</a></li>
+               <li><a href="banco2_recursosAdministracaoBd.html">Recursos de Administra&ccedil;&atilde;o BD</a></li>
+			   <li><a href="exercicios/exer_instrucoesDdl.html">Exerc&iacute;cios de Instru&ccedil;oes DDL</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+          
+      <p class="cl_conteudo_tit">Instru&ccedil;&otilde;es DDL</p>
+          &nbsp;
+          
+          <p>Descri&ccedil;&atilde;o de dados de linguagem (DDL) &eacute; uma sintaxe semelhante a uma linguagem de programa&ccedil;&atilde;o de computador para a defini&ccedil;&atilde;o de estruturas de dados, especialmente esquemas de banco de dados.</p>
+          <p>Nos modelos de bases de dados relacionais, a tabela &eacute; um conjunto de dados dispostos em n&uacute;mero finito de colunas e n&uacute;mero ilimitado de linhas (ou tuplas).</p>
+          <p>As colunas s&atilde;o tipicamente consideradas os campos da tabela, e caracterizam os tipos de dados que dever&atilde;o constar na tabela (num&eacute;ricos, alfa-num&eacute;ricos, datas, coordenadas, etc). O n&uacute;mero de linhas pode ser interpretado como o n&uacute;mero de combina&ccedil;&otilde;es de valores dos campos da tabela, e pode conter linhas id&ecirc;nticas, dependendo do objectivo. A forma de referenciar inequivocamente uma &uacute;nica linha &eacute; atrav&eacute;s da utiliza&ccedil;&atilde;o de uma chave prim&aacute;ria.</p>&nbsp;
+          
+          <div class="cl_conteudo_img">
+            <img src="imagens/tabelaFigurativa.png" alt="Tabela Figurativa" style="border-color:#0000FF" border="2"/>
+          </div> &nbsp;
+          
+          <p>O n&uacute;mero de tuplas de uma tabela &eacute; virtualmente ilimitado, o que torna as pesquisas por valor potencialmente muito lentas. Para permitir agilizar estas consultas, podem ser associados &iacute;ndices &agrave; tabela, que s&atilde;o estruturas de dados independentes da forma e ordem como est&atilde;o armazenados os dados, embora tenham rela&ccedil;&atilde;o direta com os mesmos. Como consequ&ecirc;ncia, a cada altera&ccedil;&atilde;o de dados, ir&aacute; corresponder uma (ou mais) altera&ccedil;&otilde;es em cada um dos &iacute;ndices, aumentando o esfor&ccedil;o necess&aacute;rio ao sistema gestor de base de dados (SGBD) para gerir essa altera&ccedil;&atilde;o, motivo pelo qual os &iacute;ndices n&atilde;o existam naturalmente para cada coluna.</p>&nbsp;
+
+      <p>A s&iacute;ntese de cria&ccedil;&atilde;o de tabelas do MySQL &eacute; a seguinte:</p>&nbsp;
+
+<pre class="conteudo_codigo">CREATE TABLE &lt;nome_tabela&gt;;</pre>&nbsp;
+
+<p>Para criar uma tabela basta executar a seguinte parte da s&iacute;ntese: CREATE TABLE nome_tabela. Mas &eacute; mais comum criar a tabela j&aacute; acompanhada de seus campos (fields). Veja o  exemplo na tabela filmes com os seguintes campos:</p>&nbsp;
+
+ <ul>
+   <li>id - campo de identifica&ccedil;&atilde;o;</li>
+   <li>titulo - titulo do filme;</li>
+   <li>ano - Ano de produ&ccedil;&atilde;o;</li>
+   <li>diretor - diretor do filmes;</li>&nbsp;
+ </ul>  
+
+<p>Para isto deve executar o seguinte comando:</p>&nbsp;
+
+<pre class="conteudo_codigo">create table filmes(
+id int(10) unsigned not null auto_increment,
+titulo varchar(80) not null,
+ano int(4) unsigned not null, 
+diretor varchar(80) not null, 
+primary key (id));</pre>&nbsp;
+
+<div class="cl_conteudo_img">
+            	<img src="imagens/createTable.png" alt="Criando tabela" border="2" style="border-color:#0000FF"/>        
+        	</div>&nbsp;
+            
+            <p>No campo id por exemplo o tipo &eacute; int(10) com o modificador unsigned, ele n&atilde;o aceita valores nulos (not null) e &eacute; auto_increment, ou seja, seu valor &eacute; definido automaticamente, aumentando de 1 (um) em 1 (um) toda vez que um novo registro &eacute; adicionado. Para fazer uso desta funcionalidade &eacute; necess&aacute;rio adicionar o valor 0 ou null neste campo.
+No campo titulo o tipo varchar(80) o que significa que este campo aceita caracteres alfanum&eacute;ricos num m&aacute;ximo determinado por 80. O campo tamb&eacute;m n&atilde;o pode ser nulo.</p>&nbsp;
+          
+          
+      <p>A instru&ccedil;&atilde;o ALTER TABLE &eacute; usado para adicionar, excluir ou modificar as colunas de uma tabela existente. Para adicionar uma coluna em uma tabela, use a seguinte sintaxe:</p>&nbsp;
+          
+          <pre class="conteudo_codigo">ALTER TABLE &lt;table_name&gt;
+ADD &lt;column_name&gt; datatype;</pre>
+          &nbsp;
+          
+       <p>Para excluir uma coluna de uma tabela, use a seguinte sintaxe (note que alguns sistemas de banco de dados n&atilde;o permitem excluir uma coluna):</p>&nbsp;
+       
+       <pre class="conteudo_codigo">ALTER TABLE &lt;table_name&gt;
+DROP COLUMN &lt;column_name&gt;;</pre>
+       &nbsp;
+       
+       <p>Olhe o exemplo:</p>&nbsp;
+       
+       <div class="cl_conteudo_img">
+            	<img src="imagens/tabelaExemplo.png" alt="Tabela exemplo" border="2" style="border-color:#0000FF"/>        
+       </div>&nbsp;
+       
+       <p>Agora, ao adicionar uma coluna chamada "DataNiver" no &quot;Pessoas&quot; da tabela. A seguinte instru&ccedil;&atilde;o SQL deve ser usada:</p>&nbsp;
+       
+       <pre class="conteudo_codigo">ALTER TABLE Pessoas
+ADD DataNiver date;</pre>
+       &nbsp;
+
+<p>Observe que a nova coluna, &quot;DataNiver&quot;, &eacute; do tipo data e vai realizar uma data. O tipo de dados especifica que tipo de dados da coluna pode conter. Para uma refer&ecirc;ncia completa de todos os tipos de dados dispon&iacute;veis em MS Access, MySQL e SQL Server. A table &quot;pessoas&quot; agora fica assim:</p>&nbsp;
+
+<div class="cl_conteudo_img">
+            	<img src="imagens/tabelaExemploModificada.png" alt="Tabela exemplo" border="2" style="border-color:#0000FF"/>        
+       </div>&nbsp;
+       
+       <p>Em seguida, tentando excluir a coluna denominada &quot;DataNiver&quot; no &quot;Pessoas&quot; da tabela. A seguinte instru&ccedil;&atilde;o SQL deve ser usada:</p>&nbsp;
+       
+       <pre class="conteudo_codigo">ALTER TABLE Pessoas
+DROP COLUMN DataNiver;</pre>&nbsp;
+
+<p>A tabela &quot;pessoas&quot; agora fica assim:</p>&nbsp;
+
+<div class="cl_conteudo_img">
+            	<img src="imagens/tabelaExemplo.png" alt="Tabela exemplo" border="2" style="border-color:#0000FF"/>        
+       </div>&nbsp;
+
+
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+
+</body>
+</html>

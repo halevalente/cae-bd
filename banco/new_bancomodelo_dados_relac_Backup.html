@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados I</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet">
+  <link type="text/css" href="../css/classes.css" rel="stylesheet">
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados I</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="new_bancointroducao.html">Introdu&ccedil;&atilde;o</a></li>
+               <li><a href="new_bancosgbd.html"> SGBD </a></li>
+			   <li><a href="new_bancomodelagem.html">Modelagem de Dados</a></li>
+               <li><a href="new_bancomodelo_mer.html">Mod. Entid. Relacionamento</a></li>
+               <li><a href="new_bancomodelo_dados_relac.html" class="current">Mod. de Dados Relacional</a></li>
+			   <li><a href="new_bancodependenciafuncional.html">Dependência Funcional</a></li>
+			   <li><a href="new_banconormalizacao.html">Normalização</a></li>
+               <li><a href="new_bancoalgebrarelacional.html">Álgebra Relacional</a></li>
+			   <li><a href="exercicios/exer1_MDR_BD1.htm" target="_blank">Exercícios de Mod. de Dad. Relac.</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+      
+          	<p span class="cl_conteudo_tit">Modelo de Dados Relacional</span></p>&nbsp;
+          
+          	<p>O modelo de dados relacional utiliza tabelas para representar suas relações. 
+               Cada linha da tabela é chamada de registro e cada coluna chama-se campo. O 
+               domínio representa o conjunto de valores do banco de dados.</p>&nbsp;
+          
+          	<p>Ele representa uma tentativa de descrever um banco de dados através de 
+               conceitos matemáticos simples e bem conhecidos (álgebra relacional).</p>&nbsp;
+          
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/image007.png" /> &nbsp;
+          
+          	</div>
+            
+            <p> Acima há a representação de uma relação, também chamada de tabela. Uma 
+                tabela é um conjunto não ordenado de linhas (tuplas). Cada campo de uma 
+                linha é chamado de valor de atributo. Cada coluna de uma tabela é um atributo.  
+                A cardinalidade da relação é a quantidade de tuplas, no exemplo a cardinalidade 
+                é 4. O grau da relação é a quantidade de colunas, no exemplo o grau é 3.</p>&nbsp;
+            
+            <p>Uma tabela possui linhas, as quais, ao serem recuperadas pelo SGBD, não 
+               são ordenadas, portanto, não é possível referenciar linhas pelas suas 
+               posições (uso de ponteiros). Para que ocorra uma ordenação faz-se necessária 
+               uma instrução de consulta.</p>&nbsp;
+               
+            <p>Os campos de uma tabela devem ser atômicos (únicos) e monovalorados (possuir 
+               apenas um valor).</p>&nbsp;
+            
+            <p>Cada tabela deve ter um único nome, para que esta possa ser referenciada.
+               Cada coluna (atributo) tem um nome que representa um aspecto do objeto 
+               representado. Cada relação (tabela) contém zero ou mais tuplas (linhas).</p>&nbsp;
+            
+            <p class="cl_conteudo_subtit">Restrições de integridade</p>&nbsp;
+              
+            <p>Para um dado ser íntegro, ele precisa ser consistente, ou seja, ele não entra
+               em conflito com outros dados.</p>&nbsp;
+            
+            <p class="cl_conteudo_subtit2">As restrições de integridade se dividem em:</p>&nbsp;
+            
+			<ul class="cl_topicos_txt">
+            	
+                <li>Integridade de domínio: os valores dos dados são anteriormente 
+                    definidos, atômicos e obrigatórios. Exemplo: sexo é definido como 'M' 
+                    ou 'F', logo os valores aceitos são somente esses;</li>&nbsp;
+                <li>Integridade de vazio: nenhuma chave primária pode ser nula;</li>&nbsp;
+                <li>Integridade de entidade: o nome de uma entidade tem que ser único no 
+                    banco de dados;</li>&nbsp;
+                <li>Integridade referencial: a chave estrangeira deve referenciar uma 
+                    chave primária;</li>&nbsp;
+                <li>Restrições semânticas: colocar na programação somente os termos 
+                	aceitos pela linguagem.</li>&nbsp;
+            
+            </ul>
+ 			
+ 
+			<p class="cl_conteudo_subtit2">Em um banco de dados relacional:</p>&nbsp;
+			
+            
+			<ul class="cl_topicos_txt">
+            	
+                <li>Cada tabela é listada pelo seu nome;</li>&nbsp;
+                <li>Após o nome da tabela são listados os nomes das colunas, separadas por
+                    vírgula e entre parênteses;</li>&nbsp;
+                <li>Os atributos que representam chave primária são sublinhados;</li>&nbsp;
+                <li> Após a definição da tabela, são listadas as definições de chave 
+                     estrangeira. No caso de haver mais de uma, elas serão separadas por 
+                     vírgula.</li>&nbsp;
+                
+            </ul>
+ 
+			<p>Exemplos:</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/exemplo1.JPG" /> &nbsp;
+          
+          	</div>
+            
+            <p></p>&nbsp;
+            <p></p>&nbsp;          
+            
+            <div class="cl_conteudo_img">
+          	
+          		<img src="imagens/exemplo2.JPG" /> &nbsp;
+          
+          	</div>
+            
+            <p></p>&nbsp;
+           
+			<p span class="cl_conteudo_tit"><u>Atividade de Fixa&ccedil;&atilde;o</u></span></p>&nbsp;
+			
+			<p>No intuito de fixar a aprendizagem iniciada por meio deste módulo e verificar como 
+			   esta sua compreensão sobre os mesmos são sugeridos alguns exercícios de fixação para 
+			   serem resolvidos. Clique no link den exercício ao lado, pois será por meio dela iniciada
+			   a lista de exercício sobre os conteúdos estudados até este momento. Boa revisão sobre os 
+			   mesmos!!  </p>&nbsp;
+          
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+</body>
+</html>

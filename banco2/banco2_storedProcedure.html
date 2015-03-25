@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados II</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet"/>
+  <link type="text/css" href="../css/classes.css" rel="stylesheet"/>
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados II</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" target="_blank" ><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="banco2_sgbd.html">SGBD</a></li>
+               <li><a href="banco2_mer.html">Modelo de Entidade Relacionamento–MER</a></li>
+			   <li><a href="banco2_modeloRelacional.html">Modelo Relacional–MR</a></li>
+               <li><a href="banco2_selecaoDados.html">Sele&ccedil;&atilde;o de dados</a></li>
+               <li><a href="banco2_alteracaoDados.html">Altera&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_insercaoDados.html">Inser&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_exclusaoDados.html">Exclus&atilde;o de dados</a></li>
+               <li><a href="banco2_instrucoesDdl.html">Instru&ccedil;&otilde;es DDL</a></li>
+               <li><a href="banco2_subQuery.html">SubQuerys</a></li>
+               <li><a href="banco2_indice.html">&Iacute;ndice</a></li>
+               <li><a href="banco2_trigger.html">Triggers</a></li>
+               <li><a href="#" class="current">Stored Procedure</a></li>
+               <li><a href="banco2_recursosAdministracaoBd.html">Recursos de Administra&ccedil;&atilde;o BD</a></li>
+			   <li><a href="exercicios/exer_storedProcedure.html">Exerc&iacute;cios de Stored Procedure</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+      
+          <p class="cl_conteudo_tit">Stored Procedure</p>
+          &nbsp;
+            
+            <p>Stored Procedure &eacute; um conjunto de comandos, ao qual &eacute; atribu&iacute;do um nome. Este conjunto fica armazenado no Banco de Dados e pode ser chamado a qualquer momento tanto pelo SGBD (sistema Gerenciador de Banco de Dados) quanto por um sistema que faz interface com o mesmo.</p>&nbsp;
+
+     <div class="cl_conteudo_img">
+         <img src="imagens/ilustrastivaStoredProcedure.png" alt="Stored Procedure" />
+         </div>&nbsp;
+            
+      <p>A utiliza&ccedil;&atilde;o de Stored Procedures &eacute; uma t&eacute;cnica eficiente de executarmos opera&ccedil;&otilde;es reetitivas. Ao inv&eacute;s de digitar os comandos cada vez que determinada opera&ccedil;&atilde;o necessite ser executada, criamos um Stored Procedure e o chamamos. Em um Stored Procedure tamb&eacute;m podemos ter estruturas de controle e decis&atilde;o, t&iacute;picas das linguagens de programa&ccedil;&atilde;o. Em termos de desenvolvimento de aplica&ccedil;&otilde;es, tamb&eacute;m temos vantagnes com a utiliza&ccedil;&atilde;o de Stored Procedures.</p>&nbsp;
+
+<pre class="conteudo_codigo">CREATE PROCEDURE TESTE
+AS 
+ BEGIN
+   SELECT
+     ‘O FAMOSO HELLO WORLD!’
+ END</pre>&nbsp;
+            
+           <p>Perceba que os comandos de in&iacute;cio e t&eacute;rmino de bloco, <b>BEGIN</b>
+e <b>END</b> respectivamente, s&atilde;o obrigat&oacute;rios no in&iacute;cio e fim do comando.</p>
+         <p>Bom, pode receber parâmetros , e utilizar eles em instru&ccedil;&otilde;es SQL que ser&atilde;o executadas dentro da Stored Procedure:</p>&nbsp;
+         
+<pre class="conteudo_codigo">CREATE PROCEDURE TESTE @PAR1 INT
+AS
+BEGIN
+  UPDATE TABELA1 
+     SET CAMPO1 = ‘NOVO_VALOR’ 
+        WHERE CAMPO2 = @PAR1
+END</pre>
+&nbsp;
+
+   <p>Perceba que no exemplo acima , n&atilde;o &eacute; utilizado par&ecirc;nteses , pois Stored Procedures &eacute; um pouco diferente de fun&ccedil;&otilde;es. Como uma Stored Procedure fica armazenada no banco de dados , ela ja &eacute; pre-compilada e o SQL Server a executa mais rapidamente.</p>
+   
+   <p>Outra vantagem das Stored Procedures &eacute; que um programa chamador, seja ele uma p&aacute;gina ASP ou um programa em VB, Delphi, Java, etc, s&oacute; precisa chamar o nome da Stored Procedure, que pode conter diversos comandos Transact-SQL embutidos dentro dela, evitanto assim um tr&aacute;fego de rede maior, resultando em resposta
+mais r&aacute;pida.</p>
+    <p>Uma Stored Procedure pode ainda retornar valores para a aplica&ccedil;&atilde;o.
+Aqui temos um detalhe: o SQL Server permite o retorno de dados em forma de uma tabela ap&oacute;s a execu&ccedil;&atilde;o ou um valor de retorno normal. Exemplo:</p>&nbsp;
+
+
+<pre class="conteudo_codigo">CREATE PROCEDURE TESTE @PAR1 INT
+AS
+BEGIN
+  SELECT @PAR1*@PAR1 AS QUADRADO
+END</pre>&nbsp;
+
+  <p>No exemplo acima a aplica&ccedil;&atilde;o chamadora (cliente) pode capturar o retorno da Stored Procedure atrav&eacute;s do campo chamado QUADRADO, que cont&eacute;m somente um valor de retorno: o parâmetro elevado ao quadrado.</p>&nbsp;
+  
+  <p>O uso de Stored Procedure &eacute; encorajado, mais deve-se utilizar este recurso com cuidado pois se utilizado em excesso o SQL Server pode ser sobrecarregado, mas ao mesmo tempo podemos obter um ganho de performance consider&aacute;vel, dependendo do caso.</p>&nbsp;&nbsp;&nbsp;
+ 
+
+
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+</body>
+</html>

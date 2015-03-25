@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados II</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet"/>
+  <link type="text/css" href="../css/classes.css" rel="stylesheet"/>
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados II</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="banco2_sgbd.html">SGBD</a></li>
+               <li><a href="banco2_mer.html">Modelo de Entidade Relacionamento–MER</a></li>
+			   <li><a href="banco2_modeloRelacional.html">Modelo Relacional–MR</a></li>
+               <li><a href="banco2_selecaoDados.html">Sele&ccedil;&atilde;o de dados</a></li>
+               <li><a href="#" class="current">Altera&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_insercaoDados.html">Inser&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_exclusaoDados.html">Exclus&atilde;o de dados</a></li>
+               <li><a href="banco2_instrucoesDdl.html">Instru&ccedil;&otilde;es DDL</a></li>
+
+               <li><a href="banco2_subQuery.html">SubQuerys</a></li>
+               <li><a href="banco2_indice.html">&Iacute;ndice</a></li>
+               <li><a href="banco2_trigger.html">Triggers</a></li>
+               <li><a href="banco2_storedProcedure.html">Stored Procedure</a></li>
+               <li><a href="banco2_recursosAdministracaoBd.html">Recursos de Administra&ccedil;&atilde;o BD</a></li>
+			   <li><a href="exercicios/exer_alteracaoDados.html">Exerc&iacute;cios de Altera&ccedil;&atilde;o de dados</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+      
+          <p  class="cl_conteudo_tit">Altera&ccedil;&atilde;o de Dados</p>
+          &nbsp;
+ 
+      <p>O comando SQL que nos permite atualizar dados no MySQL &eacute; o comando UPDATE. A sintaxe b&aacute;sica do comando UPDATE &eacute; a seguinte:</p>&nbsp;
+            
+            <pre class="conteudo_codigo">UPDATE nome_tabela SET nome_coluna1=expr1, nome_coluna2=expr2 WHERE defini&ccedil;&atilde;o_where</pre>
+            &nbsp;
+
+<p>UPDATE &eacute; aplicado a uma tabela e a cl&aacute;usula SET atribui a um campo o valor de uma express&atilde;o que pode ou n&atilde;o conter o valor de um campo da pr&oacute;pria tabela. A cl&aacute;usula WHERE restringe as atualiza&ccedil;&otilde;es apenas aos registro que satisfa&ccedil;&atilde;o suas condi&ccedil;&otilde;es.</p>
+
+<p>A partir da MySQL Vers&atilde;o 4.0.4, voc&ecirc; tamb&eacute;m pode realizar opera&ccedil;&otilde;es UPDATE que cobrem m&uacute;ltiplas tabelas.</p>&nbsp;
+<p>C&oacute;digo utilizado para explica&ccedil;&atilde;o do conte&uacute;do:</p> 
+&nbsp;  
+            
+            <pre class="conteudo_codigo">create database locadora;
+use locadora;
+CREATE TABLE `filmes` (
+  `id` int(10) unsigned NOT NULL,
+  `titulo` varchar(80) NOT NULL,
+  `ano` int(4) unsigned NOT NULL,
+  `diretor` varchar(80) NOT NULL,
+   PRIMARY KEY  (`id`)
+)AUTO_INCREMENT=4;
+
+INSERT INTO `filmes` VALUES (1, 'King Kong', 2006, 'Peter Jackson');
+INSERT INTO `filmes` VALUES (2, 'Guerra dos Mundos', 2005, 'Steven Spielberg');
+INSERT INTO `filmes` VALUES (3, 'Harry Potter', 2006, 'Mike Newell');</pre>
+            &nbsp;
+
+<p>Vamos para um exemplo pr&aacute;tico. Primeiro visualizaremos que dados temos em nossa tabela filmes :</p>&nbsp;
+&nbsp;
+
+         <pre class="conteudo_codigo">select * from filmes;</pre>&nbsp;
+         
+             <div class="cl_conteudo_img">
+           	   <img src="imagens/mostrandoSelect.png" alt="Select da tabela" style="border-color:#0000FF" border="2"/>
+   	  </div>&nbsp;
+          
+          <p>Vamos supor que desej&aacute;ssemos mudar todos os filmes para o ano de '2006', o comando UPDATE seria o seguinte:</p>&nbsp;
+          
+          <pre class="conteudo_codigo">UPDATE filmes SET ano=2006;</pre>&nbsp;
+          
+          <div class="cl_conteudo_img">
+           	   <img src="imagens/utilizandoUpdate.png" alt="Update da tabela" style="border-color:#0000FF" border="2"/>
+   	  </div>&nbsp;
+      
+      <p>O resultado do comando UPDATE notifica que tr&ecirc;s linhas combinaram com o comando (uma vez que temos tr&ecirc;s registros na tabela e n&atilde;o utilizamos a cl&aacute;usula WHERE), e destas tr&ecirc;s, uma foi alterada (atualizada). Vamos ver como ficaram os registros:</p>&nbsp;
+      
+      <pre class="conteudo_codigo">select * from filmes;</pre>
+      &nbsp;
+      
+      <div class="cl_conteudo_img">
+           	   <img src="imagens/selectAtualizadoUpdate.png" alt="Select da tabela Atualizada" style="border-color:#0000FF" border="2"/>
+   	  </div>&nbsp;
+      
+      <p>Perceba que todos os filmes agora tem o valor '2006' no campo 'ano'. Os filmes que j&aacute; tinham o valor '2006' para 'ano' foram ignorados pelo comando UPDATE. Neste primeiro exemplo n&atilde;o utilizamos a cl&aacute;usula WHERE, e o comando UPDATE tentou mudar todo e qualquer registro para o ano de '2006', &eacute; claro que isto n&atilde;o &eacute; um comportamento ideal para a maioria de nossa necessidades. Vamos realizar uma atualiza&ccedil;&atilde;o de um s&oacute; registro desta vez. Para isto vamos restringir o comando UPDADE com a cl&aacute;usula WHERE.</p>&nbsp;
+
+        <pre class="conteudo_codigo">UPDATE filmes SET ano=ano-1 WHERE id=2;</pre>
+        &nbsp;
+
+        <div class="cl_conteudo_img">
+           	   <img src="imagens/updateComWhere.png" alt="Update da tabela com Where" style="border-color:#0000FF" border="2"/>
+   	  </div>&nbsp;
+      
+      <p>Neste exemplo a instru&ccedil;&atilde;o 'WHERE id=2' restringe a atualiza&ccedil;&atilde;o apenas ao registro que possuir a chave prim&aacute;ria 'id' com o valor '2', no caso o filme 'Guerra dos Mundos'. Outro ponto importante neste exemplo &eacute; que utilizamos o pr&oacute;prio valor do campo 'ano' para atualiz&aacute;-lo. 'SET ano=ano-1' atualiza o valor de 'ano' para '2005', uma vez que 'ano' tinha o valor de '2006' (2006 - 1 = 2005). A tabela filmes ficou com os seguintes dados:</p>&nbsp;
+
+<pre class="conteudo_codigo">select * from filmes;</pre>&nbsp;
+
+<div class="cl_conteudo_img">
+   	    <img src="imagens/mostrandoSelect.png" alt="Select da tabela" style="border-color:#0000FF" border="2"/>
+   	  </div>&nbsp;
+      
+      <p>O comando SQL UPDATE utilizado com a cl&aacute;usula WHERE torna-se uma ferramenta poderosa para desenvolvedores manipularem dados no MySQL. O fato de a cl&aacute;usula SET aceitar atribui&ccedil;&atilde;o de valores de express&otilde;es possibilita que trabalhemos com o valores j&aacute; existentes no registro manipulado, o que tamb&eacute;m expande nosso controle sobre os dados.</p>&nbsp;&nbsp;
+
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+
+</body>
+</html>

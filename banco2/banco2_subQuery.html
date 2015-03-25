@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados II</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet"/>
+  <link type="text/css" href="../css/classes.css" rel="stylesheet"/>
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados II</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="banco2_sgbd.html">SGBD</a></li>
+               <li><a href="banco2_mer.html">Modelo de Entidade Relacionamento-MER</a></li>
+			   <li><a href="banco2_modeloRelacional.html">Modelo Relacional-MR</a></li>
+               <li><a href="banco2_alteracaoDados.html">Sele&ccedil;&atilde;o de dados</a></li>
+               <li><a href="banco2_alteracaoDados.html">Altera&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_insercaoDados.html">Inser&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_exclusaoDados.html">Exclus&atilde;o de dados</a></li>
+               <li><a href="banco2_instrucoesDdl.html">Instru&ccedil;&otilde;es DDL</a></li>
+               <li><a href="#" class="current">SubQuerys</a></li>
+               <li><a href="banco2_indice.html">&Iacute;ndice</a></li>
+               <li><a href="banco2_trigger.html">Triggers</a></li>
+               <li><a href="banco2_storedProcedure.html">Stored Procedure</a></li>
+               <li><a href="banco2_recursosAdministracaoBd.html">Recursos de Administra&ccedil;&atilde;o BD</a></li>
+			   <li><a href="exercicios/exer_subQuery.html">Exerc&iacute;cios de SubQuery</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+          
+      <p class="cl_conteudo_tit">SubQuerys</p>&nbsp;&nbsp;
+      
+          <p class="cl_conteudo_subtit">Join</p>&nbsp;
+          
+      <p>Um SQL cl&aacute;usula de jun&ccedil;&atilde;o combina registros de duas ou mais tabelas em um banco de dados. Ele cria um conjunto que pode ser salvo como uma tabela ou usado como ele &eacute;. Uma uni&atilde;o &eacute; um meio para combinar campos de duas tabelas usando valores comuns a cada um. Como um caso especial, uma tabela (tabela base, vis&atilde;o ou tabela unida) pode juntar-se a si mesmo em uma auto-associa&ccedil;&atilde;o. Um programador escreve um predicado de jun&ccedil;&atilde;o para identificar os registros de uni&atilde;o. Se o predicado avaliado for verdadeiro, o registro &eacute; combinado e ent&atilde;o produzido no formato esperado, um conjunto de registo ou uma tabela tempor&aacute;ria</p>&nbsp;
+          
+          <div class="cl_conteudo_img">
+            <img src="imagens/sqlJoin.png" alt="Join" style="border-color:#0000FF" border="2" /><p style="alignment-adjust:central">Figura ilustrativa do comando Join</p>
+          </div>&nbsp;
+          
+
+     <p>Bancos de dados relacionais s&atilde;o frequentemente normalizado para eliminar a duplica&ccedil;&atilde;o de informa&ccedil;&otilde;es quando os objetos podem ter rela&ccedil;&otilde;es um-para-muitos. Por exemplo, um Departamento pode ser associado com muitos empregados diferentes. Jun&ccedil;&atilde;o de duas tabelas efetivamente cria outra tabela que combina informa&ccedil;&otilde;es de ambas as tabelas. Isto &eacute; em alguma despesa em termos do tempo que leva para computar a uni&atilde;o. Embora seja tamb&eacute;m poss&iacute;vel simplesmente manter uma tabela desnormalizada se a velocidade &eacute; importante, a informa&ccedil;&atilde;o pode ter duplicado espa&ccedil;o extra, e adicionar o custo ea complexidade da manuten&ccedil;&atilde;o da integridade dos dados se os dados que est&atilde;o duplicados altera&ccedil;&otilde;es posteriores.
+Todas as explica&ccedil;&otilde;es posteriores sobre tipos de jun&ccedil;&atilde;o neste artigo fazer uso das seguintes duas tabelas. As linhas nestas tabelas servem para ilustrar o efeito de diferentes tipos de junta e juntar-predicados. Nas tabelas a seguir a coluna DepartamentoID da tabela Departamento (que pode ser designado como Department.DepartamentoID) &eacute; a chave principal, enquanto Employee.DepartamentoID &eacute; uma chave estrangeira.</p>&nbsp;
+
+<p>Para o entendimento do conte&uacute;do use este c&oacute;digo:</p>
+&nbsp;
+
+<pre class="conteudo_codigo">CREATE DATABASE EXER;
+USE EXER;
+
+CREATE TABLE departamento (
+ DepartamentoID INT,
+ nomeDepartamento VARCHAR(20)
+);
+ 
+CREATE TABLE empregado (
+ Sobrenome VARCHAR(20),
+ DepartamentoID INT
+);
+ 
+INSERT INTO departamento(DepartamentoID, nomeDepartamento) VALUES(31, 'Sales');
+INSERT INTO departamento(DepartamentoID, nomeDepartamento) VALUES(33, 'Engineering');
+INSERT INTO departamento(DepartamentoID, nomeDepartamento) VALUES(34, 'Clerical');
+INSERT INTO departamento(DepartamentoID, nomeDepartamento) VALUES(35, 'Marketing');
+ 
+INSERT INTO empregado(Sobrenome, DepartamentoID) VALUES('Rafferty', 31);
+INSERT INTO empregado(Sobrenome, DepartamentoID) VALUES('Jones', 33);
+INSERT INTO empregado(Sobrenome, DepartamentoID) VALUES('Steinberg', 33);
+INSERT INTO empregado(Sobrenome, DepartamentoID) VALUES('Robinson', 34);
+INSERT INTO empregado(Sobrenome, DepartamentoID) VALUES('Smith', 34);
+INSERT INTO empregado(Sobrenome, DepartamentoID) VALUES('John', NULL);</pre>
+&nbsp;
+
+
+<p>Uma jun&ccedil;&atilde;o interna &eacute; a opera&ccedil;&atilde;o de associa&ccedil;&atilde;o mais comum usado em aplica&ccedil;&otilde;es e pode ser considerado como o padr&atilde;o de jun&ccedil;&atilde;o do tipo. <b>INNER JOIN</b> cria uma nova tabela de resultados atrav&eacute;s da combina&ccedil;&atilde;o de valores das colunas de duas tabelas (A e B) com base na jun&ccedil;&atilde;o-predicado. A consulta compara cada linha de A com cada linha de B para encontrar todos os pares de linhas que satisfazem a jun&ccedil;&atilde;o-predicado. Quando a jun&ccedil;&atilde;o-predicado &eacute; satisfeito, valores de coluna para cada par correspondente de linhas de A e B s&atilde;o combinados em uma linha do resultado. O resultado da jun&ccedil;&atilde;o pode ser definido como o resultado do primeiro tomar o produto cartesiano (ou CROSS JOIN) de todos os registros nas tabelas (combinando cada registro na tabela A com cada registro na tabela B)-em seguida, retornar todos os registros que satisfazem a predicado de jun&ccedil;&atilde;o. Implementa&ccedil;&otilde;es reais SQL normalmente usa outras abordagens, como uma jun&ccedil;&atilde;o de hash ou uma esp&eacute;cie de mesclagem juntar sempre que poss&iacute;vel, uma vez que o c&aacute;lculo do produto cartesiano &eacute; muito ineficiente.
+SQL especifica duas diferentes formas sint&aacute;ticas para expressar junta: &quot;join expl&iacute;cito nota&ccedil;&atilde;o&quot; e &quot;impl&iacute;cita juntar nota&ccedil;&atilde;o&quot;.
+O &quot;nota&ccedil;&atilde;o de jun&ccedil;&atilde;o expl&iacute;cita&quot; usa a palavra-chave Cadastre-se para especificar a tabela para entrar, ea palavra-chave ON para especificar os predicados para a jun&ccedil;&atilde;o, como no exemplo a seguir:</p>
+&nbsp;
+
+<pre class="conteudo_codigo">SELECT *
+ FROM empregado INNER JOIN departamento
+  ON empregado.DepartamentoID = departamento.DepartamentoID;</pre>
+&nbsp;
+  
+  <p>O "nota&ccedil;&atilde;o jun&ccedil;&atilde;o impl&iacute;cita" simplesmente lista as tabelas para unir, na cl&aacute;usula FROM da instru&ccedil;&atilde;o SELECT, usando v&iacute;rgulas para separ&aacute;-los. Assim, prev&ecirc;-se uma jun&ccedil;&atilde;o cruzada, ea cl&aacute;usula WHERE pode aplicar filtro adicionais-predicados (que funcionam comparativamente aos join-predicados na nota&ccedil;&atilde;o expl&iacute;cita).
+O exemplo a seguir &eacute; equivalente &agrave; anterior, mas desta vez utilizando a nota&ccedil;&atilde;o de jun&ccedil;&atilde;o impl&iacute;cita:</p>&nbsp;
+
+<pre class="conteudo_codigo">SELECT *
+ FROM empregado, departamento
+  WHERE empregado.DepartamentoID = departamento.DepartamentoID;</pre>
+&nbsp;
+      
+      
+      <p class="cl_conteudo_tit">Group By</p>&nbsp;
+          
+          <p>Tudo que foi feito at&eacute; aqui tratava todos os dados de uma rela&ccedil;&atilde;o como um &uacute;nico grupo de dados, mas as vezes &eacute; necess&aacute;rio dividir estas rela&ccedil;&otilde;es em grupos menores. Procuram realizar estas divis&otilde;es nos dados &eacute; que se pode incluir a clausula <b>GROUP BY</b> em uma instru&ccedil;&atilde;o <b>SELECT</b>. &Eacute; poss&iacute;vel aplicar uma clausula <b>GROUP BY</b> em uma sele&ccedil;&atilde;o e usar uma fun&ccedil;&atilde;o de grupo para sumarizar os valores de cada um dos grupos  formados.</p>&nbsp;
+          
+          <div class="cl_conteudo_img">
+             <img src="imagens/ilustrativa_groupBy.png" alt="Figura ilustrativa Group By" />
+          </div>&nbsp;
+          
+          <p>Suponha que a consulta abaixo seja executada e o resultado seja apresentado a seguir.</p>&nbsp;
+
+<pre class="conteudo_codigo">SELECT SILGA, COUNT(SIGLA)
+  FROM CIDADE
+  GROUP BY SIGLA;</pre>&nbsp;
+
+<p>A rela&ccedil;&atilde;o CIDADE foi dividida em tr&ecirc;s grupos por meio da sigla, onde &eacute; considerada somente as siglas que est&atilde;o cadastradas e s&atilde;o apresentadas por meio de sele&ccedil;&atilde;o do atributo SIGLA, enquanto que a fun&ccedil;&atilde;o COUNT, sobre a sigla, mostra a quantidade de tuplas que existe em cada sigla(alguns grupos).</p>&nbsp;
+
+<p>Sempre que existir um ou mais atributos individuais na sele&ccedil;&atilde;o, juntamente com a aplica&ccedil;&atilde;o de fun&ccedil;&otilde;es de grupo, sera necess&aacute;rio inclui estes atributos no grupo por meio da clausula <b>GROUP BY</b>.</p>
+&nbsp;
+
+<pre class="conteudo_codigo">SELECT SIGLA, COUNT(SIGLA)
+  FROM CIDADE
+  GROUP BY SIGLA;</pre>&nbsp;
+
+<p>A sele&ccedil;&atilde;o sem especifica&ccedil;&atilde;o de nenhum atributo individual tamb&eacute;m &eacute; poss&iacute;vel, mas ser&aacute; realizada por toda a rela&ccedil;&atilde;o se n&atilde;o for especificada a clausula GROUP BY.</p>&nbsp;
+
+
+<p>O atributo especificado no GROUP BY n&atilde;o precisa estar no SELECT, mas normalmente seu resultado fica sem sentido devido a dificuldade de compreens&atilde;o dos dados agrupados.</p>
+&nbsp;
+
+
+<pre class="conteudo_codigo">SELECT COUNT(SIGLA)
+  FROM CIDADE
+  GROUP BY SIGLA;</pre>&nbsp;
+
+<p>Pode tamb&eacute;m existir a necessidade de agrupar mais que um atributo, onde uma rela&ccedil;&atilde;o &eacute; agrupada primeiro por um atributo e dentro deste tamb&eacute;m &eacute; realizado o agrupamento por um outro atributo. Imagine o exemplo:</p>&nbsp;
+
+<pre class="conteudo_codigo">SELECT DEPARTAMENTO, EMPREGADO, SUM(SALARIO)
+  FROM EMPREGADO
+   GROUP BY DEPARTAMENTO, EMPREGADO;</pre>&nbsp;
+  
+<p>Sempre que existir um ou mais atributos individuais na sele&ccedil;&atilde;o, juntamente com a aplica&ccedil;&atilde;o de fun&ccedil;&otilde;es de grupo, ser&aacute; necess&aacute;rio inclu&iacute; estes atributos no grupo por meio da cl&aacute;usula GROUP BY.</p>&nbsp;
+
+<pre class="conteudo_codigo">SELECT SIGLA, COUNT(SIGLA)
+  FROM CIDADE
+   GROUP BY SIGLA;</pre>&nbsp;
+
+<p>A sele&ccedil;&atilde;o sem especifica&ccedil;&atilde;o de nenhum atributo individual tamb&eacute;m &eacute; poss&iacute;vel, mas ser&aacute; realizada por toda a rela&ccedil;&atilde;o se n&atilde;o for especificada a cl&aacute;usula GROUP BY. Observe os resultados em seu BD aplicando as duas sugest&otilde;es a seguir.</p>&nbsp;
+
+
+<div class="cl_conteudo_img">
+    <img src="imagens/codigosDiferentes.png" alt="Exemplo de c&oacute;digos" border="2" style="border-color:#00F" />
+    </div>&nbsp;
+    
+    <p class="cl_conteudo_tit">Order By</p>&nbsp;&nbsp;
+    
+    <p>Uma cl&aacute;usula ORDER BY no SQL especifica que uma instru&ccedil;&atilde;o SQL SELECT retorna um conjunto de resultados com as linhas que est&atilde;o sendo classificados pelos valores de uma ou mais colunas. Os crit&eacute;rios de classifica&ccedil;&atilde;o n&atilde;o t&ecirc;m de ser inclu&iacute;dos no conjunto de resultados. Os crit&eacute;rios de classifica&ccedil;&atilde;o podem ser express&otilde;es, incluindo - mas n&atilde;o limitado a - nomes de colunas, fun&ccedil;&otilde;es definidas pelo usu&aacute;rio, opera&ccedil;&otilde;es aritm&eacute;ticas, ou express&otilde;es caso. As express&otilde;es s&atilde;o avaliadas e os resultados obtidos s&atilde;o utilizados para a classifica&ccedil;&atilde;o, isto &eacute;, os valores armazenados na coluna, ou o resultado da chamada de fun&ccedil;&atilde;o. A apresenta&ccedil;&atilde;o dos dados recupereados pelo SELECT  pode ser classificada, onde esta classifica&ccedil;&atilde;o ser&aacute; ascendente (crescente) ou descendente (decrescente).</p>&nbsp;
+
+<p>Para isso inclui-se a cl&aacute;usula <b>ORDER BY</b> no final da instru&ccedil;&atilde;o de consulta (SELECT).</p>&nbsp;
+
+<pre class="conteudo_codigo">
+SELECT NOME FROM ESTADOS
+    ORDER BY NOME ASC;</pre>&nbsp;
+    
+    
+    <p>Uma classifica&ccedil;&atilde;o com mais que um atributo pode ser feita com a especifica&ccedil;&atilde;o ordenada de quais os atributos a serem usados na classifica&ccedil;&atilde;o e a ordem de prioridade para cada um.<p>&nbsp;
+
+<p>Os atributos devem ser especificados separados por virgula e devem estar em ordem de prioridade conforme sua especifica&ccedil;&atilde;o na cl&aacute;usula <b>ORDER BY</b>, onde o primeiro atributo especificado ser&aacute; classificado primeiramente e o segundo, respeitando a classifica&ccedil;&atilde;o do primeiro, ser&aacute; classificado em seguida, dentro da primeira classifica&ccedil;&atilde;o.</p>&nbsp;
+
+<pre class="conteudo_codigo">
+SELECT nome
+   FROM empregado
+     WHERE salario &lt; 0
+       ORDER BY nome, salario;</pre>&nbsp;
+
+<p class="cl_conteudo_subtit2">Observa&ccedil;&atilde;o:</p>
+
+<p>Primeira classifica&ccedil;&atilde;o ser&aacute; feita por nome e dentro da classifica&ccedil;&atilde;o por nome ser&aacute; feita por sal&aacute;rio.</p>&nbsp;&nbsp;
+
+<p class="cl_conteudo_tit">SubConsultas</p>&nbsp;
+
+<p>Uma subconsulta, ou consulta interna consiste em uma instru&ccedil;&atilde;o SELECT incorporada em uma cl&aacute;usula de outra instru&ccedil;&atilde;o DML. Pode-se desenvolver instru&ccedil;&otilde;es sofisticadas por meio da incorpora&ccedil;&atilde;o de subconsultas simples. Elas s&atilde;o poss&iacute;veis de serem inseridas nas cl&aacute;usulas:</p>&nbsp;
+
+     <ul>
+       <li>WHERE</li>
+       <li>HAVING</li>
+       <li>FROM</li>
+   </ul>&nbsp;
+
+<p>Apesar de todas estas possibilidades, as subconsultas sao normalmente inseridas na cl&aacute;usula WHERE de instru&ccedil;&otilde;es DML(data manipulation language).</p>&nbsp;
+
+<p>Observe a forma geral da subconsulta para um SELECT:</p>&nbsp;
+
+<pre class="conteudo_codigo">SELECT &lt;lista_atributos&gt;
+   FROM &lt;rela&ccedil;&atilde;o&gt;
+   WHERE &lt;operando operador&gt; ( SELECT &lt;lista_atributo&gt;
+                                  FROM &lt;rela&ccedil;&atilde;o&gt;
+                                  WHERE &lt;condi&ccedil;&otilde;es&gt; );</pre>&nbsp;
+                                      
+ 
+ 
+ <p class="cl_conteudo_subtit2">Exemplo</p>&nbsp;
+ 
+ <p>Suponha que exista a necessidade de descobrir quem recebe sal&aacute;rio maior que o empregado padr&atilde;o na empresa (c&oacute;digo 325). Primeiramente &eacute; necess&aacute;rio elaborar uma consulta para descobrir qual o sal&aacute;rio de Paulo (325) e depois uma outra consulta para descobrir quem recebe mais que tal quantia. Para isso &eacute; poss&iacute;vel combinar duas consultas, colocando &quot;uma dentro da outra&quot;.</p>
+ &nbsp;
+
+<pre class="conteudo_codigo">SELECT F.ID_FUNCIONAL, F.NOME
+  FROM FUNCIONARIO F
+  WHERE SALARIO > ( SELECT FU.SALARIO
+                       FROM FUNCIONARIO FU
+                       WHERE FU.ID_FUNCIONAL = 325 );</pre>&nbsp;
+  
+  
+  
+<p>A elabora&ccedil;&atilde;o de uma consulta com subconsulta deve respeitar as seguintes diretrizes para ser realizada corretamente:</p>&nbsp;
+<ul>
+<li>	Subconsulta deve estar entre par&ecirc;nteses;</li>
+<li>	Coloque-a do lado direito do operador de compara&ccedil;&atilde;o;</li>
+<li>	Subconsulta n&atilde;o deve possuir uma cl&aacute;usula ORDER BY;</li>
+<li>	Respeitar as classes de operadores de compara&ccedil;&atilde;o nas subconsultas;</li>&nbsp;&nbsp;&nbsp;
+</ul>
+
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+
+</body>
+</html>

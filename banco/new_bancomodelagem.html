@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados I</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet">
+  <link type="text/css" href="../css/classes.css" rel="stylesheet">
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados I</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="new_bancointroducao.html">Introdu&ccedil;&atilde;o</a></li>
+               <li><a href="new_bancosgbd.html"> SGBD </a></li>
+			   <li><a href="new_bancomodelagem.html" class="current">Modelagem de Dados</a></li>
+               <li><a href="new_bancomodelo_mer.html">Mod. Entid. Relacionamento</a></li>
+               <li><a href="new_bancomodelo_dados_relac.html">Mod. de Dados Relacional</a></li>
+			   <li><a href="new_bancodependenciafuncional.html">Dependência Funcional</a></li>
+			   <li><a href="new_banconormalizacao.html">Normalização</a></li>
+               <li><a href="new_bancoalgebrarelacional.html">Álgebra Relacional</a></li>
+			   <li><a href="exercicios/exer1_ModelagemDad.htm" target="_blank">Exercícios de Model. Dados</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+      
+          <p span class="cl_conteudo_tit">Modelagem de Dados</span></p>&nbsp;
+          
+          <p>Na modelagem, ou seja, descrição, um banco de dados pode ser dividido em 
+             quatro níveis de abstração:</p>&nbsp;
+          
+          <div class="cl_topicos_txt">
+    	  
+          	<li>Modelo descritivo</li>&nbsp;
+		  
+          </div>
+
+		  <p>Onde se representa textualmente os dados que serão armazenados no banco de 
+             dados.</p>&nbsp;
+          
+          <div class="cl_topicos_txt">
+    	  
+          	<li> Modelo conceitual</li>&nbsp;
+		  
+          </div>
+		  
+          <p>Através do uso do Diagrama Entidade-Relacionamento (DER), é possível 
+             fazer a representação gráfica dos dados a serem armazenados no banco de
+             dados. À essa representação dá-se o nome de modelo conceitual.</p>&nbsp;
+
+
+          <div class="cl_conteudo_img">
+          	
+              <img src="imagens/image001.png" /> &nbsp;
+          
+          </div>
+            
+            <p>O SGBD não suporta diretamente este modelo, faz-se, então, necessária sua 
+                conversão em outro modelo: no lógico.</p>
+
+ 			<div class="cl_topicos_txt">
+    	  
+          		<li>Modelo lógico</li>&nbsp;
+		  
+        	</div>
+
+			<p>Através do uso do Modelo Entidade-Relacionamento (MER), é possível 
+              fazer a representação gráfica dos dados a serem armazenados no banco 
+              de dados. À essa representação dá-se o nome de modelo lógico.</p>&nbsp;
+			
+            
+             <div class="cl_conteudo_img">
+          	
+              	<img src="imagens/image003.png" /> 
+          
+          	 </div>&nbsp;
+             
+            <div class="cl_topicos_txt">
+    	  
+          		<li> Modelo físico</li>&nbsp;
+		  
+        	</div>  
+            
+            <p>Aqui há o detalhamento físico das estruturas dos dados que serão 
+              armazenados no banco de dados. Sua implementação depende da escolha de[
+              qual SGBD será utilizado.</p>&nbsp;
+              
+			
+            <div class="cl_conteudo_img">
+          	
+              	<img src="imagens/image005.png" /> 
+          
+          	 </div>&nbsp;
+
+
+			
+            <p class=" cl_conteudo_tit">Modelo de Dados Relacional</p>&nbsp;
+            
+            <p>O modelo de base de dados relacional é o mais utilizado hoje em dia, 
+               pois além de ser mais fácil se comparado aos outros modelos (como o 
+               hierárquico e de rede), o SGBD processa os dados de forma eficiente, 
+               otimizando as consultas.</p>&nbsp;
+               
+            <p>Esse modelo faz uso fundamental de tabelas (também chamadas relações). 
+               Cada linha (registro) de uma tabela é chamada de tupla. A quantidade de 
+               colunas que uma tabela possui constitui o grau da relação. O número de 
+               tuplas de uma tabela constitui sua cardinalidade. E por sua vez, cada 
+               campo da tabela é chamado de atributo.</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+              	<img src="imagens/image007.png" /> 
+          
+          	</div>&nbsp;
+             
+            <p>Na relação (tabela) acima há: </p>
+
+ 			<div class="cl_topicos_txt">
+    	  
+          		<li>Três tuplas;</li>&nbsp;
+                
+                <li>Cardinalidade = 3;</li>&nbsp;
+                
+                <li>Grau da relação = 4 (pois há quatro colunas).</li>&nbsp;
+		  
+        	</div>
+             
+            <p>O valor de cada atributo numa relação deve ser atômico, ou seja, único, 
+               individual. Exemplo:</p>&nbsp;
+             
+ 
+			<div class="cl_conteudo_img">
+          	
+              	<img src="imagens/image009.png" /> 
+          
+          	</div>&nbsp;
+           
+			<p>Numa mesma relação não podem haver duas ou mais colunas com o mesmo nome.</p>&nbsp;
+			
+			<p>As tuplas devem ser distintas, ou seja, não podem existir duas ou mais
+               tuplas com todos os seus atributos (campos) iguais. Essa é a definição 
+               da integridade de identidade.</p>&nbsp;
+            
+            <p>Quando o valor de um atributo é desconhecido, o valor especial null pode 
+               ser utilizado.</p>&nbsp;
+            
+            <p>Cada relação (tabela) deve ter um nome único, para que se evite problemas, 
+               como, por exemplo, não se saber qual tabela está sendo referenciada quando há 
+               duas ou mais relações com o nome "empregado".</p>&nbsp;&nbsp;
+               
+            <div class="cl_conteudo_tit">Representação dos relacionamentos no Modelo 
+                 Relacional (MRL)</div>&nbsp;
+                 
+            
+            <div class="cl_topicos_txt">
+    	  
+          		<li><u> Martin (mais comumente conhecido por "pé-de-galinha")</u></li>&nbsp;
+		  
+        	</div>  
+            
+            <p>Relacionamento 1:N (lê-se 1 para N) <img src="imagens/image012.gif" /></p>&nbsp;
+            
+            
+            <div class="cl_conteudo_img">
+          	
+             	<img src="imagens/image013.png" /> 
+          
+          	</div>&nbsp;
+            
+           	<p>Nesse exemplo, o relacionamento entre farmácia e produto é 1:N (1 para N), 
+               ou seja, uma farmácia pode ter vários produtos (N) e um produto só pode 
+               estar em uma única farmácia (1). O relacionamento entre farmácia e 
+               farmacêutico é também de 1:N, pois a farmácia pode ter vários farmacêuticos 
+               (N) e um farmacêutico só pode trabalhar em uma única farmácia (1).</p>&nbsp;
+            
+            <p><u>Relacionamento N:1 (lê-se N para 1)</u><img src="imagens/image016.gif" /></p>&nbsp;
+            
+            <div class="cl_conteudo_img">
+          	
+             	<img src="imagens/image018.jpg" /> 
+          
+          	</div>&nbsp;
+            
+            <p> Um cliente pode participar de várias vendas, mas uma venda só terá o nome de um cliente (na nota fiscal, por exemplo).</p>&nbsp;
+            
+            <p><u>Relacionamento 1:1 (lê-se 1 para 1) </u><img src="imagens/image020.jpg" /></p>&nbsp;
+            
+            <div class="cl_conteudo_img">
+          	
+             	<img src="imagens/image022.jpg" /> 
+          
+          	</div>&nbsp;
+             
+			
+            <p> Um paciente só pode ter um prontuário e um prontuário pertence a somente um cliente.</p>&nbsp;
+            
+            <p><u>Relacionamento N:N (lê-se N para N) </u><img src="imagens/image024.jpg" /></p>&nbsp;
+            
+            <div class="cl_conteudo_img">
+          	
+             	<img src="imagens/image026.jpg" /> 
+          
+          	</div>&nbsp;
+            
+            <p>Um autor pode escrever vários livros e um livro pode ser escrito por 
+               vários autores.</p>&nbsp;
+ 			
+           <div class="cl_topicos_txt">
+    	  
+          		<li>Bachman (setas)</li>&nbsp;
+        	
+           </div>  
+                        
+           <div class="cl_conteudo_img">
+          	
+             	<img src="imagens/image028.jpg" /> 
+          
+           </div>&nbsp; 
+			
+			<div class="cl_topicos_txt">
+    	  
+          		<li>Peter Chen</li>&nbsp;
+        	
+            </div>  
+			
+            <div class="cl_conteudo_img">
+          	
+             	<img src="imagens/image030.jpg" /> 
+          
+           	</div>&nbsp; 
+          
+           	<p> Nesse caso o relacionamento é de N:N. Há também os relacionamentos N:1, 1:N e 1:1.</p>&nbsp;
+          
+           	<div class="cl_conteudo_tit"> Transformação de Modelo Conceitual em Modelo Lógico</div>&nbsp;
+          	
+            <p>1.Traduzir entidades e atributos. Exemplo:</p>&nbsp;
+
+
+ 			<div class="cl_conteudo_img">
+          	
+             	<img src="imagens/image032.jpg" /> 
+          
+           	</div>&nbsp;
+
+			<p>2.Traduzir relacionamentos e atributos. Exemplo:</p>&nbsp;
+
+
+ 			<div class="cl_conteudo_img">
+          	
+             	<img src="imagens/image034.jpg" /> 
+          
+           	</div>&nbsp;
+ 
+ 			<p>A chave primária sempre se desloca da entidade com cardinalidade 1 para a de 
+               cardinalidade N!</p>&nbsp;
+			
+            <p>Tradução de relacionamento N:N = Nesse caso, uma entidade associativa (tabela)
+               será criada. Essa ova entidade terá como suas chaves primárias as chaves 
+               primárias das outras duas entidades. Exemplo:</p>&nbsp;
+
+ 			<div class="cl_conteudo_img">
+          	
+             	<img src="imagens/image036.jpg" /> 
+          
+           	</div>&nbsp;
+
+    		<p>3.Traduzir generalização/especialização</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+             	<img src="imagens/image038.jpg" /> 
+          
+           	</div>&nbsp;
+			
+            <p>Para traduzir:</p>&nbsp;
+			
+			<div class="cl_topicos_txt">
+    	  
+          		<li>Criar uma tabela para cada entidade da hierarquia e aplicar as 
+                    regras de tradução;</li>&nbsp;
+		  		
+                <li>Criar uma tabela para toda a hierarquia, que conterá: a chave primária 
+                    da entidade mais genérica; uma coluna para cada atributo da entidade
+                    mais genérica; uma coluna para cada atributo das entidades especializadas;
+                    uma coluna "tipo", que será criada, caso não exista na entidade mais 
+                    genérica; colunas referentes aos relacionamentos dos quais participa a
+                    entidade genérica; colunas referentes aos relacionamentos dos quais 
+                    participam cada entidade especializada.</li>&nbsp;
+          			
+        	</div>  
+            
+			<p span class="cl_conteudo_tit"><u>Atividade de Fixa&ccedil;&atilde;o</u></span></p>&nbsp;
+			
+			<p>No intuito de fixar a aprendizagem iniciada por meio deste módulo e verificar como 
+			   esta sua compreensão sobre os mesmos são sugeridos alguns exercícios de fixação para 
+			   serem resolvidos. Clique no link den exercício ao lado, pois será por meio dela iniciada
+			   a lista de exercício sobre os conteúdos estudados até este momento. Boa revisão sobre os 
+			   mesmos!!  </p>&nbsp;
+          
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+</body>
+</html>

@@ -1,0 +1,446 @@
+*{margin:0px; padding:0px;}
+
+#mod-carrossel{
+	position:relative; 
+	overflow:hidden;
+	height:26em; 
+	margin:1em 0 0 0;
+	}
+
+#mod-carrossel .transp{
+	position:absolute; 
+	width: 100%; 
+	height:7em; 
+	opacity:0.8;
+	filter:alpha(opacity=50); 
+	background:#000; 
+	bottom:0; 
+	left:2.8em; 
+	z-index:1;
+	font-size:10px;
+	}
+
+#mod-carrossel .chamada {
+	position:absolute;
+	top:21.8em; 
+	left:4.2em; 
+	width:44em; 
+	z-index:1;
+	}
+
+#mod-carrossel h2 {
+	font:bold 14px Arial, Helvetica, sans-serif;
+	vertical-align:top;
+	}
+
+#mod-carrossel a {
+	color:#FFF;
+	}
+
+#mod-carrossel h3 {
+	font:13px Arial, Helvetica, sans-serif;
+	}
+
+#mod-carrossel h3 a {
+	color:#FFF;
+	}
+
+#mod-carrossel ul, #mod-carrossel li {
+	margin:0; padding:0; 
+	list-style:none;
+	}
+
+#mod-carrossel ul.fim {
+	margin:0;
+	}
+
+#mod-carrossel ul.fim li.cloneOrigem, #mod-carrossel ul.comeco li.clonado {
+	display:none;
+	}
+
+#mod-carrossel #wrap-carrossel, #mod-carrossel #listadestaques {
+	width:52em;height:26em; 
+	top:0; 
+	left:0; 
+	overflow:hidden; 
+	position:absolute;
+	}
+
+#mod-carrossel #listadestaques li {
+	position:relative; 
+	width:52em; 
+	height:26em; 
+	float:left; 
+	background:none; 
+	overflow:hidden; 
+	background: url(../imagens/wait.gif) no-repeat center center;
+	}
+
+#mod-carrossel #listadestaques li .foto-destaque {
+	width:52em;height:26em;
+	}
+
+#mod-carrossel #seta-ant {
+	position:absolute; 
+	z-index:9; 
+	width:2.7em; 
+	height:5em; 
+	opacity:0.8;
+	filter:alpha(opacity=80); 
+	bottom:0; 
+	left:0;
+	}
+
+#mod-carrossel #seta-ant a {
+	display:block; 
+	width:2.7em; 
+	height:5em; 
+	background:#50728E url(../imagens/anterior.gif) no-repeat 0.8em center; 
+	text-indent:-9999em; 
+	outline:none; 
+	text-decoration:none;
+	}
+
+#mod-carrossel #seta-prox {
+	position:absolute;
+	z-index:1;
+	width:2.7em; 
+	height:5em; 
+	opacity:0.8;
+	filter:alpha(opacity=80); 
+	bottom:0; 
+	right:0;
+	}
+
+#mod-carrossel #seta-prox a {
+	display:block; 
+	width:2.7em; 
+	height:5em; 
+	background:#50728E url(../imagens/proximo.gif) no-repeat 1em center; 
+	text-indent:-9999em; 
+	outline:none; 
+	text-decoration:none;
+	}
+
+#mod-carrossel .semSetas #seta-ant,
+#mod-carrossel .semSetas #seta-prox {
+	display:none
+	}
+#mod-carrossel .semSetas .transp {
+	left:0; 
+	width:51.9em
+	}
+
+#topo{
+	width:1050px;
+	height:100px;
+	margin-top:0;
+	float:left;
+	position: fixed;
+	z-index:2;
+	background-color:#CCC;
+	border: 4px #CCC solid;
+	}
+	
+#topoSuperior{
+	left: 100px;
+	width:1050px;
+	height:50px;
+	float:left;
+	background-image:url(../imagens/fundoTopo.png);
+	}
+	
+#imgTopo{
+	left: 100px;
+	width: 86px;
+	height: 50px;
+	float: left;
+	background: url(../imagens/ucb.png);
+	}
+
+#topoindex {
+	width:1050px;
+	height:203px;
+	margin-top:0;
+	float:left;
+	position: fixed;
+	z-index:2;
+	}
+
+	
+#topo_logo {
+	width:213px;
+	height:152px;
+	float:left;
+	}
+	
+#topo_titulo {
+	width:837px;
+	height:152px;
+	float:left;
+	}
+	
+#menuvertical{
+	width:90px;
+	position: fixed;
+	}
+	
+#menuverticalindex{
+	width:90px;
+	position: fixed;
+	}
+	
+ul.vert-one{
+	font-weight: lighter; 
+	margin:0;
+	padding:0;
+	list-style-type:none; 
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:14px;  
+	display:block;
+	line-height:137.5%;
+	width:160px;
+	}
+	
+ul.vert-one li{
+	margin:0;
+	padding:0;
+	border-top:1px solid #DCDCDC;
+	border-bottom:1px solid #;
+	}
+	
+ul.vert-one li a{
+	display:block;
+	text-decoration:none;
+	color:#23297a;
+	padding:0 0 0 20px;
+	width:140px;
+	}
+	
+ul.vert-one li a:hover{
+	background:#014a91 url("../imagens/arrow.gif") no-repeat 0 9px;
+	color:#fff
+	}
+	 
+ul.vert-one li a.current,ul.vert-one li a.current:hover{
+	background:#014a91 url("../imagens/arrow.gif") no-repeat 0 9px;
+	color:#FFF;
+	}
+
+
+/* ----------- Menu ----------- */
+
+/*#menuindex{	
+	width: 1050px;
+	height:50px;
+	position: fixed;
+	top: 160px;
+	left: 100px;
+	}*/	
+	
+#menuindex {
+	width: 1048px;
+	padding: 0px 0px;
+	border: 2px solid #CCCCCC;
+	background-color: #CCCCCC;
+}
+
+#menu{
+	width: 1048px;
+	padding: 0px 0px;
+	border: 2px solid #CCCCCC;
+	background-color: #CCCCCC;
+}
+	
+body {
+	font: normal 14px verdana;
+	}
+ 
+ul.menubar{
+  	margin: 0px;
+	padding: 0px;
+	background-color: #FFF; /* IE6 Bug */
+  	text-align:center;
+  	font-size: 14px;
+  	}
+ 
+ul.menubar .submenu{
+  	margin: 0px;
+  	padding: 0px;
+  	list-style: none;
+  	border: 1px solid #ccc;
+  	float:left;	
+	width: 129px;
+	/*width: 9.2em;*/
+	background: url(../imagens/menuBranco.gif);
+  	}
+
+ 
+ul.menubar ul.menu{
+	display: none;
+	position: absolute;
+	page-break-inside:auto;
+  	margin: 0px;
+	width: 129px;
+	/*width: 9.2em;*/
+	}
+
+ul.menubar li a:hover {
+	color: #FFF;
+	background: url(../imagens/menuAzul.gif);
+	}
+	
+ul.menubar li a.current,ul.menubar li a.current:hover{
+	color: #FFF;
+	background: url(../imagens/menuAzul.gif);
+	}
+ 
+ul.menubar a{
+  	display:block;
+  	text-decoration: none;
+  	color: #696969;;
+	padding:5px 9px 5px 9px;
+	z-index:2;
+	border: 2px solid #CCCCCC;
+	}
+ 
+ul.menu, ul.menu ul{
+	z-index:2;
+  	margin: 0;
+  	padding: 0;
+  	width: 129px; /* Width of Menu Items */
+  	background-color: #FFFFFF; /* IE6 Bug */
+	}
+ 
+ul.menu li{
+  	position: relative;
+  	list-style: none;
+  	border: 0px;
+	}
+ 
+ul.menu li a{
+  	display: block;
+  	text-decoration: none;
+  	border: 2px solid #ccc;
+  	border-bottom: 0px;
+  	color: #333;
+  	padding: 5px 9.2px 5px 9.2px;
+	}
+ 
+ul.menu li sup{
+  	font-size:7px;
+  	color: red;
+	}
+ 
+/* Fix IE. Hide from IE Mac \*/
+* html ul.menu li {
+	float: left;
+	height: 1%; 
+	}
+	
+* html ul.menu li a {
+	height: 1%;
+	}
+	
+/* End */
+ 
+ul.menu ul{
+  	position: absolute;
+  	display: none;
+  	left: 129px; /* Set 1px less than menu width */
+  	top: 0;
+	}
+ 
+ul.menu li.submenu ul {
+	display: none;
+	} /* Hide sub-menus initially */
+ 
+ul.menu li.submenu {
+	background: url(../imagens/arrow.gif) right center no-repeat 0 9px; 
+	}
+ 
+ul.menu li a:hover {
+	color: #f1f2f4;
+	}
+
+#rodapeindex{
+	background-image: url(../imagens/barraBranca.gif);
+	height: 50px;
+	width: 1050px;	
+	float: left;
+	font-size: 14px;
+	color: #23297a;
+	position: relative;
+	bottom: 0px;
+	text-align: center;
+	border: 2px solid #CCCCCC;
+	}	
+
+#geral {
+	width:1050px;
+	height:auto;
+	margin-top:0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	}
+
+#noticiaindex{
+	padding-top: 20px;
+	width:700px;
+	height:auto;
+	float:right;
+	margin-right:60px;
+	text-align:center;
+	position: relative;
+	z-index:1;
+	
+}
+
+#conteudotxt{
+	padding-top: 20px;
+	width:700px;
+	height:auto;
+	float:right;
+	margin-right:40px;
+	position: relative;
+	z-index:1;
+}
+
+#conteudoimg{
+	top: 200px;
+	padding-top: 20px;
+	width:700px;
+	height:auto;
+	float:right;
+	margin-right:60px;
+	position:relative;
+	z-index:1;
+}
+
+
+#tabela_exemplo{
+	width:700px;
+	height:auto;
+	float: left;
+	padding-left: 50px;
+ }
+
+#tabela_exemplo_dir{
+	width:350px;
+	height:auto;
+	float: left;
+ }
+ 
+#tabela_exemplo_esq{
+	width:300px;
+	height:auto;
+	float: right;
+	text-align:center;
+ } 
+ 
+p{
+	text-indent: 1cm;
+}
+ 
+ 

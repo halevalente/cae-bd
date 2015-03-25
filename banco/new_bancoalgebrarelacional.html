@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados I</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet">
+  <link type="text/css" href="../css/classes.css" rel="stylesheet">
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados I</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="new_bancointroducao.html">Introdu&ccedil;&atilde;o</a></li>
+               <li><a href="new_bancosgbd.html"> SGBD </a></li>
+			   <li><a href="new_bancomodelagem.html">Modelagem de Dados</a></li>
+               <li><a href="new_bancomodelo_mer.html">Mod. Entid. Relacionamento</a></li>
+               <li><a href="new_bancomodelo_dados_relac.html">Mod. de Dados Relacional</a></li>
+			   <li><a href="new_bancodependenciafuncional.html">Dependência Funcional</a></li>
+			   <li><a href="new_banconormalizacao.html">Normalização</a></li>
+               <li><a href="new_bancoalgebrarelacional.html" class="current">Álgebra Relacional</a></li>
+			   <li><a href="exercicios/exer1_AlgebraRel.htm" target="_blank">Exercícios de Álgebra Relac.</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+      
+          	<p span class="cl_conteudo_tit">Álgebra Relacional</span></p>&nbsp;
+          	
+            <p>A álgebra relacional é uma linguagem que define operadores para atuar nas
+               tabelas.</p>&nbsp;
+            
+            <p>Um banco de dados relacional é descrito através de conceitos matemáticos 
+               simples, como:</p>&nbsp;
+            
+            <div class="cl_topicos_txt">
+            
+            	<li>Teoria de conjuntos e domínios;</li>&nbsp;
+            	<li>Operações;</li>&nbsp;
+            	<li>Produtos cartesianos entre tabelas;</li>&nbsp;
+            </div>
+            
+            <p>A utilização da teoria de conjuntos e domínios auxilia o usuário a ter 
+               melhor visão dos dados. Por exemplo, os dados de uma empresa podem ser:  
+               conjunto de nomes de funcionários, cujo domínio são os nomes possíveis de
+                serem escritos pelo alfabeto português.</p>&nbsp;
+                
+            <p>As operações são capazes de manipular um banco de dados. Cada operação usa 
+               uma ou mais tabelas como operando e produz sempre outra tabela como resultado.
+               </p>&nbsp;
+               
+            <p>As operações fundamentais estão listadas abaixo, e para demonstrá-las 
+               será utilizada a tabela Empregado abaixo:</p>&nbsp;
+ 
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra001.png" /> &nbsp;
+          
+          	</div>
+ 			
+            <div class="cl_topicos_txt">
+            
+            	<li><u>Seleção</u>: seleciona as linhas de uma tabela que satisfazem 
+                    uma determinada propriedade. O símbolo s representa a seleção.</li>&nbsp;
+                    
+            </div>
+			
+            <p>Exemplo: s salario>1000 (Empregado), nesse exemplo são selecionados todos
+               os salários maiores que R$ 1000,00 da tabela Empregado:</p>&nbsp;
+
+ 			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra002.png" /> &nbsp;
+          
+          	</div>
+
+
+            <div class="cl_topicos_txt">
+            
+            	<li><u>Projeção</u>: é utilizada para selecionar determinadas colunas de
+                    uma única tabela já existente. O resultado é uma nova tabela que contém
+                    apenas os campos requisitados. As duplicidades são eliminadas. O símbolo 
+                    p representa a projeção. </li>&nbsp;
+                    
+            </div>
+			
+            <p>Exemplo: p nome, salario (empregado). Nesse exemplo será criada uma nova
+               tabela contendo apenas os campos nome e salario da tabela Empregado:</p>&nbsp;
+
+ 			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra003.png" /> &nbsp;
+          
+          	</div>
+            
+            <div class="cl_topicos_txt">
+            
+            	<li><u>União</u>: é criada uma tabela, com todas as linhas únicas 
+                   (não duplicadas) de outras tabelas. Só é possível utilizar esse 
+                    operador caso as tabelas sejam equivalentes e gerem o mesmo tipo de
+                    resultado. O símbolo È representa a união.</li>&nbsp;
+                    
+            </div>
+			
+            <p>Exemplo: Considere as tabelas:</p>&nbsp;
+
+			<p class="cl_conteudo_subtit2">Alunos</p>&nbsp;
+ 			
+            <div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra004.png" /> &nbsp;
+          
+          	</div>
+            
+            <p class="cl_conteudo_subtit2">Professores</p>&nbsp;
+ 			
+            <div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra005.png" /> &nbsp;
+          
+          	</div>
+            
+            <p>Desta forma, (Alunos) È (Professores), fica:</p>&nbsp;
+ 			
+            <div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra006.png" /> &nbsp;
+          
+          	</div>
+            
+             <div class="cl_topicos_txt">
+            
+            	<li><u>Intersecção</u> = cria-se uma tabela a partir de outras contendo 
+                    todas as tuplas (linhas) que aparecem em todas as tabelas envolvidas. 
+                    Só é possível utilizar esse operador caso as tabelas sejam equivalentes. 
+                    O símbolo Ç representa a intersecção.</li>&nbsp;
+                    
+            </div>
+			
+            <p>Exemplo: Considere as tabelas: </p>&nbsp;
+
+			<p class="cl_conteudo_subtit2">Aluno</p>&nbsp;
+ 			
+            <div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra004.png" /> &nbsp;
+          
+          	</div>
+            
+            <p class="cl_conteudo_subtit2">Professores</p>&nbsp;
+ 			
+            <div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra005.png" /> &nbsp;
+          
+          	</div>
+            
+            <p>A intersecção dessas duas tabelas, (Alunos) Ç (Professores),  fica:</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra007.png" /> &nbsp;
+          
+          	</div>
+            
+            <div class="cl_topicos_txt">
+            
+            	<li><u>Diferença</u>: cria uma tabela a partir da  diferença de uma 
+                    tabela por outra. Porém, vale ressaltar, que a diferença da primeira 
+                    tabela pela segunda não é a mesma que a diferença da segunda tabela
+                     pela primeira, ou seja, a operação diferença não é comutativa. O 
+                     símbolo –  representa a diferença.</li>&nbsp;
+                    
+            </div>
+			
+            <p>Exemplo:  Ainda com as tabelas do exemplo anterior, tem-se a seguir:</p>&nbsp;
+
+			<p class="cl_conteudo_subtit2">Alunos – Professores: </p>&nbsp;
+ 			
+            <div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra008.png" /> &nbsp;
+          
+          	</div>
+            
+            <p class="cl_conteudo_subtit2">Professores – Alunos: </p>&nbsp;
+ 			
+            <div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra009.png" /> &nbsp;
+          
+          	</div>
+            
+            <div class="cl_topicos_txt">
+            
+            	<li><u>Produto cartesiano</u>: é a combinação (junção) de tuplas de duas 
+                    tabelas. O símbolo X representa o produto cartesiano.</li>&nbsp;
+                    
+            </div>
+			
+            <p>Exemplo: Considere as tabelas:</p>&nbsp;
+
+			<p class="cl_conteudo_subtit2">Alunos  </p>&nbsp;
+ 			
+            <div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra004.png" /> &nbsp;
+          
+          	</div>
+            
+            <p class="cl_conteudo_subtit2">Documentos </p>&nbsp;
+ 			
+            <div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra010.png" /> &nbsp;
+          
+          	</div>
+            
+            <p>O produto cartesiano Alunos X Documentos fica assim:</p>&nbsp;
+ 			 
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra011.png" /> &nbsp;
+          
+          	</div>
+			
+            <div class="cl_topicos_txt">
+            
+            	<li><u>Junção</u>: essa operação é de fundamental importância em banco de 
+                    dados relacionais, pois é a partir dela que é possível fazer relacionamentos.
+                    É utilizada para combinar tuplas de duas tabelas partindo dos atributos em 
+                    comum entre ambas. O símbolo |X| representa a junção.</li>&nbsp;
+                    
+            </div>
+            
+			<p>Exemplo: considere as tabelas:</p>&nbsp;
+ 			
+            <p class="cl_conteudo_subtit2">Alunos</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra012.png" /> &nbsp;
+          
+          	</div>
+            
+            <p class="cl_conteudo_subtit2">Turmas</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra013.png" /> &nbsp;
+          
+          	</div>
+            
+           	<p>A junção: Alunos |x| turma = cod_turma Turmas, será:</p>&nbsp;
+ 			
+            <p class="cl_conteudo_subtit2">Alunos_Turmas</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra014.png" /> &nbsp;
+          
+          	</div> 
+            
+			<div class="cl_topicos_txt">
+            
+            	<li><u>Divisão</u>:  tem como resultado todos os elementos da primeira
+                    tabela que se relacionam com todos os elementos da segunda tabela. O 
+                    símbolo : representa a divisão.</li>&nbsp;
+                    
+            </div>
+            
+			<p>Por exemplo: considere as tabelas: </p>&nbsp;
+ 			
+            <p class="cl_conteudo_subtit2">Equipes</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra015.png" /> &nbsp;
+          
+          	</div>
+            
+            <p class="cl_conteudo_subtit2">Projetos</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra016.png" /> &nbsp;
+          
+          	</div>
+
+			<p class="cl_conteudo_subtit2">Considere a divisão: Projetos : Equipe. O
+                resultado será:</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra017.png" /> &nbsp;
+          
+          	</div>
+            
+            <p>Operações também podem ser aninhadas para se facilitar o uso, já que nesse 
+               caso não é necessário a utilização de várias operações sucessivas. </p>&nbsp;
+			
+            <p>Exemplo: Para selecionar todos os nomes e salários das pessoas que residem no 
+               DF, a operação ficaria assim:</p>&nbsp;
+				
+            <p class="cl_conteudo_subtit2">p nome, salario (s estado (Empregado));</p>&nbsp;
+
+ 			<p>O que resultaria em:</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/algebra018.png" /> &nbsp;
+          
+          	</div>
+            
+            <p></p>&nbsp;
+            <p></p>&nbsp;
+           
+			<p span class="cl_conteudo_tit"><u>Atividade de Fixa&ccedil;&atilde;o</u></span></p>&nbsp;
+			
+			<p>No intuito de fixar a aprendizagem iniciada por meio deste módulo e verificar como 
+			   esta sua compreensão sobre os mesmos são sugeridos alguns exercícios de fixação para 
+			   serem resolvidos. Clique no link den exercício ao lado, pois será por meio dela iniciada
+			   a lista de exercício sobre os conteúdos estudados até este momento. Boa revisão sobre os 
+			   mesmos!!  </p>&nbsp;
+          
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+</body>
+</html>

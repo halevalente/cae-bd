@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados I</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet">
+  <link type="text/css" href="../css/classes.css" rel="stylesheet">
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados I</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="new_bancointroducao.html">Introdu&ccedil;&atilde;o</a></li>
+               <li><a href="new_bancosgbd.html" class="current"> SGBD </a></li>
+			   <li><a href="new_bancomodelagem.html">Modelagem de Dados</a></li>
+               <li><a href="new_bancomodelo_mer.html">Mod. Entid. Relacionamento</a></li>
+               <li><a href="new_bancomodelo_dados_relac.html">Mod. de Dados Relacional</a></li>
+			   <li><a href="new_bancodependenciafuncional.html">Dependência Funcional</a></li>
+			   <li><a href="new_banconormalizacao.html">Normalização</a></li>
+               <li><a href="new_bancoalgebrarelacional.html">Álgebra Relacional</a></li>
+			   <li><a href="exercicios/exer1_sgbd_BD1.htm" target="_blank">Exercícios de SGBD</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+      
+          <p span class="cl_conteudo_tit">SGBD (Sistema Gerenciador de Banco de Dados)</span></p>&nbsp;
+          
+        	<div class="cl_conteudo_img">
+            	<img src="imagens/image002.jpg"/>        
+        	</div>
+            
+            
+            <p>SGBD é uma sigla para sistema gerenciador de banco de dados, o qual é uma coleção de 
+			   programas que tem a função de gerenciar a interação entre os usuários e o banco de 
+			   dados, possibilitando que usuários criem, definam, construam, manipulem e mantenham
+			   um banco de dados. A figura acima mostra um banco de dados de uma farmácia sendo 
+			   gerenciado por um SGBD. </p>&nbsp;
+               
+            <p>Definir um banco de dados é especificar os tipos de dados e as restrições para os 
+				dados que serão armazenados.</p>&nbsp;
+
+			<p>Construir um banco de dados é armazenar os dados em algum meio de armazenamento que
+			   seja controlado pelo SGBD.</p>&nbsp;
+			
+			<p>Manipular um banco de dados inclui as operações que podem ser realizadas, como 
+			   consultas, atualizações, geração de relatórios etc.</p>&nbsp;
+			
+			<p>Todas as solicitações de um usuário ao banco de dados são controladas pelo SGBD.</p>&nbsp;
+			
+			<p>Ele implementa a abstração do hardware para o usuário, em outras palavras, ele 
+			   "esconde" do usuário os detalhes mais internos da máquina e, também, do banco de dados, 
+			   facilitando a utilização destes.</p>&nbsp;
+ 
+			<p>SGBDs relacionais exigem que todos os campos que sejam chave primária sejam obrigatórios.
+				Além disso, eles garantem a integridade dos dados automaticamente, através das 
+				restrições de integridade.</p>&nbsp;
+			
+			<p>A linguagem mais utilizada de consulta hoje em dia é o SQL - Structured Query Language.</p>&nbsp;
+			
+			<p>Existem diversos tipos de SGBDs no mercado, que atendem às mais diversas
+			   finalidades, como por exemplo o Oracle e o PostgreSQL, além dos softwares livres, 
+			   como o MySQL e o Firebird.</p>&nbsp;
+
+			<p class="cl_conteudo_subtit"> Métodos de acesso</p>&nbsp;
+			
+			<ul class="cl_topicos_txt">
+            	
+                <li>DDL (Data Definition Language) </li>&nbsp;
+                
+            </ul>&nbsp;
+			
+			<p>Linguagem utilizada para a especificação do esquema do BD (dados e seus tipos de 
+			   dados, índices, ...).</p>&nbsp;
+			   
+			<ul class="cl_topicos_txt">
+            	
+                <li>DML(Data Manipulation Language)</li>&nbsp;
+                
+            </ul>
+			
+			<p>Linguagem utilizada para a manipulação de dados.</p>&nbsp;
+			
+			<p class="cl_conteudo_subtit">Integridade semântica</p>&nbsp;
+			
+			<p>É a garantia que os dados estarão sempre corretos com relação ao domínio de aplicação. Exemplos:</p>&nbsp;
+
+			<ul class="cl_topicos_txt">
+            	
+                <li>Estados válidos para os dados (sexo; salário); </li>&nbsp;
+				
+				<li>Relacionamentos válidos entre os dados. </li>&nbsp;
+                
+            </ul>
+			
+			<p class="cl_conteudo_subtit">Funções básicas de um SGBD</p>&nbsp;
+			
+			<ul class="cl_topicos_txt">
+				
+				<li>Segurança</li>&nbsp;
+					
+					<ul class="cl_topicos_txt">
+                    
+                        <li>Binário: Associação entre duas entidades. Exemplo: </li>&nbsp;
+						
+						<li>Evitar violação de consistência dos dados, ou seja, evitar que dados interfiram uns 
+						    nos outros;</li>&nbsp;
+						
+						<li>Segurança de acesso para usuários e aplicações;</li>&nbsp;
+						
+						<li>Segurança contra falhas;</li>&nbsp;
+						
+						<li> Monitoração das operações que são realizadas no banco de dados;</li>&nbsp;
+						
+						<li>Manutenção de histórico de atualizações (logs) e backups do banco de dados.</li>&nbsp;
+						
+					</ul>
+					
+				<li>Concorrência</li>&nbsp;
+					
+					<ul class="cl_topicos_txt">
+                    
+                        <li>Evitar conflitos de acesso simultâneo a dados por operações.</li>&nbsp;
+					
+					</ul>
+				
+				<li>Independência</li>&nbsp;
+					
+					<ul class="cl_topicos_txt">
+                    
+                        <li>Independência dos dados;</li>&nbsp;
+						
+						<li>Transparência da organização dos dados.</li>&nbsp;
+						
+						<li>Independência física: transparência da organização (esquema) física dos dados.
+  						    Exemplo: organização dos arquivos;</li>&nbsp;
+						
+						<li>Independência lógica: transparência do esquema lógico do banco de dados. 
+						    Exemplo: visões (vários esquemas externos).</li>&nbsp;
+					
+					</ul>
+					
+			</ul>
+			
+			<p class="cl_conteudo_subtit">Componentes de um SGBD</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+            	<img src="imagens/image004.jpg"/>        
+        	</div>&nbsp;
+			
+			<p span class="cl_conteudo_tit"><u>Atividade de Fixa&ccedil;&atilde;o</u></span></p>&nbsp;
+			
+			<p>No intuito de fixar a aprendizagem iniciada por meio deste módulo e verificar como 
+			   esta sua compreensão sobre os mesmos são sugeridos alguns exercícios de fixação para 
+			   serem resolvidos. Clique no link den exercício ao lado, pois será por meio dela iniciada
+			   a lista de exercício sobre os conteúdos estudados até este momento. Boa revisão sobre os 
+			   mesmos!!  </p>&nbsp;
+          
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+</body>
+</html>

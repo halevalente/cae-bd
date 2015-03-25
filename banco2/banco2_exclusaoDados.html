@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados II</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet"/>
+  <link type="text/css" href="../css/classes.css" rel="stylesheet"/>
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados II</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="banco2_sgbd.html">SGBD</a></li>
+               <li><a href="banco2_mer.html">Modelo de Entidade Relacionamento–MER</a></li>
+			   <li><a href="banco2_modeloRelacional.html">Modelo Relacional–MR</a></li>
+               <li><a href="banco2_selecaoDados.html">Sele&ccedil;&atilde;o de dados</a></li>
+               <li><a href="banco2_alteracaoDados.html">Altera&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_insercaoDados.html">Inser&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="#" class="current">Exclus&atilde;o de dados</a></li>
+               <li><a href="banco2_instrucoesDdl.html">Instru&ccedil;&otilde;es DDL</a></li>
+
+               <li><a href="banco2_subQuery.html">SubQuerys</a></li>
+               <li><a href="banco2_indice.html">&Iacute;ndice</a></li>
+               <li><a href="banco2_trigger.html">Triggers</a></li>
+               <li><a href="banco2_storedProcedure.html">Stored Procedure</a></li>
+               <li><a href="banco2_recursosAdministracaoBd.html">Recursos de Administra&ccedil;&atilde;o BD</a></li>
+			   <li><a href="exercicios/exer_exclusaoDados.html">Exerc&iacute;cios de Exclus&atilde;o de dados</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+      
+          <p class="cl_conteudo_tit">Exclus&atilde;o de Dados</p>
+          &nbsp;
+            
+      <p>O comando SQL que nos permite excluir dados no MySQL &eacute; o comando DELETE. A sintaxe b&aacute;sica do comando DELETE &eacute; a seguinte:</p>&nbsp;
+      
+      <p>C&oacute;digo utilizado para explica&ccedil;&atilde;o do conte&uacute;do:</p>
+      
+      <pre class="conteudo_codigo">DROP TABLE IF EXISTS `filmes`;
+CREATE TABLE `filmes` (
+  `id` int(10) unsigned NOT NULL,
+  `titulo` varchar(80) NOT NULL,
+  `ano` int(4) unsigned NOT NULL,
+  `diretor` varchar(80) NOT NULL,
+  PRIMARY KEY  (`id`)
+) AUTO_INCREMENT=4 ;
+
+INSERT INTO `filmes` VALUES (1, 'King Kong', 2006, 'Peter Jackson');
+INSERT INTO `filmes` VALUES (2, 'Guerra dos Mundos', 2005, 'Steven Spielberg');
+INSERT INTO `filmes` VALUES (3, 'Harry Potter', 2006, 'Mike Newell');</pre>&nbsp;
+            
+            <pre class="conteudo_codigo">DELETE FROM &lt;table_name&gt; [WHERE &lt;defini&ccedil;&atilde;o_where&gt;]</pre>&nbsp;
+
+<p>O comando DELETE &eacute; aplicado a uma tabela e pode ou n&atilde;o ter uma cl&aacute;usula WHERE que restringe os registro nos quais ele atuar&aacute;. Este comando retorna o n&uacute;mero de registros exclu&iacute;dos da tabela. Se n&atilde;o for especificada uma cl&aacute;usula WHERE o comando DELETE apagar&aacute; todos os registros da tabela. Neste caso, no MySQL 3.23, o comando retorna zero.</p>
+
+<p>A partir do MySQL 4.0.0 a exclus&atilde;o em multi-tabelas &eacute; suportada. Vamos para um exemplo pr&aacute;tico. Primeiro visualizaremos que dados temos em nossa tabela filmes:</p>&nbsp;
+
+<div class="cl_conteudo_img">
+       	<img src="imagens/mostrandoSelect.png" alt="Select da tabela" style="border-color:#00F" border="2"/>        
+   	  </div>&nbsp;
+            
+                       <p>Como j&aacute; haviamos visto em artigos anteriores o comando SELECT * FROM filmes retorna todos os registros da tabela filmes. Neste caso temos tr&ecirc;s registros de filmes. Para ilustrar a utiliza&ccedil;&atilde;o mais comum do comando DELETE vamos excluir um destes registros com o uso de algum crit&eacute;rio. Poder&iacute;amos ter um crit&eacute;rio &uacute;nico, que excluiria apenas um registro (por exemplo usando o campo id), ou um crit&eacute;rio m&uacute;ltiplo, que poderia apagar mais de um registro (por exemplo, neste caso, usando o campo ano). Vamos optar por usar o campo ano e excluir todos os filmes de anos anteriores a '2006', o comando seria o seguinte:</p>&nbsp;
+
+            <pre class="conteudo_codigo">DELETE FROM filmes WHERE ano &lt; 2006;</pre>&nbsp;
+            
+            <div class="cl_conteudo_img">
+                    <img src="imagens/deleteDaTabela.png" alt="Deletando um atributo" style="border-color:#0000FF" border="2"/>
+            </div>&nbsp;
+            
+            <p>O comando DELETE foi executado com sucesso (&quot;Query Ok&quot;) e afetou apenas uma linha (registro) da tabela, ou seja, existia apenas um filme na tabela com data anterior a '2006'.</p>
+<p>Vamos ver como ficaram os registros:</p>&nbsp;
+
+<div class="cl_conteudo_img">
+                    <img src="imagens/selectAtualizadoDelete.png" alt="Select da tabela" style="border-color:#0000FF" border="2"/>
+            </div>&nbsp;
+            
+            <p>Fica claro que agora s&oacute; temos filmes do ano de '2006' na tabela. Vamos agora apagar um registro com base em um campo string. Executaremos o seguinte comando:</p>&nbsp;
+
+<pre class="conteudo_codigo">DELETE FROM filmes WHERE diretor LIKE '%Jackson'</pre>&nbsp;
+
+<div class="cl_conteudo_img">
+                    <img src="imagens/deleteWhere.png" alt="Delete da tabela" style="border-color:#0000FF" border="2"/>
+            </div>&nbsp;
+            
+            <p>Neste caso o comando DELETE excluiria tudos os registros cujo campo diretor terminasse com o sobrenome 'Jackson' (todos os campos que se parecessem com isto). Novamente o comando retornou sucesso e avisou que uma linha foi afetada, ou seja, t&iacute;nhamos um registro que satisfazia a condi&ccedil;&atilde;o.</p>&nbsp;
+            
+            <p>O comando SQL DELETE nos possibilita excluir, com enorme precis&atilde;o, registros de uma tabela MySQL. Esta precis&atilde;o se deve ao fato de ele aceitas a cl&aacute;usula WHERE e todos os benef&iacute;cios de filtragem de dados que ela possui. Sem o uso de WHERE, temos um comando capaz de excluir de uma s&oacute; vez todos os dados de uma tabela, algo que n&atilde;o ocorre com frequ&ecirc;ncia, mas que pode ser &uacute;til em determinadas circunst&acirc;ncias, principalmente quando desejamos saber quantos registro foram apagados.</p>&nbsp;&nbsp;&nbsp;
+
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+
+</body>
+</html>

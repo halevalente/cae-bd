@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados II</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet"/>
+  <link type="text/css" href="../css/classes.css" rel="stylesheet"/>
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados II</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="banco2_sgbd.html">SGBD</a></li>
+               <li><a href="banco2_mer.html">Modelo de Entidade Relacionamento–MER</a></li>
+			   <li><a href="banco2_modeloRelacional.html">Modelo Relacional–MR</a></li>
+               <li><a href="banco2_selecaoDados.html">Sele&ccedil;&atilde;o de dados</a></li>
+               <li><a href="banco2_alteracaoDados.html">Altera&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_insercaoDados.html">Inser&ccedil;&atilde;o de dados</a></li>
+			   <li><a href="banco2_exclusaoDados.html">Exclus&atilde;o de dados</a></li>
+               <li><a href="banco2_instrucoesDdl.html">Instru&ccedil;&otilde;es DDL</a></li>
+               <li><a href="banco2_subQuery.html">SubQuerys</a></li>
+               <li><a href="banco2_indice.html">&Iacute;ndice</a></li>
+               <li><a href="#" class="current">Triggers</a></li>
+               <li><a href="banco2_storedProcedure.html">Stored Procedure</a></li>
+               <li><a href="banco2_recursosAdministracaoBd.html">Recursos de Administra&ccedil;&atilde;o BD</a></li>
+			   <li><a href="exercicios/exer_trigger.html">Exerc&iacute;cios de Triggers</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+      
+          <p class="cl_conteudo_tit">Triggers</p>
+          &nbsp;
+            
+            <p>Trigger &eacute; um recurso de programa&ccedil;&atilde;o executado sempre que o evento associado ocorrer. Trigger &eacute; um tipo especial de procedimento armazenado, que &eacute; executado sempre que h&aacute; uma tentativa de modificar os dados de uma tabela que &eacute; protegida por ele. &Eacute; muito utilizada para ajudar a manter a consist&ecirc;ncia dos dados ou para propagar altera&ccedil;&otilde;es em um determinado dado de uma tabela para outras. Um bom exemplo &eacute; um gatilho criado para controle de quem alterou a tabela, nesse caso, quando a altera&ccedil;&atilde;o for efetuada, a trigger &eacute; &quot;disparada&quot; e grava em uma tabela de hist&oacute;rico de altera&ccedil;&atilde;o, o usu&aacute;rio e data/hora da altera&ccedil;&atilde;o.</p>
+            &nbsp;
+            
+            
+            <div class="cl_conteudo_img">
+                <img src="imagens/ilustaoTrigger.png" alt="Imagem demonstrativa de Trigger" />
+            </div>&nbsp;
+            
+            
+      <p class="cl_conteudo_subtit2">Pr&oacute;s e Contras das Triggers</p>&nbsp;
+            
+<p><strong>Os principais pontos positivos sobre os triggers s&atilde;o:</strong></p>&nbsp;
+
+<ul class="cl_topicos_txt">                            
+     <li>Parte do processamento que seria executado na aplica&ccedil;&atilde;o passa para o banco, poupando recursos da m&aacute;quina cliente.</li>
+     <li>Facilita a manuten&ccedil;&atilde;o, sem que seja necess&aacute;rio alterar o c&oacute;digo fonte da aplica&ccedil;&atilde;o.</li>&nbsp;
+</ul>
+
+<p><strong>J&aacute; contra sua utiliza&ccedil;&atilde;o existem as seguintes considera&ccedil;&otilde;es:</strong></p>&nbsp;
+
+<ul class="cl_topicos_txt">
+         <li>Algu&eacute;m que tenha acesso n&atilde;o autorizado ao banco de dados poder&aacute; visualizar e alterar o processamento realizado pelos gatilhos.</li>
+         <li>Requer maior conhecimento de manipula&ccedil;&atilde;o do banco de dados (SQL) para realizar as opera&ccedil;&otilde;es internamente.</li>&nbsp;
+</ul>
+
+<p>A seguir &eacute; explicado o processo de cria&ccedil;&atilde;o de triggers, a sintaxe utilizada e o significado de cada instru&ccedil;&atilde;o.</p>&nbsp;
+
+
+<p>A sintaxe dos comandos para criar um novo trigger no MySQL &eacute; a seguinte:</p>
+
+<pre class="conteudo_codigo">CREATE TRIGGER nome momento evento
+ON tabela
+FOR EACH ROW
+BEGIN
+/*corpo do c&oacute;digo*/
+END</pre>&nbsp;
+
+
+<p>Onde se tem os seguintes par&acirc;metros:</p>
+
+<ul class="cl_topicos_txt">
+   <li>nome: nome do trigger, segue as mesmas regras de nomea&ccedil;&atilde;o dos demais objetos do banco.</li>
+    <li>momento: quando o trigger ser&aacute; executado. Os valores v&aacute;lidos s&atilde;o BEFORE (antes) e AFTER (depois).</li>
+    <li>evento: evento que vai disparar o trigger. Os valores poss&iacute;veis s&atilde;o INSERT, UPDATE e DELETE. Vale salientar que os comandos LOAD DATA e REPLACE tamb&eacute;m disparam os eventos de inser&ccedil;&atilde;o e exclus&atilde;o de registros, com isso, os gatilhos tamb&eacute;m s&atilde;o executados.</li>
+	<li>tabela: nome da tabela a qual o gatilho est&aacute; associado.</li>&nbsp;
+</ul>
+
+<p>N&atilde;o &eacute; poss&iacute;vel criar mais de um trigger para o mesmo evento e momento de execu&ccedil;&atilde;o na mesma tabela. Por exemplo, n&atilde;o se pode criar dois triggers AFTER INSERT na mesma tabela.</p>&nbsp;
+
+
+<p class="cl_conteudo_subtit2">Os registros NEW e OLD</p>&nbsp;
+
+<p>Como os triggers, s&atilde;o executados em conjunto com opera&ccedil;&otilde;es de inclus&atilde;o e exclus&atilde;o, &eacute; necess&aacute;rio poder acessar os registros que est&atilde;o sendo inclu&iacute;dos ou removidos. Isso pode ser feito atrav&eacute;s das palavras NEW e OLD. Em triggers executados ap&oacute;s a inser&ccedil;&atilde;o de registros, a palavra reservada NEW d&aacute; acesso ao novo registro. Pode-se acessar as colunas da tabela como atributo do registro NEW, como veremos nos exemplos.</p>
+<p>O operador OLD funciona de forma semelhante, por&eacute;m em triggers que s&atilde;o executados com a exclus&atilde;o de dados, o OLD d&aacute; acesso ao registro que est&aacute; sendo removido.</p>&nbsp;
+
+
+<p class="cl_conteudo_subtit2">Utiliza&ccedil;&atilde;o do trigger</p>&nbsp;
+
+<p>Para exemplificar e tornar mais clara a utiliza&ccedil;&atilde;o de triggers, &eacute; simulado a seguinte situa&ccedil;&atilde;o: um mercado que, ao realizar vendas, precisa que o estoque dos produtos seja automaticamente reduzido. A devolu&ccedil;&atilde;o do estoque deve tamb&eacute;m ser autom&aacute;tica no caso de remo&ccedil;&atilde;o de produtos da venda.</p>
+<p>Como se trata de um ambiente hipot&eacute;tico, teremos apenas duas tabelas de estrutura simples, cujo script de cria&ccedil;&atilde;o &eacute; mostrado na listagem a seguir.</p>&nbsp;
+
+
+
+<pre class="conteudo_codigo">CREATE TABLE produtos (
+    referencia  VARCHAR(3) PRIMARY KEY,
+    descricao   VARCHAR(50) UNIQUE,
+    estoque INT NOT NULL
+);
+ 
+INSERT INTO Produtos VALUES ('1', 'Lasanha', 10);
+INSERT INTO Produtos VALUES ('2', 'Morgango', 5);
+INSERT INTO Produtos VALUES ('3', 'Farinha', 15);
+ 
+CREATE TABLE itensvenda (  
+    venda INT,
+    produto VARCHAR(3),
+    quantidade  INT
+);</pre>&nbsp;
+
+
+<p>Ao inserir e remover registro da tabela itensvenda, o estoque do produto referenciado deve ser alterado na tabela produtos. Para isso, ser&atilde;o criados dois triggers: um AFTER INSERT para dar baixa no estoque e um AFTER DELETE para fazer a devolu&ccedil;&atilde;o da quantidade do produto.</p>&nbsp;
+
+
+<pre class="conteudo_codigo">DELIMITER;;
+ 
+CREATE TRIGGER tgr_itensvenda_insert AFTER INSERT
+ON itensvenda
+FOR EACH ROW
+BEGIN
+    UPDATE produtos SET estoque = Estoque - NEW.quantidade
+WHERE referencia = NEW.produto;
+END;
+ 
+CREATE TRIGGER tgr_itensvenda_delete AFTER DELETE
+ON itensvenda
+FOR EACH ROW
+BEGIN
+    UPDATE produtos SET estoque = estoque + OLD.quantidade
+WHERE referencia = OLD.produto;
+END;
+ 
+DELIMITER;</pre>&nbsp;
+
+
+<p>No primeiro trigger, foi utilizado o registro NEW para obter as informa&ccedil;&otilde;es da linha que est&aacute; sendo inserida na tabela. O mesmo &eacute; feito no segundo trigger, onde se obt&eacute;m os dados que est&atilde;o sendo apagados da tabela atrav&eacute;s do registro OLD. Tendo criado os triggers, pode-se test&aacute;-los inserindo dados na tabela itensvenda. Nesse caso, &eacute; simulado uma venda de n&uacute;mero 1 que contem tr&ecirc;s unidades do produto 1, uma unidade do produto 2 e cinco unidades do produto 3.</p>&nbsp;
+
+<p>Insere dados na tabela.</p>&nbsp;
+
+<pre class="conteudo_codigo">INSERT INTO itensvenda VALUES (1, '1',3);
+INSERT INTO itensvenda VALUES (1, '2',1);
+INSERT INTO itensvenda VALUES (1, '3',5);</pre>&nbsp;
+
+<p>Nota-se que o estoque dos produtos foi corretamente reduzido, de acordo com as quantidades &quot;vendidas&quot;. Agora para testar o trigger da exclus&atilde;o, ser&aacute; removido o produto 1 dos itens vendidos. Com isso, o seu estoque deve ser alterado para o valor inicial, ou seja, 10.</p>&nbsp;
+
+
+<pre class="conteudo_codigo">DELETE FROM itensvenda WHERE venda = 1 AND produto = '1';</pre>&nbsp;
+
+<p>Em ambientes reais, triggers podem ser utilizados para opera&ccedil;&otilde;es mais complexas, por exemplo, antes de vender um item, verificar se h&aacute; estoque dispon&iacute;vel e s&oacute; ent&atilde;o permitir a sa&iacute;da do produto.</p>&nbsp;&nbsp;&nbsp;
+
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+</body>
+</html>
