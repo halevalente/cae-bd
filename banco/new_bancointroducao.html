@@ -54,9 +54,9 @@
 			   <li><a href="new_bancomodelagem.html">Modelagem de Dados</a></li>
                <li><a href="new_bancomodelo_mer.html">Mod. Entid. Relacionamento</a></li>
                <li><a href="new_bancomodelo_dados_relac.html">Mod. de Dados Relacional</a></li>
-			   <li><a href="new_bancodependenciafuncional.html">Dependência Funcional</a></li>
-			   <li><a href="new_banconormalizacao.html">Normalização</a></li>
-               <li><a href="new_bancoalgebrarelacional.html">Álgebra Relacional</a></li>
+			   <li><a href="new_bancodependenciafuncional.html">Depend&ecirc;ncia Funcional</a></li>
+			   <li><a href="new_banconormalizacao.html">Normaliza&ccedil;&atilde;o</a></li>
+               <li><a href="new_bancoalgebrarelacional.html">&Aacute;lgebra Relacional</a></li>
 			   <li><a href="exercicios/exer1_Introducao_BD1.htm" target="_blank">Exerc&iacute;cios de Introdu&ccedil;&atilde;o</a></li>
 			   <li> &nbsp;</li>
        	    </ul>
@@ -74,154 +74,154 @@
         	</div>
             
             
-            <p>A figura acima exemplifica o sistema de uma certa farmácia. Nesse caso, as bases de dados dos departamentos de 
-               Compra e Venda são "ilhas" isoladas de dados, ou seja, não compartilham os dados entre si. E o que isso acarreta? 
-               Acontece que, desta forma, há vários problemas, como: </p>&nbsp;
+            <p>A figura acima exemplifica o sistema de uma certa farm&aacute;cia. Nesse caso, as bases de dados dos departamentos de 
+               Compra e Venda s&atilde;o "ilhas" isoladas de dados, ou seja, n&atilde;o compartilham os dados entre si. E o que isso acarreta? 
+               Acontece que, desta forma, h&aacute; v&aacute;rios problemas, como: </p>&nbsp;
                
              <ul class="cl_topicos_txt">
              	
-                <li>Redundância de dados, pois "Nome_Produto" e "Fornecedor" se repetem nas duas bases de dados; </li>&nbsp;
+                <li>Redund&acirc;ncia de dados, pois "Nome_Produto" e "Fornecedor" se repetem nas duas bases de dados; </li>&nbsp;
                
-                <li>Dificuldade na manutenção dos dados: se ocorrer uma mudança no nome de um preduto na base de dados de Compra, a 	                    base de dados de Venda ainda continuará com o nome antigo até que alguém o mude; </li>&nbsp;
+                <li>Dificuldade na manuten&ccedil;&atilde;o dos dados: se ocorrer uma mudan&ccedil;a no nome de um preduto na base de dados de Compra, a 	                    base de dados de Venda ainda continuar&aacute; com o nome antigo at&eacute; que algu&eacute;m o mude; </li>&nbsp;
                
-                <li>Falta de padronização: o nome do fornecedor, por exemplo, pode ser digitado de forma diferente em cada registro, ou                    seja, cada base de dados tem seu próprio padrão; </li>&nbsp;
+                <li>Falta de padroniza&ccedil;&atilde;o: o nome do fornecedor, por exemplo, pode ser digitado de forma diferente em cada registro, ou                    seja, cada base de dados tem seu pr&oacute;prio padr&atilde;o; </li>&nbsp;
                
-                <li>Inconsistência dos dados: uma mesma informação se apresenta de diferentes formas nas bases de dados, isso                    geralmente é causado pela falta de padronização; </li>&nbsp;
+                <li>Inconsist&ecirc;ncia dos dados: uma mesma informa&ccedil;&atilde;o se apresenta de diferentes formas nas bases de dados, isso                    geralmente &eacute; causado pela falta de padroniza&ccedil;&atilde;o; </li>&nbsp;
                
                 <li>Dificuldade de acesso aos dados: isso ocorre devido aos formatos diferentes nos quais os dados se apresentam. </li>&nbsp;
 			
             </ul>
             
-            <p>Solução para esse problema:</p>&nbsp;
+            <p>Solu&ccedil;&atilde;o para esse problema:</p>&nbsp;
             
             <div class="cl_conteudo_img">
             	<img src="imagens/introd2.jpg"/>        
         	</div>
 
-			<p>No banco de dados representado na figura acima, toda informação anterior se encontra aqui contida, de forma               compartilhada, assim há apenas uma ocorrência de cada informação, assim, os problemas vistos não ocorrem mais.</p>&nbsp;
+			<p>No banco de dados representado na figura acima, toda informa&ccedil;&atilde;o anterior se encontra aqui contida, de forma               compartilhada, assim h&aacute; apenas uma ocorr&ecirc;ncia de cada informa&ccedil;&atilde;o, assim, os problemas vistos n&atilde;o ocorrem mais.</p>&nbsp;
             
-            <p>Para o gerenciamento desse banco de dados é adotado o uso de um SGBD (sistema gerenciador de banco de dados), o qual é               uma coleção de programas que visa dar ao usuário a possibilidade de criar, manter, definir e manipular um banco de               dados.</p>&nbsp;
+            <p>Para o gerenciamento desse banco de dados &eacute; adotado o uso de um SGBD (sistema gerenciador de banco de dados), o qual &eacute;               uma cole&ccedil;&atilde;o de programas que visa dar ao usu&aacute;rio a possibilidade de criar, manter, definir e manipular um banco de               dados.</p>&nbsp;
 			
-            <p>Mas afinal, o que é um banco de dados? </p>&nbsp;
+            <p>Mas afinal, o que &eacute; um banco de dados? </p>&nbsp;
 
 			<div class="cl_conteudo_img">
             	<img src="imagens/haa.jpg"/>        
         	</div>
           
           
-          	<p>Banco de dados é uma coleção de dados armazenados em um computador, o qual é gerenciado por um SGBD.</p>&nbsp;
+          	<p>Banco de dados &eacute; uma cole&ccedil;&atilde;o de dados armazenados em um computador, o qual &eacute; gerenciado por um SGBD.</p>&nbsp;
             
-            <p>Entre as vantagens que um banco de dados proporciona estão:</p>&nbsp;
+            <p>Entre as vantagens que um banco de dados proporciona est&atilde;o:</p>&nbsp;
             
             <ul class="cl_topicos_txt">
             	
-                <li>Controle da redundância: o mesmo dado não aparece em vários registros; </li>&nbsp;
+                <li>Controle da redund&acirc;ncia: o mesmo dado n&atilde;o aparece em v&aacute;rios registros; </li>&nbsp;
                 
                 <li>Controle centralizado: controle do banco de dados exercido pelo SGBD; </li>&nbsp;
                 
                 <li>Dados compartilhados; </li>&nbsp;
                 
-                <li>Independência dos dados: os dados, agora, pertencem ao banco de dados, e não mais aos programas; </li>&nbsp;
+                <li>Independ&ecirc;ncia dos dados: os dados, agora, pertencem ao banco de dados, e n&atilde;o mais aos programas; </li>&nbsp;
                 
-                <li>Garantia de integridade (restrição de integridade); </li>&nbsp;
+                <li>Garantia de integridade (restri&ccedil;&atilde;o de integridade); </li>&nbsp;
                 
-                <li>Restrição a acesso não autorizado; </li>&nbsp;
+                <li>Restri&ccedil;&atilde;o a acesso n&atilde;o autorizado; </li>&nbsp;
                 
-                <li>Facilidade em se fazer cópias e recuperações (backup e recovery); </li>&nbsp;
+                <li>Facilidade em se fazer c&oacute;pias e recupera&ccedil;&otilde;es (backup e recovery); </li>&nbsp;
                 
-                <li>Inconsistências são evitadas; </li>
+                <li>Inconsist&ecirc;ncias s&atilde;o evitadas; </li>
                 
-                <li>Há uma maior privacidade/proteção dos dados; </li>&nbsp;
+                <li>H&aacute; uma maior privacidade/prote&ccedil;&atilde;o dos dados; </li>&nbsp;
                 
-                <li>Há padrões em comum, o que facilita o intercâmbio e as migrações; </li>&nbsp;
+                <li>H&aacute; padr&otilde;es em comum, o que facilita o interc&acirc;mbio e as migra&ccedil;&otilde;es; </li>&nbsp;
                 
-                <li>Otimização do espaço de armazenamento; </li>&nbsp;
+                <li>Otimiza&ccedil;&atilde;o do espa&ccedil;o de armazenamento; </li>&nbsp;
                 
-                <li>Facilidade de criação de novas aplicações. </li>&nbsp;
+                <li>Facilidade de cria&ccedil;&atilde;o de novas aplica&ccedil;&otilde;es. </li>&nbsp;
             
             </ul>&nbsp;
             
-            <p>Entretanto, em algumas situações, o uso de um banco de dados pode não ser vantajoso: </p>&nbsp;
+            <p>Entretanto, em algumas situa&ccedil;&otilde;es, o uso de um banco de dados pode n&atilde;o ser vantajoso: </p>&nbsp;
             
             <ul class="cl_topicos_txt">
             	
                 <li>Custos iniciais elevados em hardware, software e treinamento; </li>&nbsp;
                 
-                <li>Custos adicionais com segurança e infraestrutura; </li>&nbsp;
+                <li>Custos adicionais com seguran&ccedil;a e infraestrutura; </li>&nbsp;
                 
-                <li>Aplicações simples; </li>
+                <li>Aplica&ccedil;&otilde;es simples; </li>
                 
-                <li>O acesso por múltiplos usuários aos dados não é necessário. </li>&nbsp;
+                <li>O acesso por m&uacute;ltiplos usu&aacute;rios aos dados n&atilde;o &eacute; necess&aacute;rio. </li>&nbsp;
                 
             </ul>&nbsp;
             
-            <p>Alguns conceitos também são importantes para se entender um banco de dados:</p>&nbsp;
+            <p>Alguns conceitos tamb&eacute;m s&atilde;o importantes para se entender um banco de dados:</p>&nbsp;
             
             <ul class="cl_topicos_txt">
             
-            	<li><u>Campos</u>: são espaços reservados para que seja inserido um dado. Exemplo: um campo de uma tabela; </li>
+            	<li><u>Campos</u>: s&atilde;o espa&ccedil;os reservados para que seja inserido um dado. Exemplo: um campo de uma tabela; </li>
                 
-                <li><u>Chave</u>: seqüência de um ou mais campos, usado(s) para pesquisa em uma tabela; </li>
+                <li><u>Chave</u>: seq&Uuml;&ecirc;ncia de um ou mais campos, usado(s) para pesquisa em uma tabela; </li>
                 
                 <div class="cl_conteudo_img">
             		<img src="imagens/chave.jpg"/>        
         		</div>            
             
-                <li><u>Chave primária (PK)</u>: coluna ou combinação de colunas de uma tabela cujos valores distinguem uma linha 
-                        das demais, na medida em que individualiza cada registro. Logo a chave primária precisa ser única e não nula.
-                        Um bom exemplo de chave primária seria uma coluna chamada "cpf" de uma tabela de funcionários, já que não
+                <li><u>Chave prim&aacute;ria (PK)</u>: coluna ou combina&ccedil;&atilde;o de colunas de uma tabela cujos valores distinguem uma linha 
+                        das demais, na medida em que individualiza cada registro. Logo a chave prim&aacute;ria precisa ser &uacute;nica e n&atilde;o nula.
+                        Um bom exemplo de chave prim&aacute;ria seria uma coluna chamada "cpf" de uma tabela de funcion&aacute;rios, j&aacute; que n&atilde;o
                         existem duas ou mais pessoas com um mesmo cpf. Considere agora a tabela abaixo: 
                         
                        <div class="cl_conteudo_img">
                             <img src="imagens/tabelaPK.jpg"/>        
                        </div>&nbsp;
                         
-                 Nesse caso, a coluna cod_funcionario não pode ser chave primária, uma vez que há valores que se repetem, não permitindo             distinguir unicamente cada linha. Na coluna num_dependente ocorre a mesma situação, logo esta também não pode ser a chave             primária. A coluna nome não é uma boa candidata à chave primária, já que existem várias pessoas com um mesmo nome. A             solução nesse caso é combinar as colunas cod_funcionario e num_dependente de forma a criar uma única chave primária. </li>
+                 Nesse caso, a coluna cod_funcionario n&atilde;o pode ser chave prim&aacute;ria, uma vez que h&aacute; valores que se repetem, n&atilde;o permitindo             distinguir unicamente cada linha. Na coluna num_dependente ocorre a mesma situa&ccedil;&atilde;o, logo esta tamb&eacute;m n&atilde;o pode ser a chave             prim&aacute;ria. A coluna nome n&atilde;o &eacute; uma boa candidata &agrave; chave prim&aacute;ria, j&aacute; que existem v&aacute;rias pessoas com um mesmo nome. A             solu&ccedil;&atilde;o nesse caso &eacute; combinar as colunas cod_funcionario e num_dependente de forma a criar uma &uacute;nica chave prim&aacute;ria. </li>
                  &nbsp;
-                <li><u>Chave secundária</u>: chave que pode referenciar um conjunto de registros, ou seja, ela não precisa ter um 
-                     valor diferente para cada registro (como a chave primária); </li>&nbsp;
+                <li><u>Chave secund&aacute;ria</u>: chave que pode referenciar um conjunto de registros, ou seja, ela n&atilde;o precisa ter um 
+                     valor diferente para cada registro (como a chave prim&aacute;ria); </li>&nbsp;
                      
-                <li><u>Chave de ordenação</u>: chave usada para a ordenação dos registros de um arquivo; </li>&nbsp;
+                <li><u>Chave de ordena&ccedil;&atilde;o</u>: chave usada para a ordena&ccedil;&atilde;o dos registros de um arquivo; </li>&nbsp;
                 
                 <li><u>Chave de acesso</u>: Chave usada para pesquisa em um arquivo;</li>&nbsp;
                 
-                <li><u>Chave estrangeira (FK)</u>: coluna ou combinação de colunas, cujos valores são obrigatoriamente chaves primárias
-                    em outras ou na própria tabela. Ela representa uma ligação (relacionamento) entre tabelas. Não há limite de 
+                <li><u>Chave estrangeira (FK)</u>: coluna ou combina&ccedil;&atilde;o de colunas, cujos valores s&atilde;o obrigatoriamente chaves prim&aacute;rias
+                    em outras ou na pr&oacute;pria tabela. Ela representa uma liga&ccedil;&atilde;o (relacionamento) entre tabelas. N&atilde;o h&aacute; limite de 
                     quantidade para chave estrangeira. </li>&nbsp;
     
-                <li><u>Chave candidata (ou alternativa)</u>: Quando duas ou mais colunas podem ser chave primária, se uma delas
-                    for escolhida como tal, as outras serão chaves candidatas. Resumindo, chave candidata é um atributo que 
-                    poderia ser chave primária. Exemplo: &nbsp;
+                <li><u>Chave candidata (ou alternativa)</u>: Quando duas ou mais colunas podem ser chave prim&aacute;ria, se uma delas
+                    for escolhida como tal, as outras ser&atilde;o chaves candidatas. Resumindo, chave candidata &eacute; um atributo que 
+                    poderia ser chave prim&aacute;ria. Exemplo: &nbsp;
     
                 <div class="cl_conteudo_img">
                     <img src="imagens/tabelaChaveCandidata.jpg"/>        
                 </div>&nbsp;
     
     
-                Nesse caso, há duas possibilidades para chave primária (cpf e rg). Ao se escolher o rg como a chave primária(PK)
+                Nesse caso, h&aacute; duas possibilidades para chave prim&aacute;ria (cpf e rg). Ao se escolher o rg como a chave prim&aacute;ria(PK)
                 da tabela, o cpf torna-se chave candidata.
-                Obs.: No exemplo anterior, a melhor escolha para PK é o rg, pois o cpf possui mais caracteres, o que
-                dificulta a busca e a digitação e aumenta o espaço de armazenamento. </li>&nbsp;
+                Obs.: No exemplo anterior, a melhor escolha para PK &eacute; o rg, pois o cpf possui mais caracteres, o que
+                dificulta a busca e a digita&ccedil;&atilde;o e aumenta o espa&ccedil;o de armazenamento. </li>&nbsp;
                 
-                <li><u>Argumento de pesquisa</u>: campo que se quer procurar, ou seja, é o valor da chave de acesso em uma pesquisa; </li>&nbsp;
+                <li><u>Argumento de pesquisa</u>: campo que se quer procurar, ou seja, &eacute; o valor da chave de acesso em uma pesquisa; </li>&nbsp;
                 
-                <li><u>Dicionário de dados</u>: O dicionário de dados nada mais é que um banco de dados que contém informações 
-                    sobre os dados da empresa, como atributos, relacionamentos, restrições, chaves, entidades etc. </li>&nbsp;
+                <li><u>Dicion&aacute;rio de dados</u>: O dicion&aacute;rio de dados nada mais &eacute; que um banco de dados que cont&eacute;m informa&ccedil;&otilde;es 
+                    sobre os dados da empresa, como atributos, relacionamentos, restri&ccedil;&otilde;es, chaves, entidades etc. </li>&nbsp;
                 
-                <li><u>Entidade</u>: Objeto do mundo real distinguível de outros objetos. </li>&nbsp;
+                <li><u>Entidade</u>: Objeto do mundo real distingu&iacute;vel de outros objetos. </li>&nbsp;
                 
-                <li><u>Relacionamento</u>: É uma associação (ligação) entre entidades. Pode ser classificado como: </li>&nbsp;
+                <li><u>Relacionamento</u>: &Eacute; uma associa&ccedil;&atilde;o (liga&ccedil;&atilde;o) entre entidades. Pode ser classificado como: </li>&nbsp;
                 
                     <ul class="cl_topicos_txt">
                     
-                        <li>Binário: Associação entre duas entidades. Exemplo: </li>&nbsp;
+                        <li>Bin&aacute;rio: Associa&ccedil;&atilde;o entre duas entidades. Exemplo: </li>&nbsp;
                         
                         <div class="cl_conteudo_img">
                             <img src="imagens/relacionamento.jpg"/>        
                         </div>&nbsp;
                         
                         
-                        <li>Ternário: Associação entre duas ou mais entidades. Exemplo: </li>&nbsp;
+                        <li>Tern&aacute;rio: Associa&ccedil;&atilde;o entre duas ou mais entidades. Exemplo: </li>&nbsp;
         
                         <div class="cl_conteudo_img">
                             <img src="imagens/relacionamentoTernario.jpg"/>        
@@ -231,33 +231,33 @@
 			</ul>&nbsp;			
 			
             
-            <p>As pessoas que manipulam um banco de dados recebem denominações especiais. São elas:  </p>&nbsp;
+            <p>As pessoas que manipulam um banco de dados recebem denomina&ccedil;&otilde;es especiais. S&atilde;o elas:  </p>&nbsp;
             
             <ul class="cl_topicos_txt">
 
-            	<li>Administrador de dados (AD): É a pessoa que conhece bem a empresa e, por isso, é ele quem cria e 
-                    mantém o dicionário de dados, entre outras funções; </li>&nbsp;
+            	<li>Administrador de dados (AD): &Eacute; a pessoa que conhece bem a empresa e, por isso, &eacute; ele quem cria e 
+                    mant&eacute;m o dicion&aacute;rio de dados, entre outras fun&ccedil;&otilde;es; </li>&nbsp;
                 
-                <li> Administrador de banco de dados (DBA): É o especialista em SGBD que controla os dados  e aplicativos que
-                     acessam o banco de dados. Também é de sua responsabilidade: elaborar o projeto físico do banco de dados,
-                     auxiliar na construção do modelo lógico, fazer manutenções, modificar a estrutura física etc; </li>&nbsp;
+                <li> Administrador de banco de dados (DBA): &Eacute; o especialista em SGBD que controla os dados  e aplicativos que
+                     acessam o banco de dados. Tamb&eacute;m &eacute; de sua responsabilidade: elaborar o projeto f&iacute;sico do banco de dados,
+                     auxiliar na constru&ccedil;&atilde;o do modelo l&oacute;gico, fazer manuten&ccedil;&otilde;es, modificar a estrutura f&iacute;sica etc; </li>&nbsp;
                      
-                <li>Projetista de banco de dados: Pessoa que entende bem de engenharia de software e é responsável por 
-                    identificar os dados que serão armazenados, além de escolher a estrutura para representar e armazenar os 
-                    dados, ouvir o usuário para obter suas necessidades etc. </li>&nbsp;
+                <li>Projetista de banco de dados: Pessoa que entende bem de engenharia de software e &eacute; respons&aacute;vel por 
+                    identificar os dados que ser&atilde;o armazenados, al&eacute;m de escolher a estrutura para representar e armazenar os 
+                    dados, ouvir o usu&aacute;rio para obter suas necessidades etc. </li>&nbsp;
                     
-                <li>Usuário final: Esta classificação se divide em quatro categorias: </li>&nbsp;
+                <li>Usu&aacute;rio final: Esta classifica&ccedil;&atilde;o se divide em quatro categorias: </li>&nbsp;
                 
                 <ul class="cl_topicos_txt">
                 
-                	<li>Casual: Raramente acessa o banco de dados, porém pode necessitar de informações diferentes a cada vez;</li>
+                	<li>Casual: Raramente acessa o banco de dados, por&eacute;m pode necessitar de informa&ccedil;&otilde;es diferentes a cada vez;</li>
                     
-                    <li>Leigos ou paramétricos: Faz acessos constantes ao banco de dados, mas utiliza consultas padronizadas
+                    <li>Leigos ou param&eacute;tricos: Faz acessos constantes ao banco de dados, mas utiliza consultas padronizadas
                         testadas anteriormente; </li>&nbsp;
                     
                     <li>Sofisticados: Conhece o SGBD e o utiliza; </li>&nbsp;
                     
-                    <li>Individual: Possui banco de dados pessoal e utiliza programas já prontos. </li>&nbsp;
+                    <li>Individual: Possui banco de dados pessoal e utiliza programas j&aacute; prontos. </li>&nbsp;
 
                 
                 </ul>
@@ -271,7 +271,7 @@
             	<li>Banco de dados em rede (ou reticular) </li>
              </ul>&nbsp;
             
-            <p>Os dados são colocados  em registros, os quais são agrupados em classes. Exemplo de banco de dados em rede: 
+            <p>Os dados s&atilde;o colocados  em registros, os quais s&atilde;o agrupados em classes. Exemplo de banco de dados em rede: 
                     Adabas e IDMS.</p>&nbsp;
            
 			
@@ -280,27 +280,27 @@
             </div>
 			
 			<ul class="cl_topicos_txt">
-            	<li> Banco de dados hierárquico </li>&nbsp;
+            	<li> Banco de dados hier&aacute;rquico </li>&nbsp;
              </ul>&nbsp;
            
 
-			<p>É representado por uma árvore hierárquica, onde todos os relacionamentos são do tipo 1:N. </p>&nbsp;
+			<p>&Eacute; representado por uma &aacute;rvore hier&aacute;rquica, onde todos os relacionamentos s&atilde;o do tipo 1:N. </p>&nbsp;
 
-			<p>Exemplo de banco de dados hierárquico: Arquivos e diretórios em sistemas operacionais tipo Unix.</p>&nbsp;
+			<p>Exemplo de banco de dados hier&aacute;rquico: Arquivos e diret&oacute;rios em sistemas operacionais tipo Unix.</p>&nbsp;
 
             <div class="cl_conteudo_img">
             	<img src="imagens/bdhierarquico.jpg"/>        
             </div>&nbsp;
             
             <ul class="cl_topicos_txt">
-            	<li>  Banco de dados textual ou multimídia </li>&nbsp;
+            	<li>  Banco de dados textual ou multim&iacute;dia </li>&nbsp;
              </ul>&nbsp;
             
 			<p>Esse tipo de banco de dados difere dos demais na medida em que neste os dados como "texto corrido" ou "som" 
-               são tratados como qualquer outro campo chave. Desta forma, qualquer informação pode ser encontrada, até mesmo um
+               s&atilde;o tratados como qualquer outro campo chave. Desta forma, qualquer informa&ccedil;&atilde;o pode ser encontrada, at&eacute; mesmo um
                pequeno trecho de um texto! </p>&nbsp;
 
-			<p>Exemplo de banco de dados textual ou multimídia: PostgreSQL, BrSearch, Oracle, LightBase etc.</p>&nbsp;
+			<p>Exemplo de banco de dados textual ou multim&iacute;dia: PostgreSQL, BrSearch, Oracle, LightBase etc.</p>&nbsp;
 
  			<ul class="cl_topicos_txt">
             	<li>Banco de dados orientado a objetos </li>&nbsp;
@@ -309,15 +309,15 @@
 
 
 
-			<p>Como nas linguagens de programação orientadas a objetos, a unidade de armazenamento também é o objeto, porém 
-             aqui os objetos continuam a existir após a finalização do programa, à essa característica dá-se o nome de 
-             <u> persistência de objetos</u>.</p>&nbsp;
+			<p>Como nas linguagens de programa&ccedil;&atilde;o orientadas a objetos, a unidade de armazenamento tamb&eacute;m &eacute; o objeto, por&eacute;m 
+             aqui os objetos continuam a existir ap&oacute;s a finaliza&ccedil;&atilde;o do programa, &agrave; essa caracter&iacute;stica d&aacute;-se o nome de 
+             <u> persist&ecirc;ncia de objetos</u>.</p>&nbsp;
              
-             <p>O sistema é organizado como uma coleção de objetos que definem estruturas de dados e comportamento.</p>&nbsp;
+             <p>O sistema &eacute; organizado como uma cole&ccedil;&atilde;o de objetos que definem estruturas de dados e comportamento.</p>&nbsp;
 			
             
-            <p>Uma das grandes qualidades desse tipo de banco de dados é o <u>reuso</u>, onde grandes programas são construídos a
-             partir de outros pré-fabricados.</p>
+            <p>Uma das grandes qualidades desse tipo de banco de dados &eacute; o <u>reuso</u>, onde grandes programas s&atilde;o constru&iacute;dos a
+             partir de outros pr&eacute;-fabricados.</p>
 
 			<p>Exemplo de banco de dados orientado a objetos: Jasmine, PostgreSQL etc.</p>&nbsp;
 
@@ -329,11 +329,11 @@
             	<li> Banco de dados relacional  </li>&nbsp;
              </ul>&nbsp;
             
-            <p>Banco de dados que utiliza tabelas para representar suas relações. Cada linha da <u>tabela</u> é chamada de <u>registro</u> 
-               e cada coluna chama-se <u>campo</u>. O <u>domínio</u> é o conjunto de valores do banco de dados.</p>&nbsp;
+            <p>Banco de dados que utiliza tabelas para representar suas rela&ccedil;&otilde;es. Cada linha da <u>tabela</u> &eacute; chamada de <u>registro</u> 
+               e cada coluna chama-se <u>campo</u>. O <u>dom&iacute;nio</u> &eacute; o conjunto de valores do banco de dados.</p>&nbsp;
             
-            <p>O modelo relacional representa uma tentativa de descrever um banco de dados através de conceitos
-               matemáticos simples e conhecidos (Álgebra relacional).</p>&nbsp;
+            <p>O modelo relacional representa uma tentativa de descrever um banco de dados atrav&eacute;s de conceitos
+               matem&aacute;ticos simples e conhecidos (&Aacute;lgebra relacional).</p>&nbsp;
                
             <p>Exemplo de banco de dados relacional: Oracle, PostgreSQL, MySQL etc.</p>&nbsp;
 

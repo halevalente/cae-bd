@@ -54,10 +54,10 @@
 			   <li><a href="new_bancomodelagem.html">Modelagem de Dados</a></li>
                <li><a href="new_bancomodelo_mer.html" class="current">Mod. Entid. Relacionamento</a></li>
                <li><a href="new_bancomodelo_dados_relac.html">Mod. de Dados Relacional</a></li>
-			   <li><a href="new_bancodependenciafuncional.html">Dependência Funcional</a></li>
-			   <li><a href="new_banconormalizacao.html">Normalização</a></li>
-               <li><a href="new_bancoalgebrarelacional.html">Álgebra Relacional</a></li>
-			   <li><a href="./exercicios/exer1_MER_BD1.htm" target="_blank">Exercícios de Modelo MER</a></li>
+			   <li><a href="new_bancodependenciafuncional.html">Depend&ecirc;ncia Funcional</a></li>
+			   <li><a href="new_banconormalizacao.html">Normaliza&ccedil;&atilde;o</a></li>
+               <li><a href="new_bancoalgebrarelacional.html">&Aacute;lgebra Relacional</a></li>
+			   <li><a href="./exercicios/exer1_MER_BD1.htm" target="_blank">Exerc&iacute;cios de Modelo MER</a></li>
 			   <li> &nbsp;</li>
        	    </ul>
         </div><!-- FIM MENU VERTICAL id-->
@@ -69,42 +69,42 @@
       
           <p span class="cl_conteudo_tit">Modelo Entidade-Relacionamento (ME-R)</span></p>&nbsp;
           
-          <p>O Modelo Entidade-Relacionamento (ME-R) é um modelo baseado na percepção do 
-             mundo real, que consiste em um conjunto de objetos, que são chamados de
+          <p>O Modelo Entidade-Relacionamento (ME-R) &eacute; um modelo baseado na percep&ccedil;&atilde;o do 
+             mundo real, que consiste em um conjunto de objetos, que s&atilde;o chamados de
              entidades, e nos relacionamentos entre esses objetos.</p>&nbsp;
           
-          <p>O objetivo do ME-R é facilitar o projeto de banco de dados, possibilitando 
-             a construção da estrutura lógica geral do banco de dados.</p>&nbsp;
+          <p>O objetivo do ME-R &eacute; facilitar o projeto de banco de dados, possibilitando 
+             a constru&ccedil;&atilde;o da estrutura l&oacute;gica geral do banco de dados.</p>&nbsp;
           
           <p class="cl_conteudo_subtit">Conceitos</p>&nbsp;
           
           <ul class="cl_topicos_txt">
-          		<li><u>Entidade</u>: É uma representação abstrata de um objeto do mundo real. 				Exemplo: funcionário, aluno, departamento etc.</li>&nbsp;
+          		<li><u>Entidade</u>: &Eacute; uma representa&ccedil;&atilde;o abstrata de um objeto do mundo real. 				Exemplo: funcion&aacute;rio, aluno, departamento etc.</li>&nbsp;
                  
-                 	<p class="cl_conteudo_subtit">Não são entidades:</p>&nbsp;
+                 	<p class="cl_conteudo_subtit">N&atilde;o s&atilde;o entidades:</p>&nbsp;
                  	
                     <ul class="cl_topicos_txt">
             	
                 		<li>Entidade com apenas 1 elemento;</li>&nbsp;
-	                	<li>Operações do sistema;</li>&nbsp;
-    	            	<li>Saídas do sistema;</li>&nbsp;
-        	        	<li>Pessoas que realizam trabalhos (usuários do sistema);</li>&nbsp;
-            	    	<li>Cargos de direção.</li>&nbsp;
+	                	<li>Opera&ccedil;ões do sistema;</li>&nbsp;
+    	            	<li>Sa&iacute;das do sistema;</li>&nbsp;
+        	        	<li>Pessoas que realizam trabalhos (usu&aacute;rios do sistema);</li>&nbsp;
+            	    	<li>Cargos de dire&ccedil;&atilde;o.</li>&nbsp;
             		
                     </ul>
                 
-                <li><u>Atributo</u>: Elemento de dado que contém informação que 
-                       descreve uma entidade. Exemplo: código_funcionário, endereço, nome
+                <li><u>Atributo</u>: Elemento de dado que cont&eacute;m informa&ccedil;&atilde;o que 
+                       descreve uma entidade. Exemplo: c&oacute;digo_funcion&aacute;rio, endere&ccedil;o, nome
                        do aluno etc.</li>&nbsp;
                  
-                <li><u>Domínio do Atributo</u>: Universo de valores que um atributo pode armazenar. Exemplo:</li>
+                <li><u>Dom&iacute;nio do Atributo</u>: Universo de valores que um atributo pode armazenar. Exemplo:</li>
 
  				<ul class="cl_topicos_txt">
             	
-                		<li> Conjunto de valores do atributo Sexo do funcionário: M ou F;</li>&nbsp;
-	                	<li>Conjunto de valores do atributo Nome do aluno: 40 caracteres alfanumérico;</li>&nbsp;
-    	            	<li>Conjunto de valores do atributo salário: inteiro maior que 5000.</li>&nbsp;
-        	        	<li>Relacionamento: Estrutura que indica a associação entre duas ou mais entidades. Exemplo:</li>&nbsp;
+                		<li> Conjunto de valores do atributo Sexo do funcion&aacute;rio: M ou F;</li>&nbsp;
+	                	<li>Conjunto de valores do atributo Nome do aluno: 40 caracteres alfanum&eacute;rico;</li>&nbsp;
+    	            	<li>Conjunto de valores do atributo sal&aacute;rio: inteiro maior que 5000.</li>&nbsp;
+        	        	<li>Relacionamento: Estrutura que indica a associa&ccedil;&atilde;o entre duas ou mais entidades. Exemplo:</li>&nbsp;
             	    	
                         <div class="cl_conteudo_img">
           	
@@ -116,15 +116,15 @@
                     
 		  </ul>&nbsp;	
           
-          <p>Nesse caso, há um relacionamento entre a entidade "paciente" e a entidade "prontuário".</p>&nbsp;
+          <p>Nesse caso, h&aacute; um relacionamento entre a entidade "paciente" e a entidade "prontu&aacute;rio".</p>&nbsp;
           
           <p class="cl_conteudo_subtit">Cardinalidade de relacionamentos</p>&nbsp;
           
           <ul class="cl_topicos_txt">
           	
-          		<li>Um-para-um (1 : 1) : uma entidade A (nesse caso, paciente) está 
-                    associada no máximo a uma entidade em B (prontuário) e uma entidade 
-                    em B está associada no máximo a uma entidade em A. Exemplo:</li>&nbsp;
+          		<li>Um-para-um (1 : 1) : uma entidade A (nesse caso, paciente) est&aacute; 
+                    associada no m&aacute;ximo a uma entidade em B (prontu&aacute;rio) e uma entidade 
+                    em B est&aacute; associada no m&aacute;ximo a uma entidade em A. Exemplo:</li>&nbsp;
             	
           </ul>
           
@@ -134,14 +134,14 @@
           
     	  </div>
           
-          <p>Nesse exemplo, um paciente só pode ter um prontuário e um prontuário 
-             só pode pertencer a um paciente.</p>&nbsp;
+          <p>Nesse exemplo, um paciente s&oacute; pode ter um prontu&aacute;rio e um prontu&aacute;rio 
+             s&oacute; pode pertencer a um paciente.</p>&nbsp;
           
           <ul class="cl_topicos_txt">
           	
-          		<li>Um-para-muitos (1 : N): uma entidade em A (nesse caso, venda) está 
-                    associada a qualquer número de entidades em B (cliente), enquanto uma 
-                    entidade em B está associada no máximo a uma entidade em A. Exemplo:</li>&nbsp;
+          		<li>Um-para-muitos (1 : N): uma entidade em A (nesse caso, venda) est&aacute; 
+                    associada a qualquer n&uacute;mero de entidades em B (cliente), enquanto uma 
+                    entidade em B est&aacute; associada no m&aacute;ximo a uma entidade em A. Exemplo:</li>&nbsp;
             	
           </ul>
 
@@ -152,14 +152,14 @@
           
     	  	</div>	
             
-            <p>Nesse exemplo, um cliente pode participar de várias vendas, e uma venda só 
+            <p>Nesse exemplo, um cliente pode participar de v&aacute;rias vendas, e uma venda s&oacute; 
                pode ser realizada para um cliente.</p>&nbsp;
 			
             <ul class="cl_topicos_txt">
           	
-          		<li> Muitos-para-um (N : 1): uma entidade em A (nesse caso, venda) está 
-                     associada no máximo uma entidade em B (cliente), enquanto uma entidade 
-                     em B está associada a qualquer número de entidades em B. Exemplo:</li>&nbsp;
+          		<li> Muitos-para-um (N : 1): uma entidade em A (nesse caso, venda) est&aacute; 
+                     associada no m&aacute;ximo uma entidade em B (cliente), enquanto uma entidade 
+                     em B est&aacute; associada a qualquer n&uacute;mero de entidades em B. Exemplo:</li>&nbsp;
             	
           	</ul>
 
@@ -170,14 +170,14 @@
           
     	  	</div>	
  
-			<p>Nesse exemplo, uma venda só pode ser realizada para um único cliente, 
-               mas um cliente pode participar de várias vendas.</p>&nbsp;
+			<p>Nesse exemplo, uma venda s&oacute; pode ser realizada para um &uacute;nico cliente, 
+               mas um cliente pode participar de v&aacute;rias vendas.</p>&nbsp;
 
  			<ul class="cl_topicos_txt">
           	
-          		<li>Muitos-para-muitos: Uma entidade em A está associada a qualquer 
-                    número de entidades em B, e uma entidade em B está associada a qualquer 
-                    número de entidades em A.</li>&nbsp;
+          		<li>Muitos-para-muitos: Uma entidade em A est&aacute; associada a qualquer 
+                    n&uacute;mero de entidades em B, e uma entidade em B est&aacute; associada a qualquer 
+                    n&uacute;mero de entidades em A.</li>&nbsp;
             	
           	</ul>
 
@@ -190,9 +190,9 @@
 
  			<p class="cl_conteudo_subtit">Grau do Relacionamento</p>&nbsp;
             
-            <p>Indica o número de entidade que se relacionam.</p>&nbsp;
+            <p>Indica o n&uacute;mero de entidade que se relacionam.</p>&nbsp;
             
-            <p class="cl_conteudo_subtit2"><u>Relacionamento Binário </u></p>&nbsp;
+            <p class="cl_conteudo_subtit2"><u>Relacionamento Bin&aacute;rio </u></p>&nbsp;
             
 			<p>Quando existe o relacionamento entre apenas duas entidades. Exemplo:</p>&nbsp;
             
@@ -202,9 +202,9 @@
           
     	  	</div>	
 			
-            <p class="cl_conteudo_subtit2"><u>Relacionamento Ternário</u></p>&nbsp;
+            <p class="cl_conteudo_subtit2"><u>Relacionamento Tern&aacute;rio</u></p>&nbsp;
     		
-			<p>Quando existe o relacionamento entre três ou mais entidades. Exemplo:</p>&nbsp;
+			<p>Quando existe o relacionamento entre tr&ecirc;s ou mais entidades. Exemplo:</p>&nbsp;
             
             <div class="cl_conteudo_img">
           	
@@ -212,11 +212,11 @@
           
     	  	</div>
             
-            <p class="cl_conteudo_subtit">Agregação</p>&nbsp;
+            <p class="cl_conteudo_subtit">Agrega&ccedil;&atilde;o</p>&nbsp;
             
-            <p>Uma limitação do modelo E-R é que não é possível expressar relacionamentos 
-               entre relacionamentos. Agregação é uma abstração através da qual relacionamentos
-               são tratados como entidades de nível superior. Observe o exemplo a seguir:</p>&nbsp;
+            <p>Uma limita&ccedil;&atilde;o do modelo E-R &eacute; que n&atilde;o &eacute; poss&iacute;vel expressar relacionamentos 
+               entre relacionamentos. Agrega&ccedil;&atilde;o &eacute; uma abstra&ccedil;&atilde;o atrav&eacute;s da qual relacionamentos
+               s&atilde;o tratados como entidades de n&iacute;vel superior. Observe o exemplo a seguir:</p>&nbsp;
             
             <div class="cl_conteudo_img">
           	
@@ -224,7 +224,7 @@
           
     	  	</div>
             
-            <p>Agora o mesmo exemplo usando agregação:</p>&nbsp;
+            <p>Agora o mesmo exemplo usando agrega&ccedil;&atilde;o:</p>&nbsp;
 
 			<div class="cl_conteudo_img">
           	
@@ -232,10 +232,10 @@
           
     	  	</div>
             
-            <p class="cl_conteudo_subtit">Generalização e Especialização</p>&nbsp;
+            <p class="cl_conteudo_subtit">Generaliza&ccedil;&atilde;o e Especializa&ccedil;&atilde;o</p>&nbsp;
 			
             <p>Existem casos em que um conjunto-entidade pode ser dividido em categorias, 
-               cada qual com atributos específicos. Observe a figura abaixo:</p>&nbsp;
+               cada qual com atributos espec&iacute;ficos. Observe a figura abaixo:</p>&nbsp;
             
             <div class="cl_conteudo_img">
           	
@@ -245,7 +245,7 @@
             
             <p class="cl_conteudo_subtit">Diagrama Entidade-Relacionamento (DE-R)</p>&nbsp;
 			
-            <p>A estrutura lógica geral de um banco de dados pode ser expressa graficamente
+            <p>A estrutura l&oacute;gica geral de um banco de dados pode ser expressa graficamente
                por um Diagrama Entidade-Relacionamento. Exemplo:</p>
                
             
@@ -258,20 +258,20 @@
 			
             <ul class="cl_topicos_txt">
           	
-          		<li> A presença de um <u>substantivo</u> usualmente indica uma <u>entidade;</u></li>&nbsp;
-                <li> A presença de um <u>verbo</u> é uma forte indicação de um <u>relacionamento</u>;</li>&nbsp;
-                <li> Um <u>adjetivo</u>, que é uma qualidade, é uma forte indicação de um <u>atributo;</u></li>&nbsp;
-                <li> Um <u>advérbio</u> temporal, qualificando o verbo, é uma indicação de um 
+          		<li> A presen&ccedil;a de um <u>substantivo</u> usualmente indica uma <u>entidade;</u></li>&nbsp;
+                <li> A presen&ccedil;a de um <u>verbo</u> &eacute; uma forte indica&ccedil;&atilde;o de um <u>relacionamento</u>;</li>&nbsp;
+                <li> Um <u>adjetivo</u>, que &eacute; uma qualidade, &eacute; uma forte indica&ccedil;&atilde;o de um <u>atributo;</u></li>&nbsp;
+                <li> Um <u>adv&eacute;rbio</u> temporal, qualificando o verbo, &eacute; uma indica&ccedil;&atilde;o de um 
                      <u>atributo</u> do <u>Relacionamento</u>.</li>&nbsp;
             	
           	</ul>
             
 			<p span class="cl_conteudo_tit"><u>Atividade de Fixa&ccedil;&atilde;o</u></span></p>&nbsp;
 			
-			<p>No intuito de fixar a aprendizagem iniciada por meio deste módulo e verificar como 
-			   esta sua compreensão sobre os mesmos são sugeridos alguns exercícios de fixação para 
-			   serem resolvidos. Clique no link den exercício ao lado, pois será por meio dela iniciada
-			   a lista de exercício sobre os conteúdos estudados até este momento. Boa revisão sobre os 
+			<p>No intuito de fixar a aprendizagem iniciada por meio deste m&oacute;dulo e verificar como 
+			   esta sua compreens&atilde;o sobre os mesmos s&atilde;o sugeridos alguns exerc&iacute;cios de fixa&ccedil;&atilde;o para 
+			   serem resolvidos. Clique no link den exerc&iacute;cio ao lado, pois ser&aacute; por meio dela iniciada
+			   a lista de exerc&iacute;cio sobre os conte&uacute;dos estudados at&eacute; este momento. Boa revis&atilde;o sobre os 
 			   mesmos!!  </p>&nbsp;
           
     </div>
