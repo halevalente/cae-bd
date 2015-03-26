@@ -54,10 +54,10 @@
 			   <li><a href="new_bancomodelagem.html">Modelagem de Dados</a></li>
                <li><a href="new_bancomodelo_mer.html">Mod. Entid. Relacionamento</a></li>
                <li><a href="new_bancomodelo_dados_relac.html">Mod. de Dados Relacional</a></li>
-			   <li><a href="new_bancodependenciafuncional.html" class="current">Dependência Funcional</a></li>
-			   <li><a href="new_banconormalizacao.html">Normalização</a></li>
-               <li><a href="new_bancoalgebrarelacional.html">Álgebra Relacional</a></li>
-			   <li><a href="../web-a-desenvolver.html">Exercícios de Depen. Funcional</a></li>
+			   <li><a href="new_bancodependenciafuncional.html" class="current">Depend&ecirc;ncia Funcional</a></li>
+			   <li><a href="new_banconormalizacao.html">Normaliza&ccedil;&atilde;o</a></li>
+               <li><a href="new_bancoalgebrarelacional.html">&Aacute;lgebra Relacional</a></li>
+			   <li><a href="../web-a-desenvolver.html">Exerc&iacute;cios de Depen. Funcional</a></li>
 			   <li> &nbsp;</li>
        	    </ul>
         </div><!-- FIM MENU VERTICAL id-->
@@ -67,9 +67,9 @@
   <div id="conteudotxt">  
     <div class="cl_conteudo_txt">
       
-          	<p span class="cl_conteudo_tit">Dependência Funcional</span></p>&nbsp;
+          	<p span class="cl_conteudo_tit">Depend&ecirc;ncia Funcional</span></p>&nbsp;
           	
- 			<p>Vem da teoria de funções da matemática o conceito de dependência 
+ 			<p>Vem da teoria de fun&ccedil;&otilde;es da matem&aacute;tica o conceito de depend&ecirc;ncia 
                funcional utilizado pela modelagem relacional.</p>&nbsp;
             
             <p>Por exemplo, considere os conjuntos:</p>&nbsp;
@@ -80,29 +80,29 @@
           
           	</div>
            	
-           	<p>Nesse exemplo, há uma uma função de um número com relação a um nome, ou seja, 
-               com um número é possível encontrar o nome correspondente.</p>&nbsp;
+           	<p>Nesse exemplo, h&aacute; uma uma fun&ccedil;&atilde;o de um n&uacute;mero com rela&ccedil;&atilde;o a um nome, ou seja, 
+               com um n&uacute;mero &eacute; poss&iacute;vel encontrar o nome correspondente.</p>&nbsp;
             
             <p>Dados outros dois conjuntos de atributos A e B de uma entidade, diz-se que:</p>&nbsp;
             
             <div class="cl_topicos_txt">
             
-            	<li> B é funcionalmente dependente de A ou</li>&nbsp;
+            	<li> B &eacute; funcionalmente dependente de A ou</li>&nbsp;
             	<li>A determina B ou</li>&nbsp;
             	<li>B depende de A</li>&nbsp;
                 
             </div>
 
- 			<p>Se cada valor de A estiver associado a um, e só um, valor de B.</p>&nbsp;
+ 			<p>Se cada valor de A estiver associado a um, e s&oacute; um, valor de B.</p>&nbsp;
             
- 			<p>Se A determina B, então B não é funcionalmente dependente de nenhum subconjunto
+ 			<p>Se A determina B, ent&atilde;o B n&atilde;o &eacute; funcionalmente dependente de nenhum subconjunto
                de A.</p>&nbsp;
 
- 			<p>Uma dependência funcional é representada por :</p>&nbsp;
+ 			<p>Uma depend&ecirc;ncia funcional &eacute; representada por :</p>&nbsp;
  			
             <p class="cl_conteudo_subtit2">A -> B</p>&nbsp;                        
  			
-            <p>(A é denominado determinante)</p>&nbsp;
+            <p>(A &eacute; denominado determinante)</p>&nbsp;
 			
 			<p>Exemplo:</p>&nbsp;
             
@@ -112,26 +112,26 @@
           
           	</div>
             
-           <p>Departamento -> Código funcionário ? (Departamento pode determinar o
-               Código_Funcionário ?)</p>&nbsp;
+           <p>Departamento -> C&oacute;digo funcion&aacute;rio ? (Departamento pode determinar o
+               C&oacute;digo_Funcion&aacute;rio ?)</p>&nbsp;
 
-    	   <p>Não, pois o departamento 003 aparece em duas tuplas (para os funcionários 125 e 555).</p>&nbsp;
+    	   <p>N&atilde;o, pois o departamento 003 aparece em duas tuplas (para os funcion&aacute;rios 125 e 555).</p>&nbsp;
         
-           <p>Código_Funcionário -> Departamento ? (Código_Funcionário pode determinar o Departamento?)</p>&nbsp;
+           <p>C&oacute;digo_Funcion&aacute;rio -> Departamento ? (C&oacute;digo_Funcion&aacute;rio pode determinar o Departamento?)</p>&nbsp;
         
-           <p>Sim, pois se conhecendo o Código_Funcionário (atributo unívoco) é possível determinar o departamento (um funcionário só pode pertencer a um departamento).</p>&nbsp;
+           <p>Sim, pois se conhecendo o C&oacute;digo_Funcion&aacute;rio (atributo un&iacute;voco) &eacute; poss&iacute;vel determinar o departamento (um funcion&aacute;rio s&oacute; pode pertencer a um departamento).</p>&nbsp;
            
-           <p>Nome -> Código_Funcionário ? (Nome pode determinar o Código_Funcionário ?)</p>&nbsp;
+           <p>Nome -> C&oacute;digo_Funcion&aacute;rio ? (Nome pode determinar o C&oacute;digo_Funcion&aacute;rio ?)</p>&nbsp;
            
-           <p>Não, pois podem existir funcionários com o mesmo nome, logo, pode haver múltiplos valores de Código_Funcionário para o mesmo nome.</p>&nbsp;
+           <p>N&atilde;o, pois podem existir funcion&aacute;rios com o mesmo nome, logo, pode haver m&uacute;ltiplos valores de C&oacute;digo_Funcion&aacute;rio para o mesmo nome.</p>&nbsp;
 			
-            <p>Código_Funcionário -> Sobrenome ? (Código_Funcionário pode determinar o Sobrenome?)</p>&nbsp;
+            <p>C&oacute;digo_Funcion&aacute;rio -> Sobrenome ? (C&oacute;digo_Funcion&aacute;rio pode determinar o Sobrenome?)</p>&nbsp;
         	
-            <p>Apesar de dois funcionários terem o mesmo sobrenome, ao se conhecer o Código_Funcionário é possível se determinar um só sobrenome.</p>&nbsp;
+            <p>Apesar de dois funcion&aacute;rios terem o mesmo sobrenome, ao se conhecer o C&oacute;digo_Funcion&aacute;rio &eacute; poss&iacute;vel se determinar um s&oacute; sobrenome.</p>&nbsp;
         		
-         	<p>A identificação de dependências funcionais não pode ser obtida apenas a partir da inspeção de algumas instâncias, mas sim através das próprias propriedades dos atributos.</p>&nbsp;
+         	<p>A identifica&ccedil;&atilde;o de depend&ecirc;ncias funcionais n&atilde;o pode ser obtida apenas a partir da inspe&ccedil;&atilde;o de algumas inst&acirc;ncias, mas sim atrav&eacute;s das pr&oacute;prias propriedades dos atributos.</p>&nbsp;
         	
-            <p>Outro exemplo de identificação de dependências funcionais:</p>&nbsp;
+            <p>Outro exemplo de identifica&ccedil;&atilde;o de depend&ecirc;ncias funcionais:</p>&nbsp;
 
 			<div class="cl_conteudo_img">
           	
@@ -139,50 +139,50 @@
           
           	</div>
 			
-            <p>O valor é funcionalmente dependente de produto (Produto -> Valor) ?</p>&nbsp;
+            <p>O valor &eacute; funcionalmente dependente de produto (Produto -> Valor) ?</p>&nbsp;
 
-            <p>Não, o mesmo produto pode ter valores distintos diferentes mercados.</p>&nbsp;
+            <p>N&atilde;o, o mesmo produto pode ter valores distintos diferentes mercados.</p>&nbsp;
             
-            <p>O valor é funcionalmente dependente de mercado?</p>&nbsp;
+            <p>O valor &eacute; funcionalmente dependente de mercado?</p>&nbsp;
             
-            <p>Não, para cada mercado há tantos valores quanto os produtos vendidos nesse mercado.</p>&nbsp;
+            <p>N&atilde;o, para cada mercado h&aacute; tantos valores quanto os produtos vendidos nesse mercado.</p>&nbsp;
             
             <p>Valor depende funcionalmente de ambos {Mercado, produto} -> Valor. </p>&nbsp;
             
-            <p class="cl_conteudo_subtit">Regras para encontrar Dependências Funcionais</p>&nbsp;
+            <p class="cl_conteudo_subtit">Regras para encontrar Depend&ecirc;ncias Funcionais</p>&nbsp;
 			
             <div class="cl_topicos_txt">
             
-            	<li>Separação</li>&nbsp;
+            	<li>Separa&ccedil;&atilde;o</li>&nbsp;
                     
             </div>
             
-            <p class="cl_conteudo_subtit2"> A -> BC então A -> B e A -> C</p>&nbsp;
+            <p class="cl_conteudo_subtit2"> A -> BC ent&atilde;o A -> B e A -> C</p>&nbsp;
  
 			<p>Exemplo:</p>&nbsp;
             
-            <p class="cl_conteudo_subtit2">CPF -> nome, endereço então CPF -> nome e CPF -> 
-              endereço</p>&nbsp;
+            <p class="cl_conteudo_subtit2">CPF -> nome, endere&ccedil;o ent&atilde;o CPF -> nome e CPF -> 
+              endere&ccedil;o</p>&nbsp;
 			
-            <p>Leia o exemplo acima da seguinte maneira: se com um número de cpf é 
-               possível encontrar o nome e o endereço de uma pessoa, então com esse 
-               número é possível encontrar apenas o nome ou apenas o endereço.</p>&nbsp;
+            <p>Leia o exemplo acima da seguinte maneira: se com um n&uacute;mero de cpf &eacute; 
+               poss&iacute;vel encontrar o nome e o endere&ccedil;o de uma pessoa, ent&atilde;o com esse 
+               n&uacute;mero &eacute; poss&iacute;vel encontrar apenas o nome ou apenas o endere&ccedil;o.</p>&nbsp;
 
        		<div class="cl_topicos_txt">
             
-            	<li>Acumulação</li>&nbsp;
+            	<li>Acumula&ccedil;&atilde;o</li>&nbsp;
                     
             </div>
 			
-            <p class="cl_conteudo_subtit2"> A -> B então AC -> B</p>&nbsp;
+            <p class="cl_conteudo_subtit2"> A -> B ent&atilde;o AC -> B</p>&nbsp;
             
             <p>Exemplo:</p>&nbsp;
             
-            <p class="cl_conteudo_subtit2"> CPF -> endereço então CPF, idade -> endereço</p>&nbsp;
+            <p class="cl_conteudo_subtit2"> CPF -> endere&ccedil;o ent&atilde;o CPF, idade -> endere&ccedil;o</p>&nbsp;
             
-            <p>Leia o exemplo acima da seguinte maneira: se com um número de cpf é 
-               possível encontrar o endereço de uma pessoa, então com este número mais a 
-               idade da pessoa é possível encontrar o endereço também.</p>&nbsp;
+            <p>Leia o exemplo acima da seguinte maneira: se com um n&uacute;mero de cpf &eacute; 
+               poss&iacute;vel encontrar o endere&ccedil;o de uma pessoa, ent&atilde;o com este n&uacute;mero mais a 
+               idade da pessoa &eacute; poss&iacute;vel encontrar o endere&ccedil;o tamb&eacute;m.</p>&nbsp;
            
             <div class="cl_topicos_txt">
             
@@ -190,17 +190,17 @@
                     
             </div>
 			
-            <p class="cl_conteudo_subtit2"> A -> B e B -> C então A -> C</p>&nbsp;
+            <p class="cl_conteudo_subtit2"> A -> B e B -> C ent&atilde;o A -> C</p>&nbsp;
             
             <p>Exemplo:</p>&nbsp;
             
-            <p class="cl_conteudo_subtit2">CPF -> código-cidade e código-cidade -> nome-cidade 
-                então CPF -> nome-cidade</p>&nbsp;
+            <p class="cl_conteudo_subtit2">CPF -> c&oacute;digo-cidade e c&oacute;digo-cidade -> nome-cidade 
+                ent&atilde;o CPF -> nome-cidade</p>&nbsp;
             
-            <p> Leia o exemplo acima da seguinte maneira: se com um número de cpf é
-                possível encontrar o código da cidade de uma pessoa, e como o código da 
-                cidade é possível encontrar o nome da cidade, então com o número do cpf é 
-                possível encontrar o nome da cidade. </p>&nbsp;
+            <p> Leia o exemplo acima da seguinte maneira: se com um n&uacute;mero de cpf &eacute;
+                poss&iacute;vel encontrar o c&oacute;digo da cidade de uma pessoa, e como o c&oacute;digo da 
+                cidade &eacute; poss&iacute;vel encontrar o nome da cidade, ent&atilde;o com o n&uacute;mero do cpf &eacute; 
+                poss&iacute;vel encontrar o nome da cidade. </p>&nbsp;
 
 			<div class="cl_topicos_txt">
             
@@ -208,31 +208,28 @@
                     
             </div>
 			
-            <p class="cl_conteudo_subtit2"> A -> B e BC -> D então AC -> D</p>&nbsp;
+            <p class="cl_conteudo_subtit2"> A -> B e BC -> D ent&atilde;o AC -> D</p>&nbsp;
             
             <p>Exemplo:</p>&nbsp;
             
-            <p class="cl_conteudo_subtit2">CPF -> código-funcionário e código-funcionário, mês -> 
-             salário-funcionário então</p>&nbsp;
+            <p class="cl_conteudo_subtit2">CPF -> c&oacute;digo-funcion&aacute;rio e c&oacute;digo-funcion&aacute;rio, m&ecirc;s -> 
+             sal&aacute;rio-funcion&aacute;rio ent&atilde;o</p>&nbsp;
             
-            <p class="cl_conteudo_subtit2">CPF, mês -> salário-funcionário</p>&nbsp;
+            <p class="cl_conteudo_subtit2">CPF, m&ecirc;s -> sal&aacute;rio-funcion&aacute;rio</p>&nbsp;
             
-            <p>Leia o exemplo acima da seguinte maneira: se com um número de cpf é
-               possível encontrar o código do funcionário, e com o código do funcionário 
-               mais um certo mês é possível encontrar  o salário que ele recebeu naquele
-                mês, então com o número do cpf mais um certo mês é possível encontrar o
-                salário que ele recebeu naquele mês.</p>&nbsp;
+            <p>Leia o exemplo acima da seguinte maneira: se com um n&uacute;mero de cpf &eacute;
+               poss&iacute;vel encontrar o c&oacute;digo do funcion&aacute;rio, e com o c&oacute;digo do funcion&aacute;rio 
+               mais um certo m&ecirc;s &eacute; poss&iacute;vel encontrar  o sal&aacute;rio que ele recebeu naquele
+                m&ecirc;s, ent&atilde;o com o n&uacute;mero do cpf mais um certo m&ecirc;s &eacute; poss&iacute;vel encontrar o
+                sal&aacute;rio que ele recebeu naquele m&ecirc;s.</p>&nbsp;
             
             <p></p>&nbsp;
             <p></p>&nbsp;
            
 			<p span class="cl_conteudo_tit"><u>Atividade de Fixa&ccedil;&atilde;o</u></span></p>&nbsp;
 			
-			<p>No intuito de fixar a aprendizagem iniciada por meio deste módulo e verificar como 
-			   esta sua compreensão sobre os mesmos são sugeridos alguns exercícios de fixação para 
-			   serem resolvidos. Clique no link den exercício ao lado, pois será por meio dela iniciada
-			   a lista de exercício sobre os conteúdos estudados até este momento. Boa revisão sobre os 
-			   mesmos!!  </p>&nbsp;
+			<p>No intuito de fixar a aprendizagem iniciada por meio deste m&oacute;dulo, e verificar como est&aacute; sua compreens&atilde;o sobre os mesmos, s&atilde;o sugeridos alguns exerc&iacute;cios de fixa&ccedil;&atilde;o para serem resolvidos. Clique no link lateral &agrave; esquerda <b>Exerc&iacute;cios</b>, pois ser&aacute; por meio dele iniciada uma lista de exerc&iacute;cio sobre os conte&uacute;dos estudados at&eacute; este momento.</p>
+<p> Boa revis&atilde;o sobre os mesmos!!</p>&nbsp;
           
     </div>
   </div><!-- FIM CONTEUDO-->            

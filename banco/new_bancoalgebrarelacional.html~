@@ -54,10 +54,10 @@
 			   <li><a href="new_bancomodelagem.html">Modelagem de Dados</a></li>
                <li><a href="new_bancomodelo_mer.html">Mod. Entid. Relacionamento</a></li>
                <li><a href="new_bancomodelo_dados_relac.html">Mod. de Dados Relacional</a></li>
-			   <li><a href="new_bancodependenciafuncional.html">Depend&ecirc;ncia Funcional</a></li>
-			   <li><a href="new_banconormalizacao.html">Normaliz&ccedil;&atilde;ao</a></li>
-               <li><a href="new_bancoalgebrarelacional.html" class="current">&Aacute;lgebra Relacional</a></li>
-			   <li><a href="exercicios/exer1_AlgebraRel.htm" target="_blank">Exerc&iacute;cios de &Aacute;lgebra Relac.</a></li>
+			   <li><a href="new_bancodependenciafuncional.html">Dependência Funcional</a></li>
+			   <li><a href="new_banconormalizacao.html">Normalização</a></li>
+               <li><a href="new_bancoalgebrarelacional.html" class="current">Álgebra Relacional</a></li>
+			   <li><a href="exercicios/exer1_AlgebraRel.htm" target="_blank">Exercícios de Álgebra Relac.</a></li>
 			   <li> &nbsp;</li>
        	    </ul>
         </div><!-- FIM MENU VERTICAL id-->
@@ -67,32 +67,32 @@
   <div id="conteudotxt">  
     <div class="cl_conteudo_txt">
       
-          	<p span class="cl_conteudo_tit">&Aacute;lgebra Relacional</span></p>&nbsp;
+          	<p span class="cl_conteudo_tit">Álgebra Relacional</span></p>&nbsp;
           	
-            <p>A &aacute;lgebra relacional &eacute; uma linguagem que define operadores para atuar nas
+            <p>A álgebra relacional é uma linguagem que define operadores para atuar nas
                tabelas.</p>&nbsp;
             
-            <p>Um banco de dados relacional &eacute; descrito atrav&eacute;s de conceitos matem&aacute;ticos 
+            <p>Um banco de dados relacional é descrito através de conceitos matemáticos 
                simples, como:</p>&nbsp;
             
             <div class="cl_topicos_txt">
             
-            	<li>Teoria de conjuntos e dom&iacute;nios;</li>&nbsp;
-            	<li>Opera&ccedil;&otilde;es;</li>&nbsp;
+            	<li>Teoria de conjuntos e domínios;</li>&nbsp;
+            	<li>Operações;</li>&nbsp;
             	<li>Produtos cartesianos entre tabelas;</li>&nbsp;
             </div>
             
-            <p>A utiliza&ccedil;&atilde;o da teoria de conjuntos e dom&iacute;nios auxilia o usu&aacute;rio a ter 
-               melhor vis&atilde;o dos dados. Por exemplo, os dados de uma empresa podem ser:  
-               conjunto de nomes de funcion&aacute;rios, cujo dom&iacute;nio s&atilde;o os nomes poss&iacute;veis de
-                serem escritos pelo alfabeto portugu&ecirc;s.</p>&nbsp;
+            <p>A utilização da teoria de conjuntos e domínios auxilia o usuário a ter 
+               melhor visão dos dados. Por exemplo, os dados de uma empresa podem ser:  
+               conjunto de nomes de funcionários, cujo domínio são os nomes possíveis de
+                serem escritos pelo alfabeto português.</p>&nbsp;
                 
-            <p>As opera&ccedil;&otilde;es s&atilde;o capazes de manipular um banco de dados. Cada opera&ccedil;&atilde;o usa 
+            <p>As operações são capazes de manipular um banco de dados. Cada operação usa 
                uma ou mais tabelas como operando e produz sempre outra tabela como resultado.
                </p>&nbsp;
                
-            <p>As opera&ccedil;&otilde;es fundamentais est&atilde;o listadas abaixo, e para demonstr&aacute;-las 
-               ser&aacute; utilizada a tabela Empregado abaixo:</p>&nbsp;
+            <p>As operações fundamentais estão listadas abaixo, e para demonstrá-las 
+               será utilizada a tabela Empregado abaixo:</p>&nbsp;
  
 			<div class="cl_conteudo_img">
           	
@@ -102,13 +102,13 @@
  			
             <div class="cl_topicos_txt">
             
-            	<li><u>Sele&ccedil;&atilde;o</u>: seleciona as linhas de uma tabela que satisfazem 
-                    uma determinada propriedade. O s&iacute;mbolo s representa a sele&ccedil;&atilde;o.</li>&nbsp;
+            	<li><u>Seleção</u>: seleciona as linhas de uma tabela que satisfazem 
+                    uma determinada propriedade. O símbolo s representa a seleção.</li>&nbsp;
                     
             </div>
 			
-            <p>Exemplo: s salario>1000 (Empregado), nesse exemplo s&atilde;o selecionados todos
-               os sal&aacute;rios maiores que R$ 1000,00 da tabela Empregado:</p>&nbsp;
+            <p>Exemplo: s salario>1000 (Empregado), nesse exemplo são selecionados todos
+               os salários maiores que R$ 1000,00 da tabela Empregado:</p>&nbsp;
 
  			<div class="cl_conteudo_img">
           	
@@ -119,14 +119,14 @@
 
             <div class="cl_topicos_txt">
             
-            	<li><u>Proje&ccedil;&atilde;o</u>: &eacute; utilizada para selecionar determinadas colunas de
-                    uma &uacute;nica tabela j&aacute; existente. O resultado &eacute; uma nova tabela que cont&eacute;m
-                    apenas os campos requisitados. As duplicidades s&atilde;o eliminadas. O s&iacute;mbolo 
-                    p representa a proje&ccedil;&atilde;o. </li>&nbsp;
+            	<li><u>Projeção</u>: é utilizada para selecionar determinadas colunas de
+                    uma única tabela já existente. O resultado é uma nova tabela que contém
+                    apenas os campos requisitados. As duplicidades são eliminadas. O símbolo 
+                    p representa a projeção. </li>&nbsp;
                     
             </div>
 			
-            <p>Exemplo: p nome, salario (empregado). Nesse exemplo ser&aacute; criada uma nova
+            <p>Exemplo: p nome, salario (empregado). Nesse exemplo será criada uma nova
                tabela contendo apenas os campos nome e salario da tabela Empregado:</p>&nbsp;
 
  			<div class="cl_conteudo_img">
@@ -137,10 +137,10 @@
             
             <div class="cl_topicos_txt">
             
-            	<li><u>Uni&atilde;o</u>: &eacute; criada uma tabela, com todas as linhas &uacute;nicas 
-                   (n&atilde;o duplicadas) de outras tabelas. S&oacute; &eacute; poss&iacute;vel utilizar esse 
+            	<li><u>União</u>: é criada uma tabela, com todas as linhas únicas 
+                   (não duplicadas) de outras tabelas. Só é possível utilizar esse 
                     operador caso as tabelas sejam equivalentes e gerem o mesmo tipo de
-                    resultado. O s&iacute;mbolo &Egrave; representa a uni&atilde;o.</li>&nbsp;
+                    resultado. O símbolo È representa a união.</li>&nbsp;
                     
             </div>
 			
@@ -162,7 +162,7 @@
           
           	</div>
             
-            <p>Desta forma, (Alunos) &Egrave; (Professores), fica:</p>&nbsp;
+            <p>Desta forma, (Alunos) È (Professores), fica:</p>&nbsp;
  			
             <div class="cl_conteudo_img">
           	
@@ -172,10 +172,10 @@
             
              <div class="cl_topicos_txt">
             
-            	<li><u>Intersec&ccedil;&atilde;o</u> = cria-se uma tabela a partir de outras contendo 
+            	<li><u>Intersecção</u> = cria-se uma tabela a partir de outras contendo 
                     todas as tuplas (linhas) que aparecem em todas as tabelas envolvidas. 
-                    S&oacute; &eacute; poss&iacute;vel utilizar esse operador caso as tabelas sejam equivalentes. 
-                    O s&iacute;mbolo &Ccedil; representa a intersec&ccedil;&atilde;o.</li>&nbsp;
+                    Só é possível utilizar esse operador caso as tabelas sejam equivalentes. 
+                    O símbolo Ç representa a intersecção.</li>&nbsp;
                     
             </div>
 			
@@ -197,7 +197,7 @@
           
           	</div>
             
-            <p>A intersec&ccedil;&atilde;o dessas duas tabelas, (Alunos) &Ccedil; (Professores),  fica:</p>&nbsp;
+            <p>A intersecção dessas duas tabelas, (Alunos) Ç (Professores),  fica:</p>&nbsp;
 
 			<div class="cl_conteudo_img">
           	
@@ -207,11 +207,11 @@
             
             <div class="cl_topicos_txt">
             
-            	<li><u>Diferen&ccedil;a</u>: cria uma tabela a partir da  diferen&ccedil;a de uma 
-                    tabela por outra. Por&eacute;m, vale ressaltar, que a diferen&ccedil;a da primeira 
-                    tabela pela segunda n&atilde;o &eacute; a mesma que a diferen&ccedil;a da segunda tabela
-                     pela primeira, ou seja, a opera&ccedil;&atilde;o diferen&ccedil;a n&atilde;o &eacute; comutativa. O 
-                     s&iacute;mbolo –  representa a diferen&ccedil;a.</li>&nbsp;
+            	<li><u>Diferença</u>: cria uma tabela a partir da  diferença de uma 
+                    tabela por outra. Porém, vale ressaltar, que a diferença da primeira 
+                    tabela pela segunda não é a mesma que a diferença da segunda tabela
+                     pela primeira, ou seja, a operação diferença não é comutativa. O 
+                     símbolo –  representa a diferença.</li>&nbsp;
                     
             </div>
 			
@@ -235,8 +235,8 @@
             
             <div class="cl_topicos_txt">
             
-            	<li><u>Produto cartesiano</u>: &eacute; a combina&ccedil;&atilde;o (jun&ccedil;&atilde;o) de tuplas de duas 
-                    tabelas. O s&iacute;mbolo X representa o produto cartesiano.</li>&nbsp;
+            	<li><u>Produto cartesiano</u>: é a combinação (junção) de tuplas de duas 
+                    tabelas. O símbolo X representa o produto cartesiano.</li>&nbsp;
                     
             </div>
 			
@@ -268,10 +268,10 @@
 			
             <div class="cl_topicos_txt">
             
-            	<li><u>Jun&ccedil;&atilde;o</u>: essa opera&ccedil;&atilde;o &eacute; de fundamental import&acirc;ncia em banco de 
-                    dados relacionais, pois &eacute; a partir dela que &eacute; poss&iacute;vel fazer relacionamentos.
-                    &Eacute; utilizada para combinar tuplas de duas tabelas partindo dos atributos em 
-                    comum entre ambas. O s&iacute;mbolo |X| representa a jun&ccedil;&atilde;o.</li>&nbsp;
+            	<li><u>Junção</u>: essa operação é de fundamental importância em banco de 
+                    dados relacionais, pois é a partir dela que é possível fazer relacionamentos.
+                    É utilizada para combinar tuplas de duas tabelas partindo dos atributos em 
+                    comum entre ambas. O símbolo |X| representa a junção.</li>&nbsp;
                     
             </div>
             
@@ -293,7 +293,7 @@
           
           	</div>
             
-           	<p>A jun&ccedil;&atilde;o: Alunos |x| turma = cod_turma Turmas, ser&aacute;:</p>&nbsp;
+           	<p>A junção: Alunos |x| turma = cod_turma Turmas, será:</p>&nbsp;
  			
             <p class="cl_conteudo_subtit2">Alunos_Turmas</p>&nbsp;
 
@@ -305,9 +305,9 @@
             
 			<div class="cl_topicos_txt">
             
-            	<li><u>Divis&atilde;o</u>:  tem como resultado todos os elementos da primeira
+            	<li><u>Divisão</u>:  tem como resultado todos os elementos da primeira
                     tabela que se relacionam com todos os elementos da segunda tabela. O 
-                    s&iacute;mbolo : representa a divis&atilde;o.</li>&nbsp;
+                    símbolo : representa a divisão.</li>&nbsp;
                     
             </div>
             
@@ -329,8 +329,8 @@
           
           	</div>
 
-			<p class="cl_conteudo_subtit2">Considere a divis&atilde;o: Projetos : Equipe. O
-                resultado ser&aacute;:</p>&nbsp;
+			<p class="cl_conteudo_subtit2">Considere a divisão: Projetos : Equipe. O
+                resultado será:</p>&nbsp;
 
 			<div class="cl_conteudo_img">
           	
@@ -338,11 +338,11 @@
           
           	</div>
             
-            <p>Opera&ccedil;&otilde;es tamb&eacute;m podem ser aninhadas para se facilitar o uso, j&aacute; que nesse 
-               caso n&atilde;o &eacute; necess&aacute;rio a utiliza&ccedil;&atilde;o de v&aacute;rias opera&ccedil;&otilde;es sucessivas. </p>&nbsp;
+            <p>Operações também podem ser aninhadas para se facilitar o uso, já que nesse 
+               caso não é necessário a utilização de várias operações sucessivas. </p>&nbsp;
 			
-            <p>Exemplo: Para selecionar todos os nomes e sal&aacute;rios das pessoas que residem no 
-               DF, a opera&ccedil;&atilde;o ficaria assim:</p>&nbsp;
+            <p>Exemplo: Para selecionar todos os nomes e salários das pessoas que residem no 
+               DF, a operação ficaria assim:</p>&nbsp;
 				
             <p class="cl_conteudo_subtit2">p nome, salario (s estado (Empregado));</p>&nbsp;
 
@@ -356,11 +356,14 @@
             
             <p></p>&nbsp;
             <p></p>&nbsp;
-			   
-			   <p span class="cl_conteudo_tit"><u>Atividade de Fixa&ccedil;&atilde;o</u></span></p>&nbsp;
+           
+			<p span class="cl_conteudo_tit"><u>Atividade de Fixa&ccedil;&atilde;o</u></span></p>&nbsp;
 			
-			<p>No intuito de fixar a aprendizagem iniciada por meio deste m&oacute;dulo, e verificar como est&aacute; sua compreens&atilde;o sobre os mesmos, s&atilde;o sugeridos alguns exerc&iacute;cios de fixa&ccedil;&atilde;o para serem resolvidos. Clique no link lateral &agrave; esquerda <b>Exerc&iacute;cios</b>, pois ser&aacute; por meio dele iniciada uma lista de exerc&iacute;cio sobre os conte&uacute;dos estudados at&eacute; este momento.</p>
-<p> Boa revis&atilde;o sobre os mesmos!!</p>&nbsp;
+			<p>No intuito de fixar a aprendizagem iniciada por meio deste módulo e verificar como 
+			   esta sua compreensão sobre os mesmos são sugeridos alguns exercícios de fixação para 
+			   serem resolvidos. Clique no link den exercício ao lado, pois será por meio dela iniciada
+			   a lista de exercício sobre os conteúdos estudados até este momento. Boa revisão sobre os 
+			   mesmos!!  </p>&nbsp;
           
     </div>
   </div><!-- FIM CONTEUDO-->            

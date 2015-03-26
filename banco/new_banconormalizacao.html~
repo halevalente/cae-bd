@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados I</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet">
+  <link type="text/css" href="../css/classes.css" rel="stylesheet">
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados I</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="new_bancointroducao.html">Introdu&ccedil;&atilde;o</a></li>
+               <li><a href="new_bancosgbd.html"> SGBD </a></li>
+			   <li><a href="new_bancomodelagem.html">Modelagem de Dados</a></li>
+               <li><a href="new_bancomodelo_mer.html">Mod. Entid. Relacionamento</a></li>
+               <li><a href="new_bancomodelo_dados_relac.html">Mod. de Dados Relacional</a></li>
+			   <li><a href="new_bancodependenciafuncional.html">Dependência Funcional</a></li>
+			   <li><a href="new_banconormalizacao.html" class="current">Normalização</a></li>
+               <li><a href="new_bancoalgebrarelacional.html">Álgebra Relacional</a></li>
+			   <li><a href="exercicios/exer1_normalizacao.htm" target="_blank">Exercícios de Normalização</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+      
+      
+		<p span class="cl_conteudo_tit">Normalização</span></p>&nbsp;
+        
+        <p>A normalização tem seus conceitos fundamentados na teoria de conjuntos da 
+           matemática, assim como a dependência funcional.</p>&nbsp; 
+           
+        <p>Embora existam cinco formas normais no total, na prática só são utilizadas 
+           três.</p>&nbsp;
+        
+        <p>Normalização é uma técnica de análise de dados e tabelas, que, passo a passo 
+           (formas normais), analisa e substitui um conjunto de atributos de uma entidade 
+           por outros. Nesse processo nenhum atributo deve ser perdido.</p>&nbsp;
+        
+        <p>Normalizar uma tabela (relação) é decompô-la, com a finalidade de eliminar 
+           redundâncias e inconsistências, deixando-a sem as anomalias de atualização 
+           (inclusão, alteração e exclusão), como por exemplo:</p>&nbsp;
+        
+        <div class="cl_topicos_txt">
+        
+        	<li>Quando se eliminar um dado não excluí-lo de todo o banco de dados ou 
+                quando incluí-lo não ter que incluir no banco de dados inteiro; </li>&nbsp;
+            <li>Atributos multivalorados (repetidos); </li>&nbsp;
+            <li><u>Dependência parcial</u> (um atributo que não é chave primária depende de 
+                parte dela) em relação à chave concatenada;</li>&nbsp;
+            <li>Perdas acidentais de informações;</li>&nbsp;
+            <li><u>Dependência transitiva</u> (campo que não é chave primária e depende de outro
+                que também não é) entre atributos etc.</li>&nbsp;
+           
+        </div>&nbsp;
+        
+        
+        <p>Mas por que normalizar?</p>&nbsp;
+        
+        <div class="cl_conteudo_img">
+          	
+              <img src="imagens/normali001.gif" /> &nbsp;
+          
+    	  </div>
+          
+        
+        <p>É importante normalizar para se obter uma estrutura mais simples para o 
+           modelo de dados, de modo que atualizações de dados sejam mais fáceis e econômicas. 
+           Além disso, a normalização serve também para eliminar as falhas, e principalmente 
+           a "mistura" de assuntos e repetições do projeto conceitual do banco de dados.</p>&nbsp;  
+        
+        <p>No projeto conceitual de um banco de dados não se pode "misturar" os assuntos em 
+           uma mesma tabela! Cada assunto deve ficar em sua própria tabela.</p>&nbsp;  
+        
+        <p>Normalmente, após a aplicação das regras de normalização, algumas tabelas acabam 
+           sendo divididas em duas ou mais tabelas, o que, no final, gera um número maior 
+           de tabelas do que havia inicialmente. Estas tabelas deverão conter os mesmos 
+           dados da tabela original.</p>&nbsp;  
+        
+        <p class="cl_conteudo_subtit">1ª Forma Normal</p>&nbsp;  
+        
+        <p>Um modelo está na 1ª forma normal se não possui atributos repetidos.</p>&nbsp;  
+		
+        <p><u>Transformando para a 1ª FN:</u></p>&nbsp;  
+        
+        <p>Remoção dos atributos repetidos, criando-se uma ou mais tabelas para herdá-los, 
+           a qual terá como parte da chave primária (concatenada) a chave primária da 
+           entidade inicial.</p>&nbsp; 
+
+ 		<p>Exemplo:</p>&nbsp; 
+
+ 		<p>Estrutura não normalizada:</p>&nbsp;  
+        
+        <p>Arquivo de Notas Fiscais (<u>Num. NF</u>, Série, Data emissão, Cod. do Cliente, Nome do
+           cliente, Endereço do cliente, CGC do cliente, Relação das mercadorias vendidas 
+           (onde para cada mercadoria temos: Código da Mercadoria, Descrição da Mercadoria,
+            Quantidade vendida, Preço de venda e Total da venda desta mercadoria) e Total 
+            Geral da Nota)</p>&nbsp;  
+        
+        <p>Analisando a estrutura acima, observamos que existem várias mercadorias em uma 
+           única Nota Fiscal, sendo portanto elementos repetitivos que deverão ser retirados. </p>&nbsp;  
+        
+        <p>Como resultado desta etapa ocorre um desdobramento dos dados  em duas 
+           estruturas:</p>&nbsp;  
+        
+        <p>Arquivo de Notas Fiscais (<u>Num. NF</u>, Série, Data emissão, Código do Cliente, 
+           Nome Cliente, Endereço do cliente, CGC do cliente e Total Geral da Nota)</p>&nbsp;  
+        
+        <p>Arquivo de Vendas (<u>Num. NF, Código da Mercadoria</u>, Descrição da Mercadoria, 
+           Quantidade vendida, Preço de venda e Total da venda desta mercadoria)</p>&nbsp;  
+         
+        <p>Obs. Os campos sublinhados identificam as chaves das estruturas.</p>&nbsp;  
+         
+        <p>Entendendo melhor:</p>&nbsp;
+        
+        <div class="cl_topicos_txt">
+        
+        	<li>Primeira estrutura (Arquivo de Notas Fiscais): Dados que compõem a 
+                estrutura original, excluindo os elementos repetitivos.</li>&nbsp;
+            <li>Segundo estrutura (Arquivo de Vendas): Dados que compõem os elementos 
+                repetitivos da estrutura original, tendo como chave o campo chave da 
+                estrutura original (Num. NF) e o campo chave da estrutura de repetição 
+                (Código da Mercadoria).</li>&nbsp;
+            
+        </div>
+        
+        
+        <p class="cl_conteudo_subtit">2ª Forma Normal</p>&nbsp;
+        
+        <p>Um modelo está na 2ª forma normal se:</p>&nbsp;
+        
+        <div class="cl_topicos_txt">
+        	
+            <li>Estiver na 1ª Forma Normal;</li>&nbsp;
+            <li>Cada uma das colunas não pertencentes à chave primária dependem totalmente 
+                da chave (e não de um subconjunto de chave).</li>&nbsp;
+            <li>Dependência funcional Total (completa – chaves concatenada), Parcial e
+                Transitiva.</li>&nbsp;
+          
+        </div>
+        
+        <p><u>Transformando para a 2ª FN:</u></p>&nbsp;
+        
+        <div class="cl_topicos_txt">
+        	
+            <li>Remoção das  dependências parciais de parte da chave primária;</li>&nbsp;
+            <li>Identificar as colunas que não participam da chave primária da tabela.</li>&nbsp;
+            <li>Para cada coluna, analisar se seu valor é dependente em parte ou na totalidade 
+                da chave.</li>&nbsp;
+			<li>Para colunas dependentes parcialmente, criar novas tabelas e excluir 
+                as dependências parciais.</li>&nbsp;
+            <li>Decompôr a relação em duas ou mais relações.</li>&nbsp;
+                      
+        </div>
+        
+        <p>Continuando ainda com a estrutura do exemplo anterior, sua 2ª Forma Normal será:</p>&nbsp;
+        
+        <p>Arquivo de Notas Fiscais (<u>Num. NF</u>, Série, Data emissão, Código do Cliente, 
+           Nome do cliente, Endereço do cliente, CGC do cliente e Total Geral da Nota)</p>&nbsp;  
+        
+        <p>Arquivo de Vendas (<u>Num. NF, Código da Mercadoria</u>, Quantidade vendida e Total da 
+           venda desta mercadoria)</p>&nbsp;
+        
+        <p>Arquivo de Mercadorias (<u>Código da Mercadoria</u>, Descrição da Mercadoria, 
+           Preço de venda)</p>&nbsp;
+        
+        <p>Ou seja, como resultado desta etapa, houve um desdobramento do arquivo de Vendas
+           (o arquivo de Notas Fiscais, não foi alterado, por não possuir chave composta) em 
+           duas estruturas:</p>&nbsp;
+        
+        <div class="cl_topicos_txt">
+        	
+            <li>Primeira estrutura (Arquivo de Vendas): Contém os elementos originais, 
+               sendo excluídos os dados que são dependentes apenas do campo Código da 
+               Mercadoria.</li>&nbsp;
+            <li>Segundo estrutura (Arquivo de Mercadorias): Contém os elementos que são
+                identificados apenas pelo Código da Mercadoria, ou seja, independentemente
+                 da Nota Fiscal, a descrição e o preço de venda serão constantes.</li>&nbsp;
+                      
+        </div>
+        
+        
+        <p class="cl_conteudo_subtit">3ª Forma Normal</p>&nbsp; 
+        
+        <p>Um modelo está na 3ª forma normal se:</p>&nbsp; 
+        
+        <div class="cl_topicos_txt">
+        	
+            <li>Estiver na 2ª Forma Normal;</li>&nbsp;
+            <li>Os atributos (coluna) que não pertencem à chave não dependem de nenhum 
+                atributo que também não pertence à chave.</li>&nbsp;
+            <li>Dependência transitiva.</li>&nbsp;
+                      
+        </div>
+        
+        <p><u>Transformando para a 3ª FN:</u></p>&nbsp; 
+        
+        <div class="cl_topicos_txt">
+        	
+            <li>Remoção das  dependências transitivas;</li>&nbsp;
+            <li>Identificar as colunas que não participam da chave primária da tabela;</li>&nbsp;
+            <li>Para cada coluna, analisar se seu valor é dependente de alguma coluna que não 
+            	seja chave.</li>&nbsp;
+            <li>Para colunas dependentes transitivamente, criar novas tabelas e excluir 
+                as dependências transitivas</li>&nbsp;
+                      
+        </div>
+        
+        <p>Ainda com o exemplo anterior, sua 3ª Forma normal ficará:</p>&nbsp; 
+        
+        <p>Arquivo de Notas Fiscais (<u>Num. NF</u>, Série, Data emissão, Código do Cliente e Total
+           Geral da Nota)</p>&nbsp; 
+        
+        <p>Arquivo de Vendas (<u>Num. NF, Código da Mercadoria</u>, Quantidade vendida e Total da 
+           venda desta mercadoria)</p>&nbsp; 
+        
+        <p>Arquivo de Mercadorias (<u>Código da Mercadoria</u>, Descrição da Mercadoria, Preço de 
+           venda)</p>&nbsp; 
+        
+        <p>Arquivo de Clientes (<u>Código do Cliente</u>, Nome do cliente, Endereço do cliente e CGC 
+           do cliente)</p>&nbsp; 
+        
+        <p>Como resultado desta etapa, houve um desdobramento do arquivo de Notas Fiscais, 
+           por ser o único que possuía campos que não eram dependentes da chave principal 
+           (Num. NF), uma vez que independente da Nota Fiscal, o Nome, Endereço e CGC do 
+           cliente são inalterados. Este procedimento permite evitar inconsistência nos
+           dados dos arquivos e economizar espaço por eliminar o armazenamento freqüente e 
+           repetidas vezes destes dados. A cada nota fiscal comprada pelo cliente, haverá o
+            armazenamento destes dados e poderá ocorrer divergência entre eles.</p>&nbsp; 
+            
+        <p>As estruturas alteradas foram:</p>&nbsp; 
+        
+        <div class="cl_topicos_txt">
+        	
+            <li>Primeira estrutura (Arquivo de Notas Fiscais): Contém os elementos 
+                originais, sendo excluído os dados que são dependentes apenas do campo 
+                Código do Cliente (informações referentes ao cliente).</li>&nbsp;
+            <li>Segundo estrutura (Arquivo de Clientes): Contém os elementos que são
+                identificados apenas pelo Código do Cliente, ou seja, independente da Nota 
+                Fiscal, o Nome, Endereço e CGC dos clientes serão constantes.</li>&nbsp;
+                      
+        </div>
+        
+       
+            
+		<p span class="cl_conteudo_tit"><u>Atividade de Fixa&ccedil;&atilde;o</u></span></p>&nbsp;
+			
+		<p>No intuito de fixar a aprendizagem iniciada por meio deste módulo e verificar como 
+			   esta sua compreensão sobre os mesmos são sugeridos alguns exercícios de fixação para 
+			   serem resolvidos. Clique no link den exercício ao lado, pois será por meio dela iniciada
+			   a lista de exercício sobre os conteúdos estudados até este momento. Boa revisão sobre os 
+			   mesmos!!  </p>&nbsp;
+          
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+</body>
+</html>

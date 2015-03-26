@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Banco de Dados I</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>UCB</title>
+	
+  <!-- JS -->
+<script type="text/javascript" src="../js/menuHorizontal.js"></script>	
+    
+    
+  <!-- CSS -->
+  <link type="text/css" href="../css/padroes.css" rel="stylesheet">
+  <link type="text/css" href="../css/classes.css" rel="stylesheet">
+
+</head>
+<body onload="horizontal();">
+<div id="geral">
+	<div class="topo">
+  		<div id="topo">
+        		<div id="topoSuperior">
+                    <div id="imgTopo"></div>
+                    <span class="tituloTopo">Banco de Dados I</span>
+                </div>
+                
+                <div id="menu">
+                    <ul id="menu_dropdown" class="menubar">
+                    	<li class="submenu"><a href="../index.html"><br/>Principal</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Bibliografia</a></li>
+                        
+                        <li class="submenu"><a href="../monitores/grade_monitoria_geral.htm" 
+                        target="_blank"><br/>Monitoria</a></li>
+                        
+                        <li class="submenu"><a href="../web-a-desenvolver.html"><br/>Professores</a></li>
+                        
+                        <li class="submenu"><a href="http://moodle.catolicavirtual.br/login/index.php" target="_blank">Acesso ao Moodle</a></li>
+                        
+                        <li class="submenu"><a href="http://sae.ucb.br/" target="_blank"><br/>Acesso ao SAE</a></li>
+                        
+                        <li class="submenu"><a href="http://www.ucb.br/" target="_blank"><br/>Acesso &agrave; UCB</a></li>
+                        
+                        <li class="submenu"><a href="../informacoes/informacoes.html">Mais Informa&ccedil;&otilde;es</a></li>
+                    </ul>
+                </div><!-- FIM MENU-->
+		</div><!-- FIM TOPOINDEX id-->
+    </div><!-- FIM TOPOINDEX class-->
+            
+    <div class="menuvertical">   
+       <div id="menuvertical">
+            <ul class="vert-one">
+               <li><a href="new_bancointroducao.html">Introdu&ccedil;&atilde;o</a></li>
+               <li><a href="new_bancosgbd.html"> SGBD </a></li>
+			   <li><a href="new_bancomodelagem.html">Modelagem de Dados</a></li>
+               <li><a href="new_bancomodelo_mer.html">Mod. Entid. Relacionamento</a></li>
+               <li><a href="new_bancomodelo_dados_relac.html">Mod. de Dados Relacional</a></li>
+			   <li><a href="new_bancodependenciafuncional.html" class="current">Dependência Funcional</a></li>
+			   <li><a href="new_banconormalizacao.html">Normalização</a></li>
+               <li><a href="new_bancoalgebrarelacional.html">Álgebra Relacional</a></li>
+			   <li><a href="../web-a-desenvolver.html">Exercícios de Depen. Funcional</a></li>
+			   <li> &nbsp;</li>
+       	    </ul>
+        </div><!-- FIM MENU VERTICAL id-->
+    </div><!-- FIM MENU VERTICAL class-->
+	
+    
+  <div id="conteudotxt">  
+    <div class="cl_conteudo_txt">
+      
+          	<p span class="cl_conteudo_tit">Dependência Funcional</span></p>&nbsp;
+          	
+ 			<p>Vem da teoria de funções da matemática o conceito de dependência 
+               funcional utilizado pela modelagem relacional.</p>&nbsp;
+            
+            <p>Por exemplo, considere os conjuntos:</p>&nbsp;
+            
+            <div class="cl_conteudo_img">
+          	
+          		<img src="imagens/imagem.JPG" /> &nbsp;
+          
+          	</div>
+           	
+           	<p>Nesse exemplo, há uma uma função de um número com relação a um nome, ou seja, 
+               com um número é possível encontrar o nome correspondente.</p>&nbsp;
+            
+            <p>Dados outros dois conjuntos de atributos A e B de uma entidade, diz-se que:</p>&nbsp;
+            
+            <div class="cl_topicos_txt">
+            
+            	<li> B é funcionalmente dependente de A ou</li>&nbsp;
+            	<li>A determina B ou</li>&nbsp;
+            	<li>B depende de A</li>&nbsp;
+                
+            </div>
+
+ 			<p>Se cada valor de A estiver associado a um, e só um, valor de B.</p>&nbsp;
+            
+ 			<p>Se A determina B, então B não é funcionalmente dependente de nenhum subconjunto
+               de A.</p>&nbsp;
+
+ 			<p>Uma dependência funcional é representada por :</p>&nbsp;
+ 			
+            <p class="cl_conteudo_subtit2">A -> B</p>&nbsp;                        
+ 			
+            <p>(A é denominado determinante)</p>&nbsp;
+			
+			<p>Exemplo:</p>&nbsp;
+            
+            <div class="cl_conteudo_img">
+          	
+          		<img src="imagens/depefuncio001.png" /> &nbsp;
+          
+          	</div>
+            
+           <p>Departamento -> Código funcionário ? (Departamento pode determinar o
+               Código_Funcionário ?)</p>&nbsp;
+
+    	   <p>Não, pois o departamento 003 aparece em duas tuplas (para os funcionários 125 e 555).</p>&nbsp;
+        
+           <p>Código_Funcionário -> Departamento ? (Código_Funcionário pode determinar o Departamento?)</p>&nbsp;
+        
+           <p>Sim, pois se conhecendo o Código_Funcionário (atributo unívoco) é possível determinar o departamento (um funcionário só pode pertencer a um departamento).</p>&nbsp;
+           
+           <p>Nome -> Código_Funcionário ? (Nome pode determinar o Código_Funcionário ?)</p>&nbsp;
+           
+           <p>Não, pois podem existir funcionários com o mesmo nome, logo, pode haver múltiplos valores de Código_Funcionário para o mesmo nome.</p>&nbsp;
+			
+            <p>Código_Funcionário -> Sobrenome ? (Código_Funcionário pode determinar o Sobrenome?)</p>&nbsp;
+        	
+            <p>Apesar de dois funcionários terem o mesmo sobrenome, ao se conhecer o Código_Funcionário é possível se determinar um só sobrenome.</p>&nbsp;
+        		
+         	<p>A identificação de dependências funcionais não pode ser obtida apenas a partir da inspeção de algumas instâncias, mas sim através das próprias propriedades dos atributos.</p>&nbsp;
+        	
+            <p>Outro exemplo de identificação de dependências funcionais:</p>&nbsp;
+
+			<div class="cl_conteudo_img">
+          	
+          		<img src="imagens/depefuncio002.png" /> &nbsp;
+          
+          	</div>
+			
+            <p>O valor é funcionalmente dependente de produto (Produto -> Valor) ?</p>&nbsp;
+
+            <p>Não, o mesmo produto pode ter valores distintos diferentes mercados.</p>&nbsp;
+            
+            <p>O valor é funcionalmente dependente de mercado?</p>&nbsp;
+            
+            <p>Não, para cada mercado há tantos valores quanto os produtos vendidos nesse mercado.</p>&nbsp;
+            
+            <p>Valor depende funcionalmente de ambos {Mercado, produto} -> Valor. </p>&nbsp;
+            
+            <p class="cl_conteudo_subtit">Regras para encontrar Dependências Funcionais</p>&nbsp;
+			
+            <div class="cl_topicos_txt">
+            
+            	<li>Separação</li>&nbsp;
+                    
+            </div>
+            
+            <p class="cl_conteudo_subtit2"> A -> BC então A -> B e A -> C</p>&nbsp;
+ 
+			<p>Exemplo:</p>&nbsp;
+            
+            <p class="cl_conteudo_subtit2">CPF -> nome, endereço então CPF -> nome e CPF -> 
+              endereço</p>&nbsp;
+			
+            <p>Leia o exemplo acima da seguinte maneira: se com um número de cpf é 
+               possível encontrar o nome e o endereço de uma pessoa, então com esse 
+               número é possível encontrar apenas o nome ou apenas o endereço.</p>&nbsp;
+
+       		<div class="cl_topicos_txt">
+            
+            	<li>Acumulação</li>&nbsp;
+                    
+            </div>
+			
+            <p class="cl_conteudo_subtit2"> A -> B então AC -> B</p>&nbsp;
+            
+            <p>Exemplo:</p>&nbsp;
+            
+            <p class="cl_conteudo_subtit2"> CPF -> endereço então CPF, idade -> endereço</p>&nbsp;
+            
+            <p>Leia o exemplo acima da seguinte maneira: se com um número de cpf é 
+               possível encontrar o endereço de uma pessoa, então com este número mais a 
+               idade da pessoa é possível encontrar o endereço também.</p>&nbsp;
+           
+            <div class="cl_topicos_txt">
+            
+            	<li>Transitividade</li>&nbsp;
+                    
+            </div>
+			
+            <p class="cl_conteudo_subtit2"> A -> B e B -> C então A -> C</p>&nbsp;
+            
+            <p>Exemplo:</p>&nbsp;
+            
+            <p class="cl_conteudo_subtit2">CPF -> código-cidade e código-cidade -> nome-cidade 
+                então CPF -> nome-cidade</p>&nbsp;
+            
+            <p> Leia o exemplo acima da seguinte maneira: se com um número de cpf é
+                possível encontrar o código da cidade de uma pessoa, e como o código da 
+                cidade é possível encontrar o nome da cidade, então com o número do cpf é 
+                possível encontrar o nome da cidade. </p>&nbsp;
+
+			<div class="cl_topicos_txt">
+            
+            	<li>Pseudo-Transitividade</li>&nbsp;
+                    
+            </div>
+			
+            <p class="cl_conteudo_subtit2"> A -> B e BC -> D então AC -> D</p>&nbsp;
+            
+            <p>Exemplo:</p>&nbsp;
+            
+            <p class="cl_conteudo_subtit2">CPF -> código-funcionário e código-funcionário, mês -> 
+             salário-funcionário então</p>&nbsp;
+            
+            <p class="cl_conteudo_subtit2">CPF, mês -> salário-funcionário</p>&nbsp;
+            
+            <p>Leia o exemplo acima da seguinte maneira: se com um número de cpf é
+               possível encontrar o código do funcionário, e com o código do funcionário 
+               mais um certo mês é possível encontrar  o salário que ele recebeu naquele
+                mês, então com o número do cpf mais um certo mês é possível encontrar o
+                salário que ele recebeu naquele mês.</p>&nbsp;
+            
+            <p></p>&nbsp;
+            <p></p>&nbsp;
+           
+			<p span class="cl_conteudo_tit"><u>Atividade de Fixa&ccedil;&atilde;o</u></span></p>&nbsp;
+			
+			<p>No intuito de fixar a aprendizagem iniciada por meio deste módulo e verificar como 
+			   esta sua compreensão sobre os mesmos são sugeridos alguns exercícios de fixação para 
+			   serem resolvidos. Clique no link den exercício ao lado, pois será por meio dela iniciada
+			   a lista de exercício sobre os conteúdos estudados até este momento. Boa revisão sobre os 
+			   mesmos!!  </p>&nbsp;
+          
+    </div>
+  </div><!-- FIM CONTEUDO-->            
+</div><!-- FIM GERAL-->    
+        
+</body>
+</html>
